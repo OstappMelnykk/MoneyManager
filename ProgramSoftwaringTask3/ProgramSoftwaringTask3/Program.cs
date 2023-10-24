@@ -1,12 +1,13 @@
 ﻿using Npgsql;
 using System.Data.SqlClient;
+using Faker;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
 
-        string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=12345;Database=MoneyManagerDb;Include Error Detail=true;";
+        string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=12345;Database=MoneyManagerDB;Include Error Detail=true;";
 
         using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
         {
@@ -52,10 +53,10 @@ internal class Program
                     id = rowCount + 1 + i;
                 } while (IsPrimaryKeyInUse(connection, "users", id));
 
-                string name = "Test" + $"{id}";
-                string phoneNumber = "Test" + $"{id}";
+                string name = Faker.Name.First();
+                string phoneNumber = Faker.Phone.Number();
                 string password = "Test" + $"{id}";
-                string email = "Test" + $"{id}";
+                string email = Faker.Internet.Email();
 
                 command.Parameters.Clear();
 
@@ -76,9 +77,11 @@ internal class Program
         int numberOfRecords = random.Next(minRecords, maxRecords + 1);
         Console.WriteLine(numberOfRecords);
         int rowCount = GetRowCount(connection, "accounts");
+        int usersRowCount = GetRowCount(connection, "users");
 
         using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO accounts VALUES (@value1, @value2, @value3, @value4)", connection))
         {
+            Random random1 = new Random();
             for (int i = 0; i < numberOfRecords; i++)
             {
                 // Generate a unique primary key value
@@ -88,9 +91,9 @@ internal class Program
                     id = rowCount + 1 + i;
                 } while (IsPrimaryKeyInUse(connection, "accounts", id));
 
-                string title = "Test" + $"{id}";
-                decimal balance = id+100;
-                int user_id = id;
+                string title = Faker.Lorem.Sentence();
+                decimal balance = random1.Next(5000);
+                int user_id = random1.Next(1,usersRowCount);
 
                 command.Parameters.Clear();
 
@@ -110,6 +113,7 @@ internal class Program
         Random random = new Random();
         int numberOfRecords = random.Next(minRecords, maxRecords + 1);
         int rowCount = GetRowCount(connection, "goals");
+        int accountsRowCount = GetRowCount(connection, "accounts");
 
         using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO goals VALUES (@value1, @value2, @value3, @value4, @value5, @value6, @value7)", connection))
         {
@@ -123,11 +127,11 @@ internal class Program
                 } while (IsPrimaryKeyInUse(connection, "goals", id));
 
                 string title = "Test" + $"{id}";
-                string descriptoin = "Test" + $"{id}";
+                string descriptoin = Faker.Lorem.Sentence();
                 decimal amountToCollect = random.Next(100, 2012);
                 decimal currentAmount = random.Next(100, 2012);
                 int progress = (int)(amountToCollect/currentAmount);
-                int account_id = id;
+                int account_id = random.Next(1,accountsRowCount);
 
                 command.Parameters.Clear();
 
@@ -150,6 +154,7 @@ internal class Program
         Random random = new Random();
         int numberOfRecords = random.Next(minRecords, maxRecords + 1);
         int rowCount = GetRowCount(connection, "transactions");
+        int accountsRowCount = GetRowCount(connection, "accounts");
 
         using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO transactions VALUES (@value1, @value2, @value3, @value4, @value5, @value6, @value7)", connection))
         {
@@ -165,7 +170,7 @@ internal class Program
                 string type = "Test" + $"{id}";
                 int fromAccountId = id;
                 int toAccountId = id - 1;
-                string descriptoin = "Test" + $"{id}";
+                string descriptoin = Faker.Lorem.Sentence();
                 decimal sum = random.Next(100, 2012);
                 DateTime date = DateTime.Now;
 
