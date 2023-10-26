@@ -1,4 +1,4 @@
-CREATE DATABASE MoneyManager
+CREATE DATABASE moneymanager
 
 
 
