@@ -28,10 +28,10 @@ internal class Program
                     }
                 }
             }
-            FillUserTableWithRandomData(connection, 30, 50);
-            FillAccountTableWithRandomData(connection, 30, 50);
-            FillGoalTableWithRandomData(connection, 30, 50);
-            FillTransactionTableWithRandomData(connection, 30, 50);
+            //FillUserTableWithRandomData(connection, 30, 50);
+            //FillAccountTableWithRandomData(connection, 30, 50);
+            //FillGoalTableWithRandomData(connection, 30, 50);
+            //FillTransactionTableWithRandomData(connection, 30, 50);
             connection.Close();
         }
     }
@@ -78,6 +78,7 @@ internal class Program
         Console.WriteLine(numberOfRecords);
         int rowCount = GetRowCount(connection, "accounts");
         int usersRowCount = GetRowCount(connection, "users");
+        List<int> usersIdList = GetIdList(connection, "users");
 
         using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO accounts VALUES (@value1, @value2, @value3, @value4)", connection))
         {
@@ -93,7 +94,7 @@ internal class Program
 
                 string title = Faker.Lorem.Sentence();
                 decimal balance = random1.Next(5000);
-                int user_id = random1.Next(1,usersRowCount);
+                int user_id = usersIdList[random.Next(usersIdList.Count)];
 
                 command.Parameters.Clear();
 
@@ -114,6 +115,7 @@ internal class Program
         int numberOfRecords = random.Next(minRecords, maxRecords + 1);
         int rowCount = GetRowCount(connection, "goals");
         int accountsRowCount = GetRowCount(connection, "accounts");
+        List<int> accountIdList = GetIdList(connection, "accounts");
 
         using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO goals VALUES (@value1, @value2, @value3, @value4, @value5, @value6, @value7)", connection))
         {
@@ -131,7 +133,7 @@ internal class Program
                 decimal amountToCollect = random.Next(100, 2012);
                 decimal currentAmount = random.Next(100, 2012);
                 int progress = (int)(amountToCollect/currentAmount);
-                int account_id = random.Next(1,accountsRowCount);
+                int account_id = accountIdList[random.Next(accountIdList.Count)];
 
                 command.Parameters.Clear();
 
@@ -155,6 +157,7 @@ internal class Program
         int numberOfRecords = random.Next(minRecords, maxRecords + 1);
         int rowCount = GetRowCount(connection, "transactions");
         int accountsRowCount = GetRowCount(connection, "accounts");
+        List<int> accountIdList = GetIdList(connection, "accounts");
 
         using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO transactions VALUES (@value1, @value2, @value3, @value4, @value5, @value6, @value7)", connection))
         {
@@ -168,8 +171,8 @@ internal class Program
                 } while (IsPrimaryKeyInUse(connection, "transactions", id));
 
                 string type = "Test" + $"{id}";
-                int fromAccountId = id;
-                int toAccountId = id - 1;
+                int fromAccountId = accountIdList[random.Next(accountIdList.Count)];
+                int toAccountId = accountIdList[random.Next(accountIdList.Count)]; 
                 string descriptoin = Faker.Lorem.Sentence();
                 decimal sum = random.Next(100, 2012);
                 DateTime date = DateTime.Now;
@@ -200,6 +203,27 @@ internal class Program
             return Convert.ToInt32(command.ExecuteScalar());
         }
     }
+
+    static List<int> GetIdList(NpgsqlConnection connection, string tableName)
+    {
+        List<int> idList = new List<int>();
+
+        using (NpgsqlCommand command = new NpgsqlCommand(
+            $"SELECT {tableName}_id FROM {tableName}", connection))
+        {
+            using (NpgsqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    int id = reader.GetInt32(0); // Отримати значення id
+                    idList.Add(id); // Додати id до списку
+                }
+            }
+        }
+
+        return idList;
+    }
+
 
     public static bool IsPrimaryKeyInUse(NpgsqlConnection connection, string tableName, int primaryKeyValue)
     {

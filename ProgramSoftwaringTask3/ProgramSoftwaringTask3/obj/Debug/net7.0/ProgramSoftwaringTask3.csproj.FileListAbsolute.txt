@@ -46,3 +46,5 @@ D:\c#\Development\MoneyManager\ProgramSoftwaringTask3\ProgramSoftwaringTask3\obj
 D:\c#\Development\MoneyManager\ProgramSoftwaringTask3\ProgramSoftwaringTask3\obj\Debug\net7.0\ProgramSoftwaringTask3.csproj.CopyComplete
 D:\c#\Development\MoneyManager\ProgramSoftwaringTask3\ProgramSoftwaringTask3\obj\Debug\net7.0\ProgramSoftwaringTask3.genruntimeconfig.cache
 D:\c#\Development\MoneyManager\ProgramSoftwaringTask3\ProgramSoftwaringTask3\obj\Debug\net7.0\ref\ProgramSoftwaringTask3.dll
+D:\c#\Development\MoneyManager\ProgramSoftwaringTask3\ProgramSoftwaringTask3\bin\Debug\net7.0\Faker.Net.6.0.dll
+D:\c#\Development\MoneyManager\ProgramSoftwaringTask3\ProgramSoftwaringTask3\bin\Debug\net7.0\de-DE\Faker.Net.6.0.resources.dll
