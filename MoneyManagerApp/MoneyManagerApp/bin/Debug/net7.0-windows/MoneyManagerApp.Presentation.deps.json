@@ -1,0 +1,49 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "MoneyManagerApp.Presentation/1.0.0": {
+        "dependencies": {
+          "MoneyManagerApp.BLL": "1.0.0"
+        },
+        "runtime": {
+          "MoneyManagerApp.Presentation.dll": {}
+        }
+      },
+      "MoneyManagerApp.BLL/1.0.0": {
+        "dependencies": {
+          "MoneyManagerApp.DAL": "1.0.0"
+        },
+        "runtime": {
+          "MoneyManagerApp.BLL.dll": {}
+        }
+      },
+      "MoneyManagerApp.DAL/1.0.0": {
+        "runtime": {
+          "MoneyManagerApp.DAL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MoneyManagerApp.Presentation/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MoneyManagerApp.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MoneyManagerApp.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

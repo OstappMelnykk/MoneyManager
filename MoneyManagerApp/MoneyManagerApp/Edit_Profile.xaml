@@ -1,0 +1,43 @@
+﻿<Window x:Class="MoneyManagerApp.Presentation.Edit_Profile"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoneyManagerApp.Presentation"
+        mc:Ignorable="d"
+        Title="Edit profile" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
+    <Grid>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="129" ></ColumnDefinition>
+            <ColumnDefinition Width="671"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue"></Grid>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15"/>
+
+        <Grid Grid.Column="1" Grid.RowSpan="5">
+            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="My profile" VerticalAlignment="Top" FontSize="35" Height="50" Width="200"/>
+            <Image HorizontalAlignment="Left" Height="170" Margin="70,130,0,0" VerticalAlignment="Top" Width="200" Source="My_Photo.png"/>
+            <Button Content="Back" HorizontalAlignment="Center" Margin="0,60,550,0" VerticalAlignment="Top" Height="20" Width="60" Background="#AA00D7"/>
+            <Button Content="Save" HorizontalAlignment="Center" Margin="420,480,0,0" VerticalAlignment="Top" Height="20" Width="120" Background="#0092FF"/>
+            <Button Content="Change photo" HorizontalAlignment="Left" Margin="125,299,0,0" VerticalAlignment="Top" FontSize="14" Background="#0092FF"/>
+            <TextBlock HorizontalAlignment="Left" Margin="450,130,0,0" TextWrapping="Wrap" Text="Set name" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="450,150,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="450,200,0,0" TextWrapping="Wrap" Text="Set phone number" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="450,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBlock HorizontalAlignment="Left" Margin="450,270,0,0" TextWrapping="Wrap" Text="Set E-mail" VerticalAlignment="Top" FontSize="14"/>
+            <TextBox HorizontalAlignment="Left" Margin="450,290,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        </Grid>
+    </Grid>
+</Window>

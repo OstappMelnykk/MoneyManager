@@ -7,7 +7,105 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Accounts.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Add_Transactions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Bar_Graph.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Create_New_Account.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Edit_Profile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Goals.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Goal_Name.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Home.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Line_Graph.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="My_Profile.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Security_Setting.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sing_Up.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Transactions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Transfer_Between_Accounts.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Transfer_From_Account.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Transfer_To_Account.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Accounts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Add_Transactions.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Bar_Graph.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Create_New_Account.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Edit_Profile.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Goals.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Goal_Name.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Home.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Line_Graph.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="My_Profile.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Security_Setting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sing_Up.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Transactions.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Transfer_Between_Accounts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Transfer_From_Account.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Transfer_To_Account.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -1,0 +1,15 @@
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\bin\Debug\net7.0-windows\MoneyManagerApp.BLL.deps.json
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\bin\Debug\net7.0-windows\MoneyManagerApp.BLL.dll
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\bin\Debug\net7.0-windows\MoneyManagerApp.BLL.pdb
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.dll
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.pdb
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.AssemblyInfo.cs
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.csproj.CopyComplete
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.dll
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\refint\MoneyManagerApp.BLL.dll
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.pdb
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\ref\MoneyManagerApp.BLL.dll

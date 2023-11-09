@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MoneyManagerApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Log in" Height="550" Width="800"  ResizeMode="NoResize" SizeToContent="Manual">
     <Grid>
+
+        <TextBlock  Text="Log in" HorizontalAlignment="Center"  FontSize="40" Margin="0,65,0,400" Height="NaN" />
+        <TextBox HorizontalAlignment="Center" Margin="0,190,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,160,120,0" Grid.Row="1" TextWrapping="Wrap" Text="Email/Phone number" VerticalAlignment="Top" />
+        <TextBox  HorizontalAlignment="Center" Margin="0,270,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,240,180,0" Grid.Row="1" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Height="20"/>
+        <Button Content="Create a new account" HorizontalAlignment="Center" Margin="0,340,100,0" VerticalAlignment="Top" Height="30" Width="130" Background="#AA00D7"/>
+        <Button Content="Log in" HorizontalAlignment="Center" Margin="150,340,0,0" VerticalAlignment="Top" Height="30" Width="80" Background="#0092FF"/>
 
     </Grid>
 </Window>

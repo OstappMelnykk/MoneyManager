@@ -1,0 +1,44 @@
+﻿<Window x:Class="MoneyManagerApp.Presentation.Transfer_Between_Accounts"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MoneyManagerApp.Presentation"
+        mc:Ignorable="d"
+         Title="Transfer between accounts" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
+    <Grid>
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="129" ></ColumnDefinition>
+            <ColumnDefinition Width="671"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue"></Grid>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15"/>
+
+        <Grid Grid.Column="1" Grid.RowSpan="5">
+            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Transfer between account" VerticalAlignment="Top" FontSize="35" Height="50" Width="400"/>
+            <Button Content="Back" HorizontalAlignment="Center" Margin="0,60,550,0" VerticalAlignment="Top" Height="20" Width="60" Background="#AA00D7"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,180,433,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top" FontSize="14" Height="22" Width="60"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,240,430,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" FontSize="14" Height="22" Width="60"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,300,410,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Top" FontSize="14" Height="22" Width="80"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,360,430,0" TextWrapping="Wrap" Text="Sum:" VerticalAlignment="Top" FontSize="14" Height="22" Width="60"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,180,0,0" TextWrapping="Wrap" Text="Account name" VerticalAlignment="Top" Width="120"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,240,0,0" TextWrapping="Wrap" Text="Account name" VerticalAlignment="Top" Width="120"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,300,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="120"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,360,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="120"/>
+            <Button Content="Add" HorizontalAlignment="Center" Margin="420,470,0,0" VerticalAlignment="Top" Height="20" Width="120" Background="#0092FF"/>
+
+        </Grid>
+
+    </Grid>
+</Window>

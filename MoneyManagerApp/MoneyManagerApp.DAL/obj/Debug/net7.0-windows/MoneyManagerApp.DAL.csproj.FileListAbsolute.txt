@@ -1,0 +1,12 @@
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.deps.json
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.dll
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.pdb
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.AssemblyInfo.cs
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.dll
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\refint\MoneyManagerApp.DAL.dll
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.pdb
+C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\ref\MoneyManagerApp.DAL.dll
