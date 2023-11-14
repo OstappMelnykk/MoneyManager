@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gADa+OGfqd8Gh+TBPXsuRiQKrxYofVP75Y2+QXGt3Y6SSp9jG8x4B2yyZA3P4RtFWLZxK/PPbCYHS9KsdBIxmQ==",
+  "dgSpecHash": "aYsypoK4UUsi92k/XXKOetVwsUdoLVdEzC7ZsWRB6l2Q/fe0OGd/yuzNMtJR79MNNNhfG2c+5AMYK7dSSLv4PA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj",
+  "projectFilePath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

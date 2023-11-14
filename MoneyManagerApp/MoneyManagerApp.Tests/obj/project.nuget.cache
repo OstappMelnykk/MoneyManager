@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GVFld0MJQ550FHN6YSXHq3cnUfG0yPBEti1j5ih5HDOiektiE3t2wiKsd73XgeQHiGkClnC3dsCozpJ4Xg7jqg==",
+  "dgSpecHash": "WpKTc7dYldEdkaddHlKB+VRURxFbHotK50s9UEY4KPoBTjPNITQ6D7KtCC+hj7Ni+7EbxMzn0KpsbsxCnnHwRQ==",
   "success": false,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.Tests\\MoneyManagerApp.Tests.csproj",
+  "projectFilePath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.Tests\\MoneyManagerApp.Tests.csproj",
   "expectedPackageFiles": [],
   "logs": [
     {

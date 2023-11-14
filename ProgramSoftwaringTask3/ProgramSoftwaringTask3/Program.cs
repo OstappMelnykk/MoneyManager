@@ -129,8 +129,6 @@ internal class Program
                 string title = "Test" + $"{id}";
                 string descriptoin = Faker.Lorem.Sentence();
                 decimal amountToCollect = random.Next(100, 2012);
-                decimal currentAmount = random.Next(100, 2012);
-                int progress = (int)(amountToCollect/currentAmount);
                 int account_id = accountIdList[random.Next(accountIdList.Count)];
 
                 command.Parameters.Clear();
@@ -138,10 +136,8 @@ internal class Program
 
                 command.Parameters.AddWithValue("@value1", id);
                 command.Parameters.AddWithValue("@value2", title);
-                command.Parameters.AddWithValue("@value3", progress);
                 command.Parameters.AddWithValue("@value4", descriptoin);
                 command.Parameters.AddWithValue("@value5", amountToCollect);
-                command.Parameters.AddWithValue("@value6", currentAmount);
                 command.Parameters.AddWithValue("@value7", account_id);
 
                 command.ExecuteNonQuery();
