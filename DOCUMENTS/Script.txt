@@ -15,7 +15,6 @@ CREATE TABLE Users (
 CREATE TABLE Accounts (
     accounts_ID serial PRIMARY KEY,
     accounts_title varchar(255) NOT NULL,
-    accounts_view int NOT NULL,
     fk_users_ID int REFERENCES users (users_ID)
 );
 
@@ -30,8 +29,8 @@ CREATE TABLE Goals (
 CREATE TABLE Transactions (
     transactions_ID serial PRIMARY KEY,
     transactions_type int CHECK (type IN (1, 2, 3)),
-    transactions_FromAccountID int REFERENCES accounts (accounts_ID),
-    transactions_ToAccountID int REFERENCES accounts (accounts_ID),
+    fk_accounts_ID_from int REFERENCES accounts (accounts_ID),
+    fk_accounts_ID_to int REFERENCES accounts (accounts_ID),
     transactions_description text,
     transactions_sum decimal(18, 2) NOT NULL,
     transactions_date date DEFAULT current_date
