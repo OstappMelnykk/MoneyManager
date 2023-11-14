@@ -93,7 +93,6 @@ internal class Program
                 } while (IsPrimaryKeyInUse(connection, "accounts", id));
 
                 string title = Faker.Lorem.Sentence();
-                decimal balance = random1.Next(5000);
                 int user_id = usersIdList[random.Next(usersIdList.Count)];
 
                 command.Parameters.Clear();
@@ -101,7 +100,6 @@ internal class Program
 
                 command.Parameters.AddWithValue("@value1", id);
                 command.Parameters.AddWithValue("@value2", title);
-                command.Parameters.AddWithValue("@value3", balance);
                 command.Parameters.AddWithValue("@value4", user_id);
 
                 command.ExecuteNonQuery();
