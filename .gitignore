@@ -200,3 +200,12 @@ obj
 /ProgramSoftwaringTask3/.vs/ProgramSoftwaringTask3/v17/.suo
 /MoneyManagerApp/.vs/MoneyManagerApp/DesignTimeBuild/.dtbcache.v2
 /ProgramSoftwaringTask3/.vs/ProgramSoftwaringTask3/v17/.futdcache.v2
+*.vsidx
+/MoneyManagerApp/MoneyManagerApp/bin/Debug/net7.0-windows/MoneyManagerApp.Presentation.dll
+/MoneyManagerApp/MoneyManagerApp/bin/Debug/net7.0-windows/MoneyManagerApp.Presentation.pdb
+/MoneyManagerApp/MoneyManagerApp/obj/Debug/net7.0-windows/MoneyManagerApp.Presentation.dll
+/MoneyManagerApp/MoneyManagerApp/obj/Debug/net7.0-windows/MoneyManagerApp.Presentation.g.resources
+/MoneyManagerApp/MoneyManagerApp/obj/Debug/net7.0-windows/MoneyManagerApp.Presentation.pdb
+/MoneyManagerApp/MoneyManagerApp/obj/Debug/net7.0-windows/MoneyManagerApp.Presentation_MarkupCompile.i.lref
+/MoneyManagerApp/MoneyManagerApp/obj/Debug/net7.0-windows/MainWindow.baml
+/MoneyManagerApp/.vs/MoneyManagerApp/FileContentIndex/9fb42243-1b11-4892-a943-10d6df00fc5d.vsidx

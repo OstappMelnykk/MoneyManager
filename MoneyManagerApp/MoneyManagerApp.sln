@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyManagerApp.Presentation", "MoneyManagerApp\MoneyManagerApp.Presentation.csproj", "{4FF1A605-1807-4BD9-8A1A-40E05DD3E6FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyManagerApp.Presentation", "MoneyManagerApp\MoneyManagerApp.Presentation.csproj", "{4FF1A605-1807-4BD9-8A1A-40E05DD3E6FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyManagerApp.DAL", "MoneyManagerApp.DAL\MoneyManagerApp.DAL.csproj", "{B5D81AC2-4A03-40E2-9764-9230399D7319}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyManagerApp.DAL", "MoneyManagerApp.DAL\MoneyManagerApp.DAL.csproj", "{B5D81AC2-4A03-40E2-9764-9230399D7319}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyManagerApp.BLL", "MoneyManagerApp.BLL\MoneyManagerApp.BLL.csproj", "{5F721301-41BA-4877-A327-6F4B84C1AB27}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyManagerApp.Tests", "MoneyManagerApp.Tests\MoneyManagerApp.Tests.csproj", "{1B95494E-222F-4EAC-BE67-E00D618A07AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyManagerApp.BLL", "MoneyManagerApp.BLL\MoneyManagerApp.BLL.csproj", "{5F721301-41BA-4877-A327-6F4B84C1AB27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +27,6 @@ Global
 		{5F721301-41BA-4877-A327-6F4B84C1AB27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F721301-41BA-4877-A327-6F4B84C1AB27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F721301-41BA-4877-A327-6F4B84C1AB27}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1B95494E-222F-4EAC-BE67-E00D618A07AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B95494E-222F-4EAC-BE67-E00D618A07AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B95494E-222F-4EAC-BE67-E00D618A07AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B95494E-222F-4EAC-BE67-E00D618A07AC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

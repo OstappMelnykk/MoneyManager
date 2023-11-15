@@ -8,7 +8,7 @@
         Title="Log in" Height="550" Width="800"  ResizeMode="NoResize" SizeToContent="Manual">
     <Grid>
 
-        <TextBlock  Text="Log in" HorizontalAlignment="Center"  FontSize="40" Margin="0,65,0,400" Height="NaN" />
+        <TextBlock  Text="Log in" HorizontalAlignment="Center"  FontSize="40" Margin="0,60,0,400" Height="60" />
         <TextBox HorizontalAlignment="Center" Margin="0,190,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
         <TextBlock HorizontalAlignment="Center" Margin="0,160,120,0" Grid.Row="1" TextWrapping="Wrap" Text="Email/Phone number" VerticalAlignment="Top" />
         <TextBox  HorizontalAlignment="Center" Margin="0,270,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
