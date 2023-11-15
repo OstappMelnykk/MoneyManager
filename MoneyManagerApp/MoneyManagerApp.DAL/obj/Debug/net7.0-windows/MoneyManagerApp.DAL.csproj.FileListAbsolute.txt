@@ -10,3 +10,14 @@ C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\n
 C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\refint\MoneyManagerApp.DAL.dll
 C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.pdb
 C:\Users\HP\Desktop\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\ref\MoneyManagerApp.DAL.dll
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.deps.json
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.dll
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.pdb
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.AssemblyInfoInputs.cache
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.AssemblyInfo.cs
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.csproj.CoreCompileInputs.cache
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.dll
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\refint\MoneyManagerApp.DAL.dll
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.pdb
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\ref\MoneyManagerApp.DAL.dll
