@@ -7,7 +7,7 @@ internal class Program
     private static void Main(string[] args)
     {
 
-        string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=12345;Database=MoneyManagerDB;Include Error Detail=true;";
+        string connectionString = "Host=localhost;Port=5432;Username=postgres;Password=12345;Database=moneymanager;Include Error Detail=true;";
 
         using (NpgsqlConnection connection = new NpgsqlConnection(connectionString))
         {
@@ -42,7 +42,7 @@ internal class Program
         int numberOfRecords = random.Next(minRecords, maxRecords + 1);
         int rowCount = GetRowCount(connection, "users");
 
-        using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO users VALUES (@value1, @value2, @value3, @value4, @value5)", connection))
+        using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO users VALUES (@value1, @value2, @value3, @value4, @value5, @value6)", connection))
         {
             for (int i = 0; i < numberOfRecords; i++)
             {
@@ -57,6 +57,7 @@ internal class Program
                 string phoneNumber = Faker.Phone.Number();
                 string password = "Test" + $"{id}";
                 string email = Faker.Internet.Email();
+                byte[] photo = GenerateRandomData(10);
 
                 command.Parameters.Clear();
 
@@ -65,6 +66,7 @@ internal class Program
                 command.Parameters.AddWithValue("@value3", phoneNumber);
                 command.Parameters.AddWithValue("@value4", password);
                 command.Parameters.AddWithValue("@value5", email);
+                command.Parameters.AddWithValue("@value6", photo);
 
                 command.ExecuteNonQuery();
             }
@@ -80,7 +82,7 @@ internal class Program
         int usersRowCount = GetRowCount(connection, "users");
         List<int> usersIdList = GetIdList(connection, "users");
 
-        using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO accounts VALUES (@value1, @value2, @value3, @value4)", connection))
+        using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO accounts VALUES (@value1, @value2, @value3)", connection))
         {
             Random random1 = new Random();
             for (int i = 0; i < numberOfRecords; i++)
@@ -100,7 +102,7 @@ internal class Program
 
                 command.Parameters.AddWithValue("@value1", id);
                 command.Parameters.AddWithValue("@value2", title);
-                command.Parameters.AddWithValue("@value4", user_id);
+                command.Parameters.AddWithValue("@value3", user_id);
 
                 command.ExecuteNonQuery();
             }
@@ -115,7 +117,7 @@ internal class Program
         int accountsRowCount = GetRowCount(connection, "accounts");
         List<int> accountIdList = GetIdList(connection, "accounts");
 
-        using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO goals VALUES (@value1, @value2, @value3, @value4, @value5, @value6, @value7)", connection))
+        using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO goals VALUES (@value1, @value2, @value3, @value4, @value5)", connection))
         {
             for (int i = 0; i < numberOfRecords; i++)
             {
@@ -136,9 +138,9 @@ internal class Program
 
                 command.Parameters.AddWithValue("@value1", id);
                 command.Parameters.AddWithValue("@value2", title);
-                command.Parameters.AddWithValue("@value4", descriptoin);
-                command.Parameters.AddWithValue("@value5", amountToCollect);
-                command.Parameters.AddWithValue("@value7", account_id);
+                command.Parameters.AddWithValue("@value3", descriptoin);
+                command.Parameters.AddWithValue("@value4", amountToCollect);
+                command.Parameters.AddWithValue("@value5", account_id);
 
                 command.ExecuteNonQuery();
             }
@@ -164,8 +166,9 @@ internal class Program
                     id = rowCount + 1 + i;
                 } while (IsPrimaryKeyInUse(connection, "transactions", id));
 
-                string type = "Test" + $"{id}";
+                int type = random.Next(1,4);
                 int fromAccountId = accountIdList[random.Next(accountIdList.Count)];
+                accountIdList.Remove(fromAccountId);
                 int toAccountId = accountIdList[random.Next(accountIdList.Count)]; 
                 string descriptoin = Faker.Lorem.Sentence();
                 decimal sum = random.Next(100, 2012);
@@ -229,5 +232,12 @@ internal class Program
                 return reader.Read(); // If a row is found, the primary key is in use
             }
         }
+    }
+
+    public static byte[] GenerateRandomData(int size)
+    {
+        byte[] buffer = new byte[size];
+        new Random().NextBytes(buffer);
+        return buffer;
     }
 }
