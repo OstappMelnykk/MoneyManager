@@ -21,3 +21,15 @@ D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\refint\MoneyManagerApp.DAL.dll
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.pdb
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\ref\MoneyManagerApp.DAL.dll
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.deps.json
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.dll
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.pdb
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.csproj.AssemblyReference.cache
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.AssemblyInfoInputs.cache
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.AssemblyInfo.cs
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.dll
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\refint\MoneyManagerApp.DAL.dll
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\MoneyManagerApp.DAL.pdb
+C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.DAL\obj\Debug\net7.0-windows\ref\MoneyManagerApp.DAL.dll

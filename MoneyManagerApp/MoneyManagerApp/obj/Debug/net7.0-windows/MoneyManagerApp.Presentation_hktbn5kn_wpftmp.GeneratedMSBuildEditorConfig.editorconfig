@@ -1,11 +1,11 @@
 is_global = true
-build_property.TargetFramework = net7.0
-build_property.TargetPlatformMinVersion = 
+build_property.TargetFramework = net7.0-windows
+build_property.TargetPlatformMinVersion = 7.0
 build_property.UsingMicrosoftNETSdkWeb = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = MoneyManagerApp.Tests
-build_property.ProjectDir = D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp.Tests\
+build_property.RootNamespace = MoneyManagerApp.Presentation_hktbn5kn_wpftmp
+build_property.ProjectDir = C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp\
