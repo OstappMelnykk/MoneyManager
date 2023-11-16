@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using MoneyManagerApp.DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,22 @@ namespace MoneyManagerApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        ApplicationContext db = new ApplicationContext();
         public MainWindow()
         {
             InitializeComponent();
+
+            Loaded += MainWindow_Loaded;
+        }
+
+        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+            // гарантируем, что база данных создана
+            db.Database.EnsureCreated();
+            // загружаем данные из БД
+            //db.Users.Load();
+            // и устанавливаем данные в качестве контекста
+            //DataContext = db.Users.Local.ToObservableCollection();
         }
     }
 }

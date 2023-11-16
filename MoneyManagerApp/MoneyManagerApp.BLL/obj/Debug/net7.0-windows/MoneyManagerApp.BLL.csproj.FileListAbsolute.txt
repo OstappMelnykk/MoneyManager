@@ -43,3 +43,18 @@ C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.BLL\obj
 C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\refint\MoneyManagerApp.BLL.dll
 C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.pdb
 C:\Users\Comp_Zona\Desktop\Money Manager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\ref\MoneyManagerApp.BLL.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\bin\Debug\net7.0-windows\MoneyManagerApp.BLL.deps.json
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\bin\Debug\net7.0-windows\MoneyManagerApp.BLL.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\bin\Debug\net7.0-windows\MoneyManagerApp.BLL.pdb
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\bin\Debug\net7.0-windows\MoneyManagerApp.DAL.pdb
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.csproj.AssemblyReference.cache
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.AssemblyInfoInputs.cache
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.AssemblyInfo.cs
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.csproj.CopyComplete
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\refint\MoneyManagerApp.BLL.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\MoneyManagerApp.BLL.pdb
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp.BLL\obj\Debug\net7.0-windows\ref\MoneyManagerApp.BLL.dll
