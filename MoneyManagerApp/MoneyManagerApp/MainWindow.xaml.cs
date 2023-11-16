@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MoneyManagerApp.DAL;
+using MoneyManagerApp.DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace MoneyManagerApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        ApplicationContext db = new ApplicationContext();
+        DBApplicationContext db = new DBApplicationContext();
         public MainWindow()
         {
             InitializeComponent();
