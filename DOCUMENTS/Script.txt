@@ -7,7 +7,8 @@ CREATE TABLE Users (
     users_ID serial PRIMARY KEY,
     users_name varchar(255) NOT NULL,
     users_phonenumber varchar(40) NOT NULL,
-    users_password varchar(255) NOT NULL,
+    password_hash CHAR(60) NOT NULL, 
+    password_salt CHAR(60) NOT NULL,
     users_email varchar(255) NOT NULL,
     users_photo bytea
 );
