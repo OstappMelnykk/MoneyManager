@@ -1,6 +1,10 @@
 ﻿//using Microsoft.EntityFrameworkCore;
-using MoneyManagerApp.DAL;
+//using MoneyManagerApp.DAL;
+using MoneyManagerApp.Presentation;
 using MoneyManagerApp.Presentation.Models;
+using Org.BouncyCastle.Crypto.Digests;
+using Org.BouncyCastle.Crypto.Generators;
+using Org.BouncyCastle.Crypto.Parameters;
 //using MoneyManagerApp.DAL.Models;
 using System;
 using System.Collections.Generic;
@@ -27,17 +31,23 @@ namespace MoneyManagerApp
         public MainWindow()
         {
             InitializeComponent();
-
             Loaded += MainWindow_Loaded;
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {        
-            
-            
-            
+        {                               
             db.Database.EnsureCreated();
-
         }
+
+
+        private void CreateAccountButton_Click(object sender, RoutedEventArgs e)
+        {
+            Sing_Up signUpWindow = new Sing_Up();
+            signUpWindow.Show();
+            this.Close();
+        }
+
+        
+        
     }
 }

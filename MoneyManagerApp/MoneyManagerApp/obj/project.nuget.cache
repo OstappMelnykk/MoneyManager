@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nMWo5A48UToVINFnxCfWhs2MWDkY6PgwzFQ3CGGjB7Kqza/mBoUFFaC+ooJZQkdGr/yrKzjPEfEMa74sl7iRpA==",
+  "dgSpecHash": "pE+OEJZanpruVnpVaV2cMmXV21hAbfwbePcwfGFI8yNkNlyTmgyFZWTUQeI9lvdlI2DF9ywV2mJhl1VV1IiB0Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\MoneyManagerApp.Presentation.csproj",
   "expectedPackageFiles": [
@@ -18,7 +18,8 @@
     "C:\\Users\\Comp_Zona\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\Comp_Zona\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\Comp_Zona\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
-    "C:\\Users\\Comp_Zona\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512"
+    "C:\\Users\\Comp_Zona\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512",
+    "C:\\Users\\Comp_Zona\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512"
   ],
   "logs": []
 }

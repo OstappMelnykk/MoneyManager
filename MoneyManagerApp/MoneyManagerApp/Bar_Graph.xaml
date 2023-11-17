@@ -37,7 +37,7 @@
             <ComboBox FontSize="18" HorizontalAlignment="Left" Margin="449,50,0,0" VerticalAlignment="Top" Width="116">
                 <ComboBoxItem Content="Bar graph" IsEnabled="False" IsSelected="True"/>
             </ComboBox>
-            <Image Source="Line_Graph.png" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0">
+            <Image Source= "images/Line_Graph.png" Width="400" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="124,169,0,0">
 
             </Image>
             <TextBlock HorizontalAlignment="Left" Margin="70,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14">

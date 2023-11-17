@@ -214,3 +214,4 @@ C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManage
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\MoneyManagerApp.Presentation.pdb
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\MoneyManagerApp.Presentation.genruntimeconfig.cache
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\ref\MoneyManagerApp.Presentation.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\BouncyCastle.Crypto.dll
