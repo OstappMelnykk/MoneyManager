@@ -1,5 +1,6 @@
 ﻿//using Microsoft.EntityFrameworkCore;
 using MoneyManagerApp.DAL;
+using MoneyManagerApp.Presentation.Models;
 //using MoneyManagerApp.DAL.Models;
 using System;
 using System.Collections.Generic;
