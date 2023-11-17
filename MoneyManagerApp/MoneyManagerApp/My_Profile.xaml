@@ -27,7 +27,7 @@
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
             <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="My profile" VerticalAlignment="Top" FontSize="35" Height="50" Width="200"/>
-            <Image HorizontalAlignment="Left" Height="170" Margin="70,130,0,0" VerticalAlignment="Top" Width="200" Source="My_Photo.png"/>
+            <Image HorizontalAlignment="Left" Height="170" Margin="70,130,0,0" VerticalAlignment="Top" Width="200" Source="images/My_Photo.png"/>
             <TextBlock  HorizontalAlignment="Left" Margin="130,310,0,0" TextWrapping="Wrap" Text="User name" VerticalAlignment="Top" FontSize="18"/>
             <Button  HorizontalAlignment="Left" Margin="510,130,0,0" VerticalAlignment="Top" Width="120" Height="60" Background="#0092FF">
                 <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Text="  Edit&#xD;&#xA;profile"/>

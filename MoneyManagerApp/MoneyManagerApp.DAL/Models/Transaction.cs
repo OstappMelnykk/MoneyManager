@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MoneyManagerApp.DAL.Models;
+namespace MoneyManagerApp.Presentation.Models;
 
 public partial class Transaction
 {
     public int TransactionsId { get; set; }
 
-    public int? TransactionType { get; set; }
+    public int? TransactionsType { get; set; }
 
     public int? FkAccountsIdFrom { get; set; }
 

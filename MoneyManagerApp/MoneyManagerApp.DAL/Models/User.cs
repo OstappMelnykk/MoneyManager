@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MoneyManagerApp.DAL.Models;
+namespace MoneyManagerApp.Presentation.Models;
 
 public partial class User
 {
@@ -11,7 +11,9 @@ public partial class User
 
     public string UsersPhonenumber { get; set; } = null!;
 
-    public string UsersPassword { get; set; } = null!;
+    public string PasswordHash { get; set; } = null!;
+
+    public string PasswordSalt { get; set; } = null!;
 
     public string UsersEmail { get; set; } = null!;
 

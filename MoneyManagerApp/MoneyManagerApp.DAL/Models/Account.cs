@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace MoneyManagerApp.DAL.Models;
+namespace MoneyManagerApp.Presentation.Models;
 
 public partial class Account
 {

@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace MoneyManagerApp.DAL.Models;
+namespace MoneyManagerApp.Presentation.Models;
 
-public partial class DBApplicationContext : DbContext
+public partial class ApplicationContext : DbContext
 {
-    public DBApplicationContext()
+    public ApplicationContext()
     {
     }
 
-    public DBApplicationContext(DbContextOptions<DBApplicationContext> options)
+    public ApplicationContext(DbContextOptions<ApplicationContext> options)
         : base(options)
     {
     }
@@ -24,9 +24,8 @@ public partial class DBApplicationContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=DB3;Username=postgres;Password=1212");
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=DB3;Username=postgres;Password=1212");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -77,7 +76,6 @@ public partial class DBApplicationContext : DbContext
             entity.Property(e => e.TransactionsId).HasColumnName("transactions_id");
             entity.Property(e => e.FkAccountsIdFrom).HasColumnName("fk_accounts_id_from");
             entity.Property(e => e.FkAccountsIdTo).HasColumnName("fk_accounts_id_to");
-            entity.Property(e => e.TransactionType).HasColumnName("transaction_type");
             entity.Property(e => e.TransactionsDate)
                 .HasDefaultValueSql("CURRENT_DATE")
                 .HasColumnName("transactions_date");
@@ -85,6 +83,7 @@ public partial class DBApplicationContext : DbContext
             entity.Property(e => e.TransactionsSum)
                 .HasPrecision(18, 2)
                 .HasColumnName("transactions_sum");
+            entity.Property(e => e.TransactionsType).HasColumnName("transactions_type");
 
             entity.HasOne(d => d.FkAccountsIdFromNavigation).WithMany(p => p.TransactionFkAccountsIdFromNavigations)
                 .HasForeignKey(d => d.FkAccountsIdFrom)
@@ -102,15 +101,20 @@ public partial class DBApplicationContext : DbContext
             entity.ToTable("users");
 
             entity.Property(e => e.UsersId).HasColumnName("users_id");
+            entity.Property(e => e.PasswordHash)
+                .HasMaxLength(60)
+                .IsFixedLength()
+                .HasColumnName("password_hash");
+            entity.Property(e => e.PasswordSalt)
+                .HasMaxLength(60)
+                .IsFixedLength()
+                .HasColumnName("password_salt");
             entity.Property(e => e.UsersEmail)
                 .HasMaxLength(255)
                 .HasColumnName("users_email");
             entity.Property(e => e.UsersName)
                 .HasMaxLength(255)
                 .HasColumnName("users_name");
-            entity.Property(e => e.UsersPassword)
-                .HasMaxLength(255)
-                .HasColumnName("users_password");
             entity.Property(e => e.UsersPhonenumber)
                 .HasMaxLength(40)
                 .HasColumnName("users_phonenumber");

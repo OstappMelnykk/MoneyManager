@@ -28,12 +28,12 @@
         <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
-            <TextBlock HorizontalAlignment="Center" Margin="0,40,450,0" TextWrapping="Wrap" Text="Balance:" VerticalAlignment="Top" FontSize="15" Height="22"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,100,450,0" TextWrapping="Wrap" Text="Account:" VerticalAlignment="Top" FontSize="15" Height="22"/>
+            <TextBlock HorizontalAlignment="Left" Margin="93,95,0,0" TextWrapping="Wrap" Text="Balance:" VerticalAlignment="Top" FontSize="15" Height="22"/>
+            <TextBlock HorizontalAlignment="Left" Margin="91,40,0,0" TextWrapping="Wrap" Text="Account:" VerticalAlignment="Top" FontSize="15" Height="22"/>
             <TextBox HorizontalAlignment="Center" Margin="0,40,100,0" TextWrapping="Wrap" Text="Account name" VerticalAlignment="Top" Width="150" FontSize="15" Height="22"/>
             <TextBox HorizontalAlignment="Center" Margin="0,100,100,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top" Width="150" FontSize="15" Height="22"/>
-            <Button Content="Account setting" HorizontalAlignment="Center" Margin="350,51,0,0" VerticalAlignment="Top" Width="140" Height="60" Background="#AA00D7"/>
-            <Rectangle HorizontalAlignment="Center" Height="250" Margin="120,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="370" Fill="LightBlue"/>
+            <Button Content="Account setting" HorizontalAlignment="Center" Margin="350,51,0,0" VerticalAlignment="Top" Width="140" Height="60" Background="#AA00D7" Click="Button_Click"/>
+            <Rectangle HorizontalAlignment="Center" Height="250" Margin="0,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="580" Fill="LightBlue"/>
             <Button Content="Add transaction" HorizontalAlignment="Center" Margin="120,470,0,0" VerticalAlignment="Top" Width="370" Height="30" Background="#0092FF"/>
 
             <TextBlock HorizontalAlignment="Center" Margin="0,210,100,0" TextWrapping="Wrap" Text="Last Transactions" VerticalAlignment="Top"/>
@@ -42,7 +42,7 @@
             <TextBlock HorizontalAlignment="Center" Margin="350,340,0,0" TextWrapping="Wrap" Text="Date 3" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Center" Margin="350,380,0,0" TextWrapping="Wrap" Text="Date 4" VerticalAlignment="Top"/>
 
-            <TextBox HorizontalAlignment="Center" Margin="0,260,20,0" TextWrapping="Wrap" Text="Transaction 1" VerticalAlignment="Top" Width="200"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,260,20,0" TextWrapping="Wrap" Text="Transaction 1" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged"/>
             <TextBox HorizontalAlignment="Center" Margin="0,300,20,0" TextWrapping="Wrap" Text="Transaction 2" VerticalAlignment="Top" Width="200"/>
             <TextBox HorizontalAlignment="Center" Margin="0,340,20,0" TextWrapping="Wrap" Text="Transaction 3" VerticalAlignment="Top" Width="200" />
             <TextBox HorizontalAlignment="Center" Margin="0,380,20,0" TextWrapping="Wrap" Text="Transaction 4" VerticalAlignment="Top" Width="200"/>

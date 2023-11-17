@@ -53,7 +53,7 @@ namespace MoneyManagerApp.Presentation {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MoneyManagerApp.Presentation;component/add_transactions.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MoneyManagerApp.Presentation;V1.0.0.0;component/add_transactions.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Add_Transactions.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
