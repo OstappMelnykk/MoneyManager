@@ -19,20 +19,24 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue"></Grid>
-        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="164*"/>
+                <RowDefinition Height="103*"/>
+            </Grid.RowDefinitions>
             <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Add transaction" VerticalAlignment="Top" FontSize="35" Height="50" Width="250"/>
-            <Button Content="Back" HorizontalAlignment="Center" Margin="0,60,550,0" VerticalAlignment="Top" Height="20" Width="60" Background="#AA00D7"/>
-            <Button  HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="60" Width="140" FontSize="15">
+            <Button FontSize="21"  Content="Back" HorizontalAlignment="Left" Margin="31,45,0,0" VerticalAlignment="Top" Height="35" Width="90" Background="#AA00D7" Click="Button_Click"/>
+            <Button  HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="60" Width="210" FontSize="19" Background="#f0f0f0">
                 <TextBlock  Text="Transfer to account" TextAlignment="Center"/>
             </Button>
-            <Button Content="Tranfer from account" HorizontalAlignment="Center" Margin="0,240,0,0"  Height="60" Width="140" FontSize="15" VerticalAlignment="Top"/>
-            <Button Content="Transfer bettwen accounts" HorizontalAlignment="Center" Margin="0,340,0,0"  Height="60" Width="140" FontSize="15" VerticalAlignment="Top"/>
+            <Button Content="Tranfer from account" HorizontalAlignment="Center" Margin="0,240,0,0"  Height="60" Width="210" FontSize="19" VerticalAlignment="Top" Background="#f0f0f0"/>
+            <Button Content="Transfer bettwen accounts" HorizontalAlignment="Center" Margin="0,12,0,0"  Height="60" Width="210" FontSize="19" VerticalAlignment="Top" Grid.Row="1" Background="#f0f0f0"/>
 
         </Grid>
 

@@ -13,8 +13,8 @@
         <TextBlock HorizontalAlignment="Center" Margin="0,160,120,0" Grid.Row="1" TextWrapping="Wrap" Text="Email/Phone number" VerticalAlignment="Top" />
         <TextBox  HorizontalAlignment="Center" Margin="0,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="285,216,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Height="20"/>
-        <Button Content="Create a new account" HorizontalAlignment="Left" Margin="285,282,0,0" VerticalAlignment="Top" Height="30" Width="130" Background="#AA00D7"/>
-        <Button Content="Log in" HorizontalAlignment="Left" Margin="435,282,0,0" VerticalAlignment="Top" Height="30" Width="80" Background="#0092FF"/>
+        <Button FontSize="14" Content="Create a new account" HorizontalAlignment="Left" Margin="284,300,0,0" VerticalAlignment="Top" Height="30" Width="145" Background="#AA00D7"/>
+        <Button FontSize="14" Content="Log in" HorizontalAlignment="Left" Margin="435,300,0,0" VerticalAlignment="Top" Height="30" Width="80" Background="#0092FF"/>
 
     </Grid>
 </Window>
