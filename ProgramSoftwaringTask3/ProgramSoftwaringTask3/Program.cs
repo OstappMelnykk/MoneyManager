@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System.Data.SqlClient;
 using Faker;
+using System.Security.Cryptography;
 
 internal class Program
 {
@@ -42,7 +43,7 @@ internal class Program
         int numberOfRecords = random.Next(minRecords, maxRecords + 1);
         int rowCount = GetRowCount(connection, "users");
 
-        using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO users VALUES (@value1, @value2, @value3, @value4, @value5, @value6)", connection))
+        using (NpgsqlCommand command = new NpgsqlCommand($"INSERT INTO users VALUES (@value1, @value2, @value3, @value4, @value5, @value6, @value7)", connection))
         {
             for (int i = 0; i < numberOfRecords; i++)
             {
@@ -56,6 +57,12 @@ internal class Program
                 string name = Faker.Name.First();
                 string phoneNumber = Faker.Phone.Number();
                 string password = "Test" + $"{id}";
+                byte[] salt;
+                new RNGCryptoServiceProvider().GetBytes(salt = new byte[16]);
+                var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000, HashAlgorithmName.SHA256);
+                byte[] hash = pbkdf2.GetBytes(20);
+                string password_hash = Convert.ToBase64String(hash);
+                string password_salt = Convert.ToBase64String(salt);
                 string email = Faker.Internet.Email();
                 byte[] photo = GenerateRandomData(10);
 
@@ -64,9 +71,10 @@ internal class Program
                 command.Parameters.AddWithValue("@value1", id);
                 command.Parameters.AddWithValue("@value2", name);
                 command.Parameters.AddWithValue("@value3", phoneNumber);
-                command.Parameters.AddWithValue("@value4", password);
-                command.Parameters.AddWithValue("@value5", email);
-                command.Parameters.AddWithValue("@value6", photo);
+                command.Parameters.AddWithValue("@value4", password_hash);
+                command.Parameters.AddWithValue("@value5", password_salt);
+                command.Parameters.AddWithValue("@value6", email);
+                command.Parameters.AddWithValue("@value7", photo);
 
                 command.ExecuteNonQuery();
             }
