@@ -19,22 +19,22 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue"></Grid>
-        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5" Margin="0,5,0,-5">
-            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Security setting" VerticalAlignment="Top" FontSize="35" Height="50" Width="250"/>
-            <Button Content="Back" HorizontalAlignment="Center" Margin="0,60,550,0" VerticalAlignment="Top" Height="20" Width="60" Background="#AA00D7"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,140,160,0" TextWrapping="Wrap" Text="Old password" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,215,155,0" TextWrapping="Wrap" Text="New password" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,290,115,0" TextWrapping="Wrap" Text="Repeat new password" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,25,0,0" TextWrapping="Wrap" Text="Security setting" VerticalAlignment="Top" FontSize="35" Height="50" Width="250"/>
+            <Button FontSize="25" Content="Back" HorizontalAlignment="Left" Margin="42,35,0,0" VerticalAlignment="Top" Height="40" Width="80" Background="#AA00D7"/>
+            <TextBlock FontSize="19" HorizontalAlignment="Left" Margin="221,140,0,0" TextWrapping="Wrap" Text="Old password" VerticalAlignment="Top"/>
+            <TextBlock FontSize="19" HorizontalAlignment="Left" Margin="221,215,0,0" TextWrapping="Wrap" Text="New password" VerticalAlignment="Top"/>
+            <TextBlock FontSize="19" HorizontalAlignment="Left" Margin="221,290,0,0" TextWrapping="Wrap" Text="Repeat new password" VerticalAlignment="Top"/>
             <TextBox HorizontalAlignment="Center" Margin="0,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
             <TextBox HorizontalAlignment="Center" Margin="0,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
             <TextBox HorizontalAlignment="Center" Margin="0,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
-            <Button Content="Save" HorizontalAlignment="Center" Margin="0,400,0,0" VerticalAlignment="Top" Height="30" Width="100" Background="#0092FF"/>
+            <Button FontSize="25" Content="Save" HorizontalAlignment="Center" Margin="0,400,0,0" VerticalAlignment="Top" Height="35" Width= "160" Background="#0092FF"/>
 
         </Grid>
 

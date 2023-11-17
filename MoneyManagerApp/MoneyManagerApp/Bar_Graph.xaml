@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MoneyManagerApp.Presentation"
         mc:Ignorable="d"
-        Title="Bar graph" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
+        Title="Line graph" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
     <Grid>
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="129" ></ColumnDefinition>
@@ -19,34 +19,34 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue"></Grid>
-        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
             <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Statistic" VerticalAlignment="Top" FontSize="35" Height="50" Width="150"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,130,0,0" TextWrapping="Wrap" Text="Income vs expences" VerticalAlignment="Top" FontSize="25" Height="35" Width="250"/>
-            <Button Content="Apply" HorizontalAlignment="Center" Margin="440,480,0,0" VerticalAlignment="Top" Height="20" Width="120" Background="#0092FF"/>
-            <TextBox HorizontalAlignment="Left" Margin="370,480,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80" Height="20"/>
-            <TextBox HorizontalAlignment="Left" Margin="220,480,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="80" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="50,480,0,0" TextWrapping="Wrap" Text="Select a date range" VerticalAlignment="Top" Height="20"/>
-            <TextBlock HorizontalAlignment="Left" Margin="185,480,0,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Left" Margin="350,480,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top"/>
-            <ComboBox HorizontalAlignment="Left" Margin="50,201,0,0" VerticalAlignment="Top" Width="80">
+            <TextBlock HorizontalAlignment="Center" Margin="0,95,0,0" TextWrapping="Wrap" Text="Income vs expences" VerticalAlignment="Top" FontSize="25" Height="35" Width="250"/>
+            <Button FontSize="23" Content="Apply" HorizontalAlignment="Left" Margin="445,456,0,0" VerticalAlignment="Top" Height="35" Width="120" Background="#0092FF"/>
+            <TextBox HorizontalAlignment="Left" Margin="258,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Height="27"/>
+            <TextBox HorizontalAlignment="Left" Margin="106,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Height="27"/>
+            <TextBlock FontSize="18" HorizontalAlignment="Left" Margin="51,435,0,0" TextWrapping="Wrap" Text="Select a date range" VerticalAlignment="Top" Height="25" Width="155"/>
+            <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="51,470,0,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top"/>
+            <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="226,470,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" RenderTransformOrigin="0.425,-1.012"/>
+            <ComboBox FontSize="18" HorizontalAlignment="Left" Margin="449,50,0,0" VerticalAlignment="Top" Width="116">
                 <ComboBoxItem Content="Bar graph" IsEnabled="False" IsSelected="True"/>
             </ComboBox>
-            <Image Source="Bar_Graph.png" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0">
+            <Image Source="Line_Graph.png" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0">
 
             </Image>
-            <TextBlock HorizontalAlignment="Left" Margin="70,250,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14">
+            <TextBlock HorizontalAlignment="Left" Margin="70,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14">
                 <Run>Income vs</Run>
                 <LineBreak />
                 <Run>Expences</Run>
             </TextBlock>
-            <TextBlock HorizontalAlignment="Left" Margin="120,410,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="16"/>
-            <TextBlock HorizontalAlignment="Left" Margin="510,415,0,0" TextWrapping="Wrap" Text="Days" VerticalAlignment="Top" FontSize="14"/>
+            <TextBlock HorizontalAlignment="Left" Margin="124,391,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Left" Margin="535,382,0,0" TextWrapping="Wrap" Text="Days" VerticalAlignment="Top" FontSize="14" RenderTransformOrigin="0.641,-0.535"/>
         </Grid>
     </Grid>
 </Window>
