@@ -19,36 +19,36 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue"></Grid>
-        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
             <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Goal name" VerticalAlignment="Top" FontSize="35" Height="50" Width="200"/>
-            <Button Content="Back" HorizontalAlignment="Center" Margin="0,60,550,0" VerticalAlignment="Top" Height="20" Width="60" Background="#AA00D7"/>
-            <Button Content="Save" HorizontalAlignment="Center" Margin="420,480,0,0" VerticalAlignment="Top" Height="20" Width="120" Background="#0092FF"/>
-            <ProgressBar HorizontalAlignment="Center" Height="20" Margin="0,150,0,0" VerticalAlignment="Top" Width="450"/>
-            <TextBlock HorizontalAlignment="Left" Margin="70,250,0,0" TextWrapping="Wrap" Text="Amount to collect:" VerticalAlignment="Top" FontSize="14"/>
-            <TextBlock HorizontalAlignment="Left" Margin="70,310,0,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Top" FontSize="14"/>
-            <TextBlock HorizontalAlignment="Left" Margin="70,370,0,0" TextWrapping="Wrap" Text="Goal name:" VerticalAlignment="Top" FontSize="14"/>
-            <TextBlock HorizontalAlignment="Left" Margin="70,440,0,0" TextWrapping="Wrap" Text="Account:" VerticalAlignment="Top" FontSize="14"/>
-            <TextBox Width="200" Height="20" BorderBrush="Gray" BorderThickness="1"  Margin="0,250,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Button FontSize="22" Content="Back" HorizontalAlignment="Left" Margin="70,47,0,0" VerticalAlignment="Top" Height="35" Width="80" Background="#AA00D7"/>
+            <Button FontSize="21" Content="Save" HorizontalAlignment="Left" Margin="475,439,0,0" VerticalAlignment="Top" Height="40" Width="120" Background="#0092FF"/>
+            <ProgressBar HorizontalAlignment="Left" Height="30" Margin="65,119,0,0" VerticalAlignment="Top" Width="530"/>
+            <TextBlock HorizontalAlignment="Left" Margin="70,196,0,0" TextWrapping="Wrap" Text="Amount to collect:" VerticalAlignment="Top" FontSize="21"/>
+            <TextBlock HorizontalAlignment="Left" Margin="67,0,0,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Center" FontSize="21"/>
+            <TextBlock HorizontalAlignment="Left" Margin="70,314,0,0" TextWrapping="Wrap" Text="Goal name:" VerticalAlignment="Top" FontSize="21"/>
+            <TextBlock HorizontalAlignment="Left" Margin="74,364,0,0" TextWrapping="Wrap" Text="Account:" VerticalAlignment="Top" FontSize="21"/>
+            <TextBox FontSize="15" Width="201" Height="20" BorderBrush="Gray" BorderThickness="1"  Margin="308,200,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
 
             </TextBox>
-            <TextBox Width="200" Height="20" BorderBrush="Gray" BorderThickness="1"  Margin="0,310,0,0" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <TextBox FontSize="15"  Width="200" Height="20" BorderBrush="Gray" BorderThickness="1"  Margin="309,261,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
 
             </TextBox>
-            
-            <ComboBox HorizontalAlignment="Center" Margin="0,370,0,0"  Text="Account name" VerticalAlignment="Top" Width="200">
+
+            <ComboBox FontSize="15" HorizontalAlignment="Left" Margin="309,317,0,0"  Text="Account name" VerticalAlignment="Top" Width="200">
                 <ComboBoxItem Content="Select goal" IsEnabled="False" IsSelected="True"/>
             </ComboBox>
-            <ComboBox HorizontalAlignment="Center" Margin="0,440,0,0"  Text="Account name" VerticalAlignment="Top" Width="200">
+            <ComboBox FontSize="15" HorizontalAlignment="Left" Margin="308,373,0,0"  Text="Account name" VerticalAlignment="Top" Width="200">
                 <ComboBoxItem Content="Select account" IsEnabled="False" IsSelected="True"/>
             </ComboBox>
-            <TextBlock HorizontalAlignment="Left" Margin="100,180,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="10" FontSize="16"/>
-            <TextBlock HorizontalAlignment="Left" Margin="540,180,0,0" TextWrapping="Wrap" Text="number" VerticalAlignment="Top" Height="20" Width="60" FontSize="16"/>
+            <TextBlock HorizontalAlignment="Left" Margin="65,154,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="10" FontSize="16" RenderTransformOrigin="-1.1,0.469"/>
+            <TextBlock HorizontalAlignment="Left" Margin="567,154,0,0" TextWrapping="Wrap" Text="number" VerticalAlignment="Top" Height="20" Width="60" FontSize="16"/>
         </Grid>
     </Grid>
 </Window>

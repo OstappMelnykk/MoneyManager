@@ -19,34 +19,34 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue"></Grid>
-        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
-            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="My profile" VerticalAlignment="Top" FontSize="35" Height="50" Width="200"/>
-            <Image HorizontalAlignment="Left" Height="170" Margin="70,130,0,0" VerticalAlignment="Top" Width="200" Source="My_Photo.png"/>
-            <TextBlock  HorizontalAlignment="Left" Margin="130,310,0,0" TextWrapping="Wrap" Text="User name" VerticalAlignment="Top" FontSize="18"/>
-            <Button  HorizontalAlignment="Left" Margin="510,130,0,0" VerticalAlignment="Top" Width="120" Height="60" Background="#0092FF">
+            <TextBlock HorizontalAlignment="Left" Margin="284,24,0,0" TextWrapping="Wrap" Text="My profile" VerticalAlignment="Top" FontSize="35" Height="50" Width="200"/>
+            <Image HorizontalAlignment="Left" Height="170" Margin="113,103,0,0" VerticalAlignment="Top" Width="200" Source="images/My_Photo.png"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="160,267,0,0" TextWrapping="Wrap" Text="User name" VerticalAlignment="Top" FontSize="18"/>
+            <Button  HorizontalAlignment="Left" Margin="431,103,0,0" VerticalAlignment="Top" Width="120" Height="60" Background="#0092FF">
                 <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Text="  Edit&#xD;&#xA;profile"/>
             </Button>
-            <Button HorizontalAlignment="Left" Margin="510,230,0,0" VerticalAlignment="Top"  Width="120" Height="60" Background="#AA00D7">
+            <Button HorizontalAlignment="Left" Margin="431,185,0,0" VerticalAlignment="Top"  Width="120" Height="60" Background="#AA00D7">
                 <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Text="Security&#xA; setting"/>
 
             </Button>
-            <Button HorizontalAlignment="Left" Margin="510,330,0,0" VerticalAlignment="Top"  Width="120" Height="60" Background="#FF3349">
+            <Button HorizontalAlignment="Left" Margin="431,273,0,0" VerticalAlignment="Top"  Width="120" Height="60" Background="#FF3349">
                 <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Text=" Log&#xA; out"/>
 
             </Button>
-            <TextBlock HorizontalAlignment="Left" Margin="60,380,0,0" TextWrapping="Wrap" Text="Phone number:" VerticalAlignment="Top" FontSize="18"/>
-            <TextBlock HorizontalAlignment="Left" Margin="60,440,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock HorizontalAlignment="Left" Margin="113,367,0,0" TextWrapping="Wrap" Text="Phone number:" VerticalAlignment="Top" FontSize="20"/>
+            <TextBlock HorizontalAlignment="Left" Margin="113,427,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.386,0.565"/>
 
-            <TextBox Width="200" Height="20" BorderBrush="Gray" BorderThickness="1"  Margin="0,380,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18">
+            <TextBox Width="200" Height="27" BorderBrush="Gray" BorderThickness="1"  Margin="351,380,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18">
 
             </TextBox>
-            <TextBox Width="200" Height="20" BorderBrush="Gray" BorderThickness="1"  Margin="0,440,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18">
+            <TextBox Width="200" Height="27" BorderBrush="Gray" BorderThickness="1"  Margin="351,440,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18">
 
             </TextBox>
 

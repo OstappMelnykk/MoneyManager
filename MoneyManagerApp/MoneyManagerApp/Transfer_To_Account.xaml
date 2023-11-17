@@ -19,22 +19,22 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue"></Grid>
-        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
-            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Transfer to account" VerticalAlignment="Top" FontSize="35" Height="50" Width="300"/>
-            <Button Content="Back" HorizontalAlignment="Center" Margin="0,60,550,0" VerticalAlignment="Top" Height="20" Width="60" Background="#AA00D7"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,200,430,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" FontSize="14" Height="22" Width="60"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,270,410,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Top" FontSize="14" Height="22" Width="80"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,340,430,0" TextWrapping="Wrap" Text="Sum:" VerticalAlignment="Top" FontSize="14" Height="22" Width="60"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,200,0,0" TextWrapping="Wrap" Text="Goal name" VerticalAlignment="Top" Width="120"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="120"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,340,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="120"/>
-            <Button Content="Add" HorizontalAlignment="Center" Margin="420,470,0,0" VerticalAlignment="Top" Height="20" Width="120" Background="#0092FF"/>
+            <TextBlock HorizontalAlignment="Left" Margin="120,31,0,0" TextWrapping="Wrap" Text="Transfer to account" VerticalAlignment="Top" FontSize="32" Height="50" Width="321"/>
+            <Button FontSize="25" Content="Back" HorizontalAlignment="Left" Margin="466,36,0,0" VerticalAlignment="Top" Height="40" Width="80" Background="#AA00D7"/>
+            <TextBlock HorizontalAlignment="Left" Margin="120,200,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" FontSize="25" Height="40" Width="60"/>
+            <TextBlock HorizontalAlignment="Left" Margin="120,270,0,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Top" FontSize="25" Height="40" Width="140"/>
+            <TextBlock HorizontalAlignment="Left" Margin="120,331,0,0" TextWrapping="Wrap" Text="Sum:" VerticalAlignment="Top" FontSize="25" Height="40" Width="60"/>
+            <TextBox FontSize="25" HorizontalAlignment="Left" Margin="336,200,0,0" TextWrapping="Wrap" Text="Goal name" VerticalAlignment="Top" Width="210"/>
+            <TextBox FontSize="25" HorizontalAlignment="Left" Margin="336,270,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="210"/>
+            <TextBox FontSize="25" HorizontalAlignment="Left" Margin="336,340,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="210"/>
+            <Button FontSize="25" Content="Add" HorizontalAlignment="Left" Margin="376,435,0,0" VerticalAlignment="Top" Height="40" Width="170" Background="#0092FF"/>
 
         </Grid>
 

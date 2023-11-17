@@ -9,12 +9,13 @@
     <Grid>
         <TextBlock  Text="Sing up" HorizontalAlignment="Center"  FontSize="40" Margin="0,65,0,400" Height="NaN" />
         <TextBlock HorizontalAlignment="Center" Margin="0,160,175,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" />
-        <TextBox HorizontalAlignment="Center"  Margin="0,190,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,240,119,0" TextWrapping="Wrap" Text="Email/Phone number" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,320,180,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Center" Margin="0,350,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
-        <Button Content="Sing up" HorizontalAlignment="Center" Margin="0,420,0,0" VerticalAlignment="Top" Width="230" Height="30" Background="#0092FF"/>
+        <TextBox x:Name="UsernameTextBox" HorizontalAlignment="Center"  Margin="0,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="286,216,0,0" TextWrapping="Wrap" Text="Email/Phone number" VerticalAlignment="Top"/>
+        <TextBox x:Name="EmailOrPhoneTextBox" HorizontalAlignment="Center" Margin="0,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="288,277,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
+        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Margin="0,298,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <Button x:Name="SignUpButton" FontSize="22" Content="Sing up" HorizontalAlignment="Center" Margin="0,368,0,0" VerticalAlignment="Top" Width="230" Height="40" Background="#0092FF" Click="SignUpButton_Click"/>
+
 
     </Grid>
 </Window>

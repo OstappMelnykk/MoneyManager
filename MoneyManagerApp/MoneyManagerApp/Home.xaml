@@ -21,33 +21,34 @@
         <Grid Grid.Column="0" Grid.RowSpan="5" Background="LightBlue">
             <Border BorderBrush="Black" BorderThickness="1"/>
         </Grid>
-        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="15"/>
-        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="15"/>
+        <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Accounts" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My goals" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="23"/>
+        <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
-            <TextBlock HorizontalAlignment="Center" Margin="0,40,450,0" TextWrapping="Wrap" Text="Balance:" VerticalAlignment="Top" FontSize="15" Height="22"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,100,450,0" TextWrapping="Wrap" Text="Account:" VerticalAlignment="Top" FontSize="15" Height="22"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,40,100,0" TextWrapping="Wrap" Text="Account name" VerticalAlignment="Top" Width="150" FontSize="15" Height="22"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,100,100,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top" Width="150" FontSize="15" Height="22"/>
-            <Button Content="Account setting" HorizontalAlignment="Center" Margin="350,51,0,0" VerticalAlignment="Top" Width="140" Height="60" Background="#AA00D7"/>
-            <Rectangle HorizontalAlignment="Center" Height="250" Margin="120,200,0,0" Stroke="Black" VerticalAlignment="Top" Width="370" Fill="LightBlue"/>
-            <Button Content="Add transaction" HorizontalAlignment="Center" Margin="120,470,0,0" VerticalAlignment="Top" Width="370" Height="30" Background="#0092FF"/>
 
-            <TextBlock HorizontalAlignment="Center" Margin="0,210,100,0" TextWrapping="Wrap" Text="Last Transactions" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Center" Margin="350,260,0,0" TextWrapping="Wrap" Text="Date 1" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Center" Margin="350,300,0,0" TextWrapping="Wrap" Text="Date 2" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Center" Margin="350,340,0,0" TextWrapping="Wrap" Text="Date 3" VerticalAlignment="Top"/>
-            <TextBlock HorizontalAlignment="Center" Margin="350,380,0,0" TextWrapping="Wrap" Text="Date 4" VerticalAlignment="Top"/>
+            <TextBlock HorizontalAlignment="Left" Margin="93,100,0,0" TextWrapping="Wrap" Text="Balance:" VerticalAlignment="Top" FontSize="22" Height="32" Width="106"/>
+            <TextBlock HorizontalAlignment="Left" Margin="93,38,0,0" TextWrapping="Wrap" Text="Account:" VerticalAlignment="Top" FontSize="22" Height="31" Width="113"/>
+            <TextBox HorizontalAlignment="Left" Margin="229,38,0,0" TextWrapping="Wrap" Text="Account name" VerticalAlignment="Top" Width="150" FontSize="22" Height="30"/>
+            <TextBox HorizontalAlignment="Left" Margin="229,101,0,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top" Width="150" FontSize="22" Height="30"/>
+            <Button  FontSize="22"  Content="Account setting" HorizontalAlignment="Left" Margin="412,53,0,0" VerticalAlignment="Top" Width="157" Height="60" Background="#AA00D7" Click="Button_Click"/>
+            <Rectangle HorizontalAlignment="Left" Height="287" Margin="93,155,0,0" Stroke="Black" VerticalAlignment="Top" Width="476" Fill="LightBlue"/>
+            <Button FontSize="22" Content="Add transaction" HorizontalAlignment="Left" Margin="93,460,0,0" VerticalAlignment="Top" Width="476" Height="40" Background="#0092FF" Click="Button_Click_1"/>
 
-            <TextBox HorizontalAlignment="Center" Margin="0,260,20,0" TextWrapping="Wrap" Text="Transaction 1" VerticalAlignment="Top" Width="200"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,300,20,0" TextWrapping="Wrap" Text="Transaction 2" VerticalAlignment="Top" Width="200"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,340,20,0" TextWrapping="Wrap" Text="Transaction 3" VerticalAlignment="Top" Width="200" />
-            <TextBox HorizontalAlignment="Center" Margin="0,380,20,0" TextWrapping="Wrap" Text="Transaction 4" VerticalAlignment="Top" Width="200"/>
+            <TextBlock FontSize="26" HorizontalAlignment="Left" Margin="120,155,0,0" TextWrapping="Wrap" Text="Last Transactions" VerticalAlignment="Top"/>
+            <TextBlock FontSize="18" HorizontalAlignment="Left" Margin="386,215,0,0" TextWrapping="Wrap" Text="Date 1" VerticalAlignment="Top"/>
+            <TextBlock FontSize="18" HorizontalAlignment="Left" Margin="386,0,0,0" TextWrapping="Wrap" Text="Date 2" VerticalAlignment="Center"/>
+            <TextBlock FontSize="18" HorizontalAlignment="Left" Margin="386,304,0,0" TextWrapping="Wrap" Text="Date 3" VerticalAlignment="Top" RenderTransformOrigin="0.501,-1.46"/>
+            <TextBlock FontSize="18" HorizontalAlignment="Left" Margin="386,352,0,0" TextWrapping="Wrap" Text="Date 4" VerticalAlignment="Top" RenderTransformOrigin="0.501,1.547"/>
 
-            <Button Content="See more" HorizontalAlignment="Center" Margin="0,420,20,0" VerticalAlignment="Top" Width="200"  Background="#0092FF"/>
+            <TextBox FontSize="18" HorizontalAlignment="Left" Margin="120,214,0,0" TextWrapping="Wrap" Text="Transaction 1" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged"/>
+            <TextBox FontSize="18" HorizontalAlignment="Left" Margin="120,257,0,0" TextWrapping="Wrap" Text="Transaction 2" VerticalAlignment="Top" Width="200" TextChanged="TextBox_TextChanged_1"/>
+            <TextBox FontSize="18" HorizontalAlignment="Left" Margin="122,304,0,0" TextWrapping="Wrap" Text="Transaction 3" VerticalAlignment="Top" Width="200" />
+            <TextBox FontSize="18" HorizontalAlignment="Left" Margin="122,351,0,0" TextWrapping="Wrap" Text="Transaction 4" VerticalAlignment="Top" Width="200"/>
+
+            <Button FontSize="22" Content="See more" HorizontalAlignment="Left" Margin="120,393,0,0" VerticalAlignment="Top" Width="200"  Background="#0092FF"/>
 
 
         </Grid>

@@ -7,7 +7,8 @@ CREATE TABLE Users (
     users_ID serial PRIMARY KEY,
     users_name varchar(255) NOT NULL,
     users_phonenumber varchar(40) NOT NULL,
-    users_password varchar(255) NOT NULL,
+    password_hash CHAR(60) NOT NULL, 
+    password_salt CHAR(60) NOT NULL,
     users_email varchar(255) NOT NULL,
     users_photo bytea
 );
@@ -28,7 +29,7 @@ CREATE TABLE Goals (
 
 CREATE TABLE Transactions (
     transactions_ID serial PRIMARY KEY,
-    transactions_type int CHECK (type IN (1, 2, 3)),
+    transactions_type int CHECK (transaction_type IN (1, 2, 3)),
     fk_accounts_ID_from int REFERENCES accounts (accounts_ID),
     fk_accounts_ID_to int REFERENCES accounts (accounts_ID),
     transactions_description text,
