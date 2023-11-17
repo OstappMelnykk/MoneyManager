@@ -19,12 +19,10 @@ using System.Windows.Shapes;
 
 namespace MoneyManagerApp
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
+
     public partial class MainWindow : Window
     {
-        // DBApplicationContext db = new DBApplicationContext();
+
         ApplicationContext db = new ApplicationContext();
         public MainWindow()
         {
@@ -34,20 +32,12 @@ namespace MoneyManagerApp
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
-        {
-            // гарантируем, что база данных создана
-            
+        {        
             
             
             
             db.Database.EnsureCreated();
 
-
-
-            // загружаем данные из БД
-            //db.Users.Load();
-            // и устанавливаем данные в качестве контекста
-            //DataContext = db.Users.Local.ToObservableCollection();
         }
     }
 }
