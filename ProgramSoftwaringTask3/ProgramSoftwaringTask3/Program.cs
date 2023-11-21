@@ -29,10 +29,10 @@ internal class Program
                     }
                 }
             }
-            //FillUserTableWithRandomData(connection, 30, 50);
-            //FillAccountTableWithRandomData(connection, 30, 50);
-            //FillGoalTableWithRandomData(connection, 30, 50);
-            //FillTransactionTableWithRandomData(connection, 30, 50);
+            FillUserTableWithRandomData(connection, 30, 50);
+            FillAccountTableWithRandomData(connection, 30, 50);
+            FillGoalTableWithRandomData(connection, 30, 50);
+            FillTransactionTableWithRandomData(connection, 30, 50);
             connection.Close();
         }
     }
