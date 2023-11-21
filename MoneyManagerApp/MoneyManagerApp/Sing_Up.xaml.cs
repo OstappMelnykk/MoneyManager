@@ -6,6 +6,7 @@ using Org.BouncyCastle.Security;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -35,52 +36,99 @@ namespace MoneyManagerApp.Presentation
             string emailOrPhoneNumber = EmailOrPhoneTextBox.Text;
             string password = PasswordTextBox.Text;
 
+
+            signUp(username, emailOrPhoneNumber, password);
+
+            /*Home HomeWindow = new Home();
+
+
+            HomeWindow.Show();
+            this.Close();*/
+            //ClearFields();
+        }
+
+        private void signUp(string username, string emailOrPhoneNumber, string password)
+        {
             if (db.Users.Any(u => u.UsersName == username || u.UsersEmail == emailOrPhoneNumber || u.UsersPhonenumber == emailOrPhoneNumber))
             {
                 MessageBox.Show("Користувач з таким ім'ям, електронною поштою або номером телефону вже існує.");
+
+
+                /*Home HomeWindow = new Home();
+
+
+                HomeWindow.Show();
+                this.Close();*/
                 return;
             }
 
-            var saltBytes = new byte[16];
-            var rng = new SecureRandom();
-            rng.NextBytes(saltBytes);
-            string salt = Convert.ToBase64String(saltBytes);
+            (byte[], byte[]) T = PasswordHelper.GetHashAndSalt(password);
 
-            string passwordHash = HashPassword(password, salt);
+            byte[] salt = T.Item1;
+            byte[] hash = T.Item2;
+
 
             User newUser = new User
             {
                 UsersName = username,
                 UsersPhonenumber = emailOrPhoneNumber,
                 UsersEmail = emailOrPhoneNumber,
-                PasswordHash = passwordHash,
-                PasswordSalt = salt
+                PasswordHash = Convert.ToBase64String(hash),
+                PasswordSalt = Convert.ToBase64String(salt)
             };
 
             db.Users.Add(newUser);
             db.SaveChanges();
 
-            MessageBox.Show("Реєстрація успішна!");
-            ClearFields();
+           
+            return;
         }
+        
 
-        private string HashPassword(string password, string salt)
-        {
-            var saltBytes = Convert.FromBase64String(salt);
-
-            var pbkdf2 = new Pkcs5S2ParametersGenerator(new Sha256Digest());
-            pbkdf2.Init(Encoding.UTF8.GetBytes(password), saltBytes, 10000);
-
-            byte[] hash = ((KeyParameter)pbkdf2.GenerateDerivedParameters(256)).GetKey();
-
-            return Convert.ToBase64String(hash);
-        }
 
         private void ClearFields()
         {
             UsernameTextBox.Text = "";
             EmailOrPhoneTextBox.Text = "";
             PasswordTextBox.Text = "";
+
+           /* Home HomeWindow = new Home();
+            this.Close();
+
+            HomeWindow.Show();*/
+           
+        }
+    }
+
+
+
+    public static class PasswordHelper
+    {
+
+        public static byte[] GenerateSalt(int length)
+        {
+            byte[] salt = new byte[length];
+            using (var rng = new RNGCryptoServiceProvider())
+            {
+                rng.GetBytes(salt);
+            }
+            return salt;
+        }
+
+        public static byte[] GenerateHash(string password, byte[] salt)
+        {
+            using (var pbkdf2 = new Rfc2898DeriveBytes(password, salt, 10000, HashAlgorithmName.SHA256))
+            {
+                return pbkdf2.GetBytes(32);
+            }
+        }
+
+       
+        public static (byte[], byte[]) GetHashAndSalt(string password)
+        {
+            byte[] salt = GenerateSalt(16); 
+            byte[] hash = GenerateHash(password, salt);
+            return (salt, hash);
         }
     }
 }

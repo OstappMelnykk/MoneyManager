@@ -38,13 +38,22 @@ namespace MoneyManagerApp
         {                               
             db.Database.EnsureCreated();
         }
+        
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Log In");
+        }
 
 
         private void CreateAccountButton_Click(object sender, RoutedEventArgs e)
         {
+           
+            
             Sing_Up signUpWindow = new Sing_Up();
             signUpWindow.Show();
             this.Close();
+
         }
 
         
