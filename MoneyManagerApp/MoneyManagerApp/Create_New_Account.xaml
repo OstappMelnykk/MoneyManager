@@ -6,6 +6,35 @@
         xmlns:local="clr-namespace:MoneyManagerApp.Presentation"
         mc:Ignorable="d"
         Title="Create new account" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
+    <Window.Resources>
+        <!-- Стиль для кнопок -->
+        <Style x:Key="CustomButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="26"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Width" Value="140"/>
+            <Setter Property="Background" Value="#0092FF"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border BorderThickness="1" BorderBrush="#0092FF" Background="{TemplateBinding Background}" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль для "Back" кнопки -->
+        <Style x:Key="BackButtonStyle" TargetType="Button" BasedOn="{StaticResource CustomButtonStyle}">
+            <Setter Property="FontSize" Value="25"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Width" Value="80"/>
+            <Setter Property="Background" Value="#AA00D7"/>
+            <Setter Property="Margin" Value="70,40,0,0"/>
+        </Style>
+    </Window.Resources>
+
     <Grid>
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="129" ></ColumnDefinition>
@@ -28,10 +57,9 @@
         <Grid Grid.Column="1" Grid.RowSpan="5">
             <TextBlock HorizontalAlignment="Left" Margin="226,35,0,0" TextWrapping="Wrap" Text="Create new account" VerticalAlignment="Top" FontSize="35" Height="50" Width="320"/>
             <TextBlock HorizontalAlignment="Center" Margin="0,150,370,0" TextWrapping="Wrap" Text="Account name:" VerticalAlignment="Top" FontSize="20" Height="25" Width="150"/>
-            <TextBox HorizontalAlignment="Left" Margin="396,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="20" />
-            <Button FontSize="26" Content="Save" HorizontalAlignment="Left" Margin="406,357,0,0" VerticalAlignment="Top" Height="45" Width="140" Background="#0092FF"/>
-            <Button FontSize="25" Content="Back" HorizontalAlignment="Left" Margin="70,40,0,0" VerticalAlignment="Top" Height="40" Width="80"  Background="#AA00D7"/>
-
+            <TextBox x:Name="AccountNameTextBox" HorizontalAlignment="Left" Margin="396,148,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" FontSize="20" />
+            <Button Style="{StaticResource CustomButtonStyle}" Content="Save" HorizontalAlignment="Left" Margin="406,357,0,0" VerticalAlignment="Top" Click="Save_Button_Click"/>
+            <Button Style="{StaticResource BackButtonStyle}" Content="Back" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Grid>
     </Grid>
 </Window>

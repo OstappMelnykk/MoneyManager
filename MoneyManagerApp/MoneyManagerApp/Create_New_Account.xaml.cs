@@ -1,32 +1,49 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+using MoneyManagerApp.Presentation.Models;
 
 namespace MoneyManagerApp.Presentation
 {
-    /// <summary>
-    /// Interaction logic for Create_New_Account.xaml
-    /// </summary>
     public partial class Create_New_Account : Window
     {
+        private ApplicationContext _dbContext; // Заміни це на свій контекст бази даних
+
         public Create_New_Account()
         {
             InitializeComponent();
+            _dbContext = new ApplicationContext(); // Ініціалізуй контекст бази даних
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            string accountName = AccountNameTextBox.Text;
+            int loggedInUserId = GetLoggedInUserId();
 
+            if (!string.IsNullOrEmpty(accountName))
+            {
+                try
+                {
+                    // Створення нового об'єкту Account для збереження в базу даних
+                    var newAccount = new Account
+                    {
+                        AccountsTitle = accountName
+                    };
+
+                    // Додавання нового об'єкту до DbSet в контексті бази даних
+                    _dbContext.Accounts.Add(newAccount);
+                    _dbContext.SaveChanges();
+
+                    MessageBox.Show("Account saved successfully!");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error saving account: {ex.Message}");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter an account name!");
+            }
         }
     }
 }
