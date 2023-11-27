@@ -17,7 +17,7 @@ namespace MoneyManagerApp.Presentation
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             string accountName = AccountNameTextBox.Text;
-            int loggedInUserId = GetLoggedInUserId();
+            //int loggedInUserId = GetLoggedInUserId();
 
             if (!string.IsNullOrEmpty(accountName))
             {
@@ -44,6 +44,11 @@ namespace MoneyManagerApp.Presentation
             {
                 MessageBox.Show("Please enter an account name!");
             }
+        }
+
+        private void Save_Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

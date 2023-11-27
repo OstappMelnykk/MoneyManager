@@ -13,9 +13,13 @@
         <TextBlock HorizontalAlignment="Left" Margin="286,216,0,0" TextWrapping="Wrap" Text="Email/Phone number" VerticalAlignment="Top"/>
         <TextBox x:Name="EmailOrPhoneTextBox" HorizontalAlignment="Center" Margin="0,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
         <TextBlock HorizontalAlignment="Left" Margin="288,277,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top"/>
-        <TextBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Margin="0,298,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
-        <Button x:Name="SignUpButton" FontSize="22" Content="Sing up" HorizontalAlignment="Center" Margin="0,368,0,0" VerticalAlignment="Top" Width="230" Height="40" Background="#0092FF" Click="SignUpButton_Click"/>
-
-
+        <PasswordBox x:Name="PasswordTextBox" HorizontalAlignment="Center" Margin="0,298,0,0" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+        <Button x:Name="SignUpButton" FontSize="22" Content="Sing up" HorizontalAlignment="Center" Margin="0,368,0,0" VerticalAlignment="Top" Width="230" Height="40" Background="#0092FF" Click="SignUpButton_Click" Foreground="White">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>

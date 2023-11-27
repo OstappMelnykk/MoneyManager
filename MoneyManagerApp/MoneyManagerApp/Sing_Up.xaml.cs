@@ -27,46 +27,47 @@ namespace MoneyManagerApp.Presentation
         public Sing_Up()
         {
             InitializeComponent();
-            SignUpButton.Click += SignUpButton_Click;
         }
 
         private void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
             string username = UsernameTextBox.Text;
             string emailOrPhoneNumber = EmailOrPhoneTextBox.Text;
-            string password = PasswordTextBox.Text;
+            string password = PasswordTextBox.Password;
 
 
-            signUp(username, emailOrPhoneNumber, password);
+            bool containsOnlyDigits = emailOrPhoneNumber.All(char.IsDigit);
+            bool containsAtSymbol = emailOrPhoneNumber.Contains('@');
 
-            /*Home HomeWindow = new Home();
-
-
-            HomeWindow.Show();
-            this.Close();*/
-            //ClearFields();
-        }
-
-        private void signUp(string username, string emailOrPhoneNumber, string password)
-        {
-            if (db.Users.Any(u => u.UsersName == username || u.UsersEmail == emailOrPhoneNumber || u.UsersPhonenumber == emailOrPhoneNumber))
+            // Перевірка наявності користувача перед реєстрацією нового користувача
+            if (IsUserAlreadyRegistered(username, emailOrPhoneNumber))
             {
-                MessageBox.Show("Користувач з таким ім'ям, електронною поштою або номером телефону вже існує.");
-
-
-                /*Home HomeWindow = new Home();
-
-
-                HomeWindow.Show();
-                this.Close();*/
+                ToolTip toolTip = new ToolTip();
+                toolTip.Content = "Користувач з таким ім'ям, електронною адресою або номером телефону вже існує";
+                UsernameTextBox.ToolTip = toolTip;
+                UsernameTextBox.BorderBrush = Brushes.Red;
+                EmailOrPhoneTextBox.BorderBrush = Brushes.Red;
                 return;
             }
 
+            if (containsOnlyDigits || containsAtSymbol)
+            {
+
+            }
+            else
+            {
+                ToolTip toolTip = new ToolTip();
+                toolTip.Content = "Не правильна електронна адреса або номер телефону";
+                EmailOrPhoneTextBox.ToolTip = toolTip;
+                EmailOrPhoneTextBox.BorderBrush = Brushes.Red;
+                return;
+            }
+
+            // Реєстрація нового користувача
             (byte[], byte[]) T = PasswordHelper.GetHashAndSalt(password);
 
             byte[] salt = T.Item1;
             byte[] hash = T.Item2;
-
 
             User newUser = new User
             {
@@ -80,17 +81,29 @@ namespace MoneyManagerApp.Presentation
             db.Users.Add(newUser);
             db.SaveChanges();
 
-           
-            return;
+            MessageBox.Show("Реєстрація пройшла успішно!");
+
+            // Відкриття вікна входу після успішної реєстрації
+            MainWindow loginWindow = new MainWindow(); // Замініть 'MainWindow' на вашу назву вікна входу
+            loginWindow.Show();
+            this.Close();
         }
-        
+
+
+
+
+
+        private bool IsUserAlreadyRegistered(string username, string emailOrPhoneNumber)
+        {
+            return db.Users.Any(u => u.UsersName == username || u.UsersEmail == emailOrPhoneNumber || u.UsersPhonenumber == emailOrPhoneNumber);
+        }
 
 
         private void ClearFields()
         {
             UsernameTextBox.Text = "";
             EmailOrPhoneTextBox.Text = "";
-            PasswordTextBox.Text = "";
+            PasswordTextBox.Clear();
 
            /* Home HomeWindow = new Home();
             this.Close();

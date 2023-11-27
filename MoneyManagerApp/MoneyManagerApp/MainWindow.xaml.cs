@@ -1,5 +1,6 @@
 ﻿//using Microsoft.EntityFrameworkCore;
 //using MoneyManagerApp.DAL;
+using MoneyManagerApp.DAL.Helpers;
 using MoneyManagerApp.Presentation;
 using MoneyManagerApp.Presentation.Models;
 using Org.BouncyCastle.Crypto.Digests;
@@ -42,21 +43,69 @@ namespace MoneyManagerApp
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Log In");
+            string username = UsernameOrEmailTextBox.Text;
+            string password = PasswordTextBox.Password;
+
+            User user = db.Users.FirstOrDefault(u => u.UsersName == username);
+
+            if (user != null)
+            {
+                byte[] salt = Convert.FromBase64String(user.PasswordSalt);
+                byte[] hash = PasswordHelper.GenerateHash(password, salt);
+
+                string enteredPasswordHash = Convert.ToBase64String(hash);
+
+                if (enteredPasswordHash == user.PasswordHash)
+                {
+                    // Successful login
+                    MessageBox.Show("Login Successful!");
+                    CurrentUser.SetCurrentUser(user.UsersId, user.UsersName);
+                    
+                }
+                else
+                {
+                    ToolTip toolTip = new ToolTip();
+                    toolTip.Content = "Не правильньний логін або пароль";
+                    UsernameOrEmailTextBox.ToolTip = toolTip;
+                    UsernameOrEmailTextBox.BorderBrush = Brushes.Red;
+                    PasswordTextBox.BorderBrush = Brushes.Red;
+                    ClearFields();
+                    return;
+
+                }
+            }
+            else
+            {
+
+                ToolTip toolTip = new ToolTip();
+                toolTip.Content = "Не правильний логін або пароль";
+                UsernameOrEmailTextBox.ToolTip = toolTip;
+                UsernameOrEmailTextBox.BorderBrush = Brushes.Red;
+                PasswordTextBox.BorderBrush = Brushes.Red;
+                ClearFields();
+                return;
+
+            }
         }
 
 
         private void CreateAccountButton_Click(object sender, RoutedEventArgs e)
         {
            
-            
             Sing_Up signUpWindow = new Sing_Up();
             signUpWindow.Show();
             this.Close();
 
         }
 
-        
-        
+        private void ClearFields()
+        {
+            UsernameOrEmailTextBox.Text = "";
+            PasswordTextBox.Clear();
+
+           
+
+        }
+
     }
 }
