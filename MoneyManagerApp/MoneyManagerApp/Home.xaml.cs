@@ -1,5 +1,8 @@
-﻿using System;
+﻿using MoneyManagerApp.DAL.Helpers;
+using MoneyManagerApp.Presentation.Models;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,29 +22,132 @@ namespace MoneyManagerApp.Presentation
     /// </summary>
     public partial class Home : Window
     {
+        public ObservableCollection<Transaction> Transactions { get; set; }
         public Home()
         {
             InitializeComponent();
+            int count = 1;
+            int currentUserId = GetCurrentUserId(); // Отримання Id поточного користувача, наприклад, із збереженого значення
+            if (count == 1)
+            {
+                GetCurrentUserAccount(currentUserId);
+                count = 2;
+            }
+            string currentUserAccountName = CurrentAccount.AccountTitle; // Отримання назви облікового запису поточного користувача
+            AccountNameLabel.Content = currentUserAccountName; // Встановлення назви акаунта у TextBox
+            BalanceLabel.Content = GetBalanceDifference().ToString() + "₴";
+            List<Transaction> currentAccountTransactions = GetCurrentAccountTransactions(CurrentAccount.AccountId);
+            Transactions = new ObservableCollection<Transaction>(currentAccountTransactions);
+            DataContext = this;
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        // Додайте цей метод до коду вашого вікна Home
+       
+
+        private int GetCurrentUserId()
         {
-
+            return CurrentUser.UserId;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void GetCurrentUserAccount(int currentUserId)
         {
-
+            using (var dbContext = new ApplicationContext()) // Замість YourDbContext вкажіть ваш контекст бази даних
+            {
+                var currentUserAccount = dbContext.Accounts.FirstOrDefault(a => a.FkUsersId == currentUserId);
+                CurrentAccount.SetCurrentAccount(currentUserAccount.AccountsId, currentUserAccount.AccountsTitle);
+            }
         }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private decimal GetBalanceDifference()
         {
+            using (var dbContext = new ApplicationContext())
+            {
+                // Отримайте суму транзакцій типу 1 для поточного облікового запису
+                decimal sumType1 = dbContext.Transactions
+                    .Where(t => t.FkAccountsIdTo == CurrentAccount.AccountId && t.FkAccountsIdFrom == null)
+                    .Where(t => t.TransactionsType == 1)
+                    .Sum(t => t.TransactionsSum);
 
+                // Отримайте суму транзакцій типу 2 для поточного облікового запису
+                decimal sumType2 = dbContext.Transactions
+                    .Where(t => t.FkAccountsIdTo == null && t.FkAccountsIdFrom == CurrentAccount.AccountId)
+                    .Where(t => t.TransactionsType == 2)
+                    .Sum(t => t.TransactionsSum);
+
+                // Обчисліть різницю сум типу 1 та типу 2
+                return sumType1 - sumType2;
+            }
         }
 
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        private List<Transaction> GetCurrentAccountTransactions(int currentAccountId)
         {
+            using (var dbContext = new ApplicationContext())
+            {
+                var transactions = dbContext.Transactions
+                    .Where(t => t.FkAccountsIdTo == currentAccountId || t.FkAccountsIdFrom == currentAccountId)
+                    .ToList();
+
+                return transactions;
+            }
+        }
+
+        private void Button_See_More_Click(object sender, RoutedEventArgs e)
+        {
+            Transactions transactions = new Transactions();
+            transactions.Show();
+            this.Close();
+        }
+
+        private void Button_Add_Transaction_Click(object sender, RoutedEventArgs e)
+        {
+            Add_Transactions add_Transactions = new Add_Transactions();
+            add_Transactions.Show();
+            this.Close();
 
         }
+
+        private void Button_Account_Settings_Click(object sender, RoutedEventArgs e)
+        {
+            My_Profile my_Profile = new My_Profile();
+            my_Profile.Show();
+            this.Close();
+        }
+
+        private void HomeLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void AccountsLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Accounts accounts = new Accounts();
+            accounts.Show();
+            this.Close();
+
+        }
+
+        private void MyGoalsLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Goals goals = new Goals();
+            goals.Show();
+            this.Close();
+        }
+
+        private void StatisticLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Bar_Graph bar_Graph = new Bar_Graph();
+            bar_Graph.Show();
+            this.Close();
+        }
+
+        private void MyProfileLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            My_Profile my_Profile1 = new My_Profile();
+            my_Profile1.Show();
+            this.Close();
+        }
+
     }
+
+
+
 }

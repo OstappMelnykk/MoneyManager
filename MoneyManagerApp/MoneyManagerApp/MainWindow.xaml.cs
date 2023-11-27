@@ -57,9 +57,11 @@ namespace MoneyManagerApp
 
                 if (enteredPasswordHash == user.PasswordHash)
                 {
-                    // Successful login
-                    MessageBox.Show("Login Successful!");
                     CurrentUser.SetCurrentUser(user.UsersId, user.UsersName);
+                    // Successful login
+                    Home home = new Home();
+                    home.Show();
+                    this.Close();
                     
                 }
                 else
