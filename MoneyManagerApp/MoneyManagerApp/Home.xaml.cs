@@ -26,12 +26,11 @@ namespace MoneyManagerApp.Presentation
         public Home()
         {
             InitializeComponent();
-            int count = 1;
             int currentUserId = GetCurrentUserId(); // Отримання Id поточного користувача, наприклад, із збереженого значення
-            if (count == 1)
+            if (CountOfOpenningHomePage.Count == 1)
             {
                 GetCurrentUserAccount(currentUserId);
-                count = 2;
+                CountOfOpenningHomePage.Count = 2;
             }
             string currentUserAccountName = CurrentAccount.AccountTitle; // Отримання назви облікового запису поточного користувача
             AccountNameLabel.Content = currentUserAccountName; // Встановлення назви акаунта у TextBox
@@ -63,14 +62,12 @@ namespace MoneyManagerApp.Presentation
             {
                 // Отримайте суму транзакцій типу 1 для поточного облікового запису
                 decimal sumType1 = dbContext.Transactions
-                    .Where(t => t.FkAccountsIdTo == CurrentAccount.AccountId && t.FkAccountsIdFrom == null)
-                    .Where(t => t.TransactionsType == 1)
+                    .Where(t => t.FkAccountsIdTo == CurrentAccount.AccountId)
                     .Sum(t => t.TransactionsSum);
 
                 // Отримайте суму транзакцій типу 2 для поточного облікового запису
                 decimal sumType2 = dbContext.Transactions
-                    .Where(t => t.FkAccountsIdTo == null && t.FkAccountsIdFrom == CurrentAccount.AccountId)
-                    .Where(t => t.TransactionsType == 2)
+                    .Where(t => t.FkAccountsIdFrom == CurrentAccount.AccountId)
                     .Sum(t => t.TransactionsSum);
 
                 // Обчисліть різницю сум типу 1 та типу 2
@@ -146,6 +143,7 @@ namespace MoneyManagerApp.Presentation
             this.Close();
         }
 
+       
     }
 
 

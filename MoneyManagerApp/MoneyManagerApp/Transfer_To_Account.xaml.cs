@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using MoneyManagerApp.DAL.Helpers;
+using MoneyManagerApp.Presentation.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +25,65 @@ namespace MoneyManagerApp.Presentation
         public Transfer_To_Account()
         {
             InitializeComponent();
+            LoadUserAccounts();
         }
+
+        private void LoadUserAccounts()
+        {
+            List<Account> userAccounts = GetUserAccounts();
+
+            foreach (var account in userAccounts)
+            {
+                AccountComboBox.Items.Add(account.AccountsTitle);
+            }
+        }
+        private List<Account> GetUserAccounts()
+        {
+            List<Account> currentUserAccounts;
+            using (var dbContext = new ApplicationContext())
+            {
+                currentUserAccounts = dbContext.Accounts.Where(a => a.FkUsersId == CurrentUser.UserId).ToList();
+            }
+            return currentUserAccounts;
+        }
+        private void SumTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            // Отримання тексту, який користувач намагається ввести
+            string newText = SumTextBox.Text + e.Text;
+
+            // Перевірка, чи текст може бути конвертований до decimal
+            if (!decimal.TryParse(newText, out _))
+            {
+                // Якщо текст не може бути конвертований до decimal, відміна введення
+                e.Handled = true;
+            }
+        }
+
+        private void Button_Add_Click(object sender, RoutedEventArgs e)
+        {
+            string selectedAccount = AccountComboBox.SelectedItem as string;
+            if (!string.IsNullOrEmpty(selectedAccount))
+            {
+                // Проводьте ваші дії з вибраним значенням
+                using (var dbContext = new ApplicationContext())
+                {
+                    Account account = GetUserAccounts().FirstOrDefault(a => a.AccountsTitle == selectedAccount);
+                    string description = DescriptionTextBox.Text;
+                    string sum = SumTextBox.Text;
+                    Transaction transaction = new Transaction();
+                    transaction.TransactionsType = 1;
+                    transaction.TransactionsDescription = description;
+                    transaction.TransactionsSum = Convert.ToDecimal(sum);
+                    transaction.FkAccountsIdTo = account.AccountsId;
+                    dbContext.Transactions.Add(transaction);
+                    dbContext.SaveChanges();
+                    Home home = new Home();
+                    home.Show();
+                    this.Close();
+                }
+            }
+        }
+
+       
     }
 }

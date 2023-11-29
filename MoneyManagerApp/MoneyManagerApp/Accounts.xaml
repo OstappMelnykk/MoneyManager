@@ -25,21 +25,10 @@
         <Label Content="Statistic" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center" FontSize="23"/>
         <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23"/>
 
-        <Grid Grid.Column="1" Grid.RowSpan="5">
+        <Grid Name="AccountsGrid" Grid.Column="1" Grid.RowSpan="5">
             <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Accounts" VerticalAlignment="Top" FontSize="35" Height="50" Width="150"/>
-            <Button Content="Create new account" HorizontalAlignment="Center" Margin="0,434,0,0" VerticalAlignment="Top" FontSize="24" Width="244" Height="35" Background="#0092FF" Click="Button_Click"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,160,410,0" TextWrapping="Wrap" Text="Account 1" VerticalAlignment="Top" FontSize="23" Height="30" Width="100"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,240,410,0" TextWrapping="Wrap" Text="Account 2" VerticalAlignment="Top" FontSize="23" Height="30" Width="100"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,320,410,0" TextWrapping="Wrap" Text="Account 3" VerticalAlignment="Top" FontSize="23" Height="30" Width="100"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,160,60,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top" Width="100" FontSize="23"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,240,60,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top" Width="100" FontSize="23"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,320,60,0" TextWrapping="Wrap" Text="Balance" VerticalAlignment="Top" Width="100" FontSize="23"/>
-            <Button Content="Choose" HorizontalAlignment="Center" Margin="200,160,0,0" VerticalAlignment="Top" Width="80" Height="30" FontSize="20" Background="#AA00D7"/>
-            <Button Content="Choose" HorizontalAlignment="Center" Margin="200,240,0,0" VerticalAlignment="Top" Width="80" Height="30" FontSize="20" Background="#AA00D7"/>
-            <Button Content="Choose" HorizontalAlignment="Center" Margin="200,320,0,0" VerticalAlignment="Top" Width="80" Height="30" FontSize="20" Background="#AA00D7"/>
-            <Button Content="Delete" HorizontalAlignment="Center" Margin="450,160,0,0" VerticalAlignment="Top" Width="80" Height="30" FontSize="20" Background="#AA00D7"/>
-            <Button Content="Delete" HorizontalAlignment="Center" Margin="450,240,0,0" VerticalAlignment="Top" Width="80" Height="30" FontSize="20" Background="#AA00D7"/>
-            <Button Content="Delete" HorizontalAlignment="Center" Margin="450,320,0,0" VerticalAlignment="Top" Width="80" Height="30" FontSize="20" Background="#AA00D7"/>
+            <Button Content="Create new account" HorizontalAlignment="Center" Margin="0,434,0,0" VerticalAlignment="Top" FontSize="24" Width="244" Height="35" Background="#0092FF" Click="Button_Create_New_Account_Click"/>
+            
 
         </Grid>
     </Grid>

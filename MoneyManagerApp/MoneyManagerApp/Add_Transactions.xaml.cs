@@ -28,5 +28,27 @@ namespace MoneyManagerApp.Presentation
         {
 
         }
+
+        private void Button_Transfer_To_Account_Click(object sender, RoutedEventArgs e)
+        {
+            Transfer_To_Account transfer_To_Account = new Transfer_To_Account();
+            transfer_To_Account.Show();
+            this.Close();
+        }
+
+        private void Button_Transfer_From_Account_Click(object sender, RoutedEventArgs e)
+        {
+            Transfer_From_Account transfer_From_Account = new Transfer_From_Account();
+            transfer_From_Account.Show();
+            this.Close();
+        }
+
+        private void Button_Transfer_Between_Accounts_Click(object sender, RoutedEventArgs e)
+        {
+            Transfer_Between_Accounts transfer_Between_Accounts = new Transfer_Between_Accounts();
+            transfer_Between_Accounts.Show();
+            this.Close();
+
+        }
     }
 }

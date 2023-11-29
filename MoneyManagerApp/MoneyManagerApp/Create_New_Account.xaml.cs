@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows;
+using MoneyManagerApp.DAL.Helpers;
 using MoneyManagerApp.Presentation.Models;
 
 namespace MoneyManagerApp.Presentation
@@ -14,26 +15,26 @@ namespace MoneyManagerApp.Presentation
             _dbContext = new ApplicationContext(); // Ініціалізуй контекст бази даних
         }
 
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void Save_Button_Click(object sender, RoutedEventArgs e)
         {
             string accountName = AccountNameTextBox.Text;
-            //int loggedInUserId = GetLoggedInUserId();
 
             if (!string.IsNullOrEmpty(accountName))
             {
                 try
                 {
                     // Створення нового об'єкту Account для збереження в базу даних
-                    var newAccount = new Account
-                    {
-                        AccountsTitle = accountName
-                    };
+                    Account newAccount = new Account();
+                    newAccount.AccountsTitle = accountName;
+                    newAccount.FkUsersId = CurrentUser.UserId;
 
                     // Додавання нового об'єкту до DbSet в контексті бази даних
                     _dbContext.Accounts.Add(newAccount);
                     _dbContext.SaveChanges();
 
-                    MessageBox.Show("Account saved successfully!");
+                    Accounts accounts = new Accounts();
+                    accounts.Show();
+                    this.Close();
                 }
                 catch (Exception ex)
                 {
@@ -46,9 +47,6 @@ namespace MoneyManagerApp.Presentation
             }
         }
 
-        private void Save_Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }
