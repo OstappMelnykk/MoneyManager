@@ -49,19 +49,24 @@ namespace MoneyManagerApp.Presentation
                 EmailOrPhoneTextBox.BorderBrush = Brushes.Red;
                 return;
             }
+            else{
+                UsernameTextBox.ToolTip = null;
+                UsernameTextBox.BorderBrush = Brushes.Black;
+                if (containsOnlyDigits || containsAtSymbol)
+                {
 
-            if (containsOnlyDigits || containsAtSymbol)
-            {
+                }
+                else
+                {
+                    ToolTip toolTip = new ToolTip();
+                    toolTip.Content = "Не правильна електронна адреса або номер телефону";
+                    EmailOrPhoneTextBox.ToolTip = toolTip;
+                    EmailOrPhoneTextBox.BorderBrush = Brushes.Red;
+                    return;
+                }
+            }
 
-            }
-            else
-            {
-                ToolTip toolTip = new ToolTip();
-                toolTip.Content = "Не правильна електронна адреса або номер телефону";
-                EmailOrPhoneTextBox.ToolTip = toolTip;
-                EmailOrPhoneTextBox.BorderBrush = Brushes.Red;
-                return;
-            }
+            
 
             // Реєстрація нового користувача
             (byte[], byte[]) T = PasswordHelper.GetHashAndSalt(password);
@@ -81,7 +86,6 @@ namespace MoneyManagerApp.Presentation
             db.Users.Add(newUser);
             db.SaveChanges();
 
-            MessageBox.Show("Реєстрація пройшла успішно!");
 
             // Відкриття вікна входу після успішної реєстрації
             MainWindow loginWindow = new MainWindow(); // Замініть 'MainWindow' на вашу назву вікна входу
