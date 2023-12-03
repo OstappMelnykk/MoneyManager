@@ -23,5 +23,38 @@ namespace MoneyManagerApp.Presentation
         {
             InitializeComponent();
         }
+        private void HomeLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Close();
+        }
+
+        private void AccountsLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Accounts accounts = new Accounts();
+            accounts.Show();
+            this.Close();
+
+        }
+
+        private void MyGoalsLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+          
+        }
+
+        private void StatisticLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Bar_Graph bar_Graph = new Bar_Graph();
+            bar_Graph.Show();
+            this.Close();
+        }
+
+        private void MyProfileLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            My_Profile my_Profile1 = new My_Profile();
+            my_Profile1.Show();
+            this.Close();
+        }
     }
 }

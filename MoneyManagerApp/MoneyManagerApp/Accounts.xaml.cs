@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace MoneyManagerApp.Presentation
@@ -121,7 +122,40 @@ namespace MoneyManagerApp.Presentation
             create_New_Account.Show();
             this.Close();
         }
+        private void HomeLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Close();
+        }
 
-       
+        private void AccountsLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+
+        }
+
+        private void MyGoalsLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Goals goals = new Goals();
+            goals.Show();
+            this.Close();
+        }
+
+        private void StatisticLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            Bar_Graph bar_Graph = new Bar_Graph();
+            bar_Graph.Show();
+            this.Close();
+        }
+
+        private void MyProfileLabel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            My_Profile my_Profile1 = new My_Profile();
+            my_Profile1.Show();
+            this.Close();
+        }
+
+
     }
 }
