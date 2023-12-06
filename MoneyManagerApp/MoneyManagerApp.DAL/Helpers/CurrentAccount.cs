@@ -16,6 +16,5 @@ namespace MoneyManagerApp.DAL.Helpers
             AccountId = accountId;
             AccountTitle = accountTitle;
         }
-
     }
 }

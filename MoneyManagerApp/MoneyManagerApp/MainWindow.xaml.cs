@@ -43,10 +43,12 @@ namespace MoneyManagerApp
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            string username = UsernameOrEmailTextBox.Text;
-            string password = PasswordTextBox.Password;
+            /*string UsernameOrEmail = UsernameOrEmailTextBox.Text;
+            string password = PasswordTextBox.Password;*/
+            string UsernameOrEmail = "79ostap@ukr.net";
+            string password ="1212";
 
-            User user = db.Users.FirstOrDefault(u => u.UsersName == username);
+            User user = db.Users.FirstOrDefault(u => u.UsersEmail == UsernameOrEmail);
 
             if (user != null)
             {

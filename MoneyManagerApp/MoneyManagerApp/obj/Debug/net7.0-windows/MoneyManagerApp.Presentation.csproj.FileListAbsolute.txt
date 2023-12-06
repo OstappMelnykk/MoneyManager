@@ -233,3 +233,9 @@ D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\MaterialDesignColors.dll
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\MaterialDesignThemes.Wpf.dll
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\MaterialDesignColors.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\OxyPlot.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\OxyPlot.Wpf.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\OxyPlot.Wpf.Shared.dll

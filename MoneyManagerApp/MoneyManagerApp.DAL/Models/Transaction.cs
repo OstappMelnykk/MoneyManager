@@ -17,7 +17,7 @@ public partial class Transaction
 
     public decimal TransactionsSum { get; set; }
 
-    public DateOnly? TransactionsDate { get; set; }
+    public DateTime TransactionsDate { get; set; }
 
     public virtual Account? FkAccountsIdFromNavigation { get; set; }
 

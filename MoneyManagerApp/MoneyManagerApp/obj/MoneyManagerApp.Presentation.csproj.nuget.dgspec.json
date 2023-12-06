@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\MoneyManagerApp.Presentation.csproj": {}
+    "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\MoneyManagerApp.Presentation.csproj": {}
   },
   "projects": {
-    "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\MoneyManagerApp.BLL.csproj": {
+    "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\MoneyManagerApp.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\MoneyManagerApp.BLL.csproj",
+        "projectUniqueName": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\MoneyManagerApp.BLL.csproj",
         "projectName": "MoneyManagerApp.BLL",
-        "projectPath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\MoneyManagerApp.BLL.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\obj\\",
+        "projectPath": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\MoneyManagerApp.BLL.csproj",
+        "packagesPath": "C:\\Users\\Comp_Zona\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Comp_Zona\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj": {
-                "projectPath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj"
+              "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj": {
+                "projectPath": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj"
               }
             }
           }
@@ -62,21 +62,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj": {
+    "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj",
         "projectName": "MoneyManagerApp.DAL",
-        "projectPath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\MoneyManagerApp.DAL.csproj",
+        "packagesPath": "C:\\Users\\Comp_Zona\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Comp_Zona\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -138,21 +138,21 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\MoneyManagerApp.Presentation.csproj": {
+    "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\MoneyManagerApp.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\MoneyManagerApp.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\MoneyManagerApp.Presentation.csproj",
         "projectName": "MoneyManagerApp.Presentation",
-        "projectPath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\MoneyManagerApp.Presentation.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\obj\\",
+        "projectPath": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\MoneyManagerApp.Presentation.csproj",
+        "packagesPath": "C:\\Users\\Comp_Zona\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Comp_Zona\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -166,8 +166,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\MoneyManagerApp.BLL.csproj": {
-                "projectPath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\MoneyManagerApp.BLL.csproj"
+              "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\MoneyManagerApp.BLL.csproj": {
+                "projectPath": "C:\\Users\\Comp_Zona\\Desktop\\MoneyManager\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp.BLL\\MoneyManagerApp.BLL.csproj"
               }
             }
           }
@@ -185,6 +185,10 @@
             "MaterialDesignThemes": {
               "target": "Package",
               "version": "[4.9.0, )"
+            },
+            "OxyPlot.Wpf": {
+              "target": "Package",
+              "version": "[2.1.2, )"
             },
             "Portable.BouncyCastle": {
               "target": "Package",
@@ -210,7 +214,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\
 MoneyManagerApp.Presentation
 none
 false
 TRACE;DEBUG;NET;NET7_0;NETCOREAPP
-D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\App.xaml
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\App.xaml
 171722650301
 
 21-2053492990
-218-465543427
+221-1174657628
 Accounts.xaml;Add_Transactions.xaml;Bar_Graph.xaml;Create_New_Account.xaml;Edit_Profile.xaml;Goals.xaml;Goal_Name.xaml;Home.xaml;Line_Graph.xaml;MainWindow.xaml;My_Profile.xaml;Security_Setting.xaml;Sing_Up.xaml;Transactions.xaml;Transfer_Between_Accounts.xaml;Transfer_From_Account.xaml;Transfer_To_Account.xaml;
 
-False
+True
 
