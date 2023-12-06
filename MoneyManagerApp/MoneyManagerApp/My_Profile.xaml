@@ -29,17 +29,32 @@
             <TextBlock HorizontalAlignment="Left" Margin="284,24,0,0" TextWrapping="Wrap" Text="My profile" VerticalAlignment="Top" FontSize="35" Height="50" Width="200"/>
             <Image HorizontalAlignment="Left" Height="170" Margin="113,103,0,0" VerticalAlignment="Top" Width="200" Source="images/My_Photo.png"/>
             <TextBlock  HorizontalAlignment="Left" Margin="160,267,0,0" TextWrapping="Wrap" Text="User name" VerticalAlignment="Top" FontSize="18"/>
-            <Button  HorizontalAlignment="Left" Margin="431,103,0,0" VerticalAlignment="Top" Width="120" Height="60" Background="#0092FF">
+            <Button  HorizontalAlignment="Left" Margin="431,103,0,0" VerticalAlignment="Top" Width="120" Height="60" Background="#0092FF" Click="EditProfile_Click">
                 <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Text="  Edit&#xD;&#xA;profile"/>
             </Button>
-            <Button HorizontalAlignment="Left" Margin="431,185,0,0" VerticalAlignment="Top"  Width="120" Height="60" Background="#AA00D7">
+            <Button HorizontalAlignment="Left" Margin="431,185,0,0" VerticalAlignment="Top"  Width="120" Height="60" Background="#AA00D7" Click="SecuritySettings_Click">
                 <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Text="Security&#xA; setting"/>
 
             </Button>
-            <Button HorizontalAlignment="Left" Margin="431,273,0,0" VerticalAlignment="Top"  Width="120" Height="60" Background="#FF3349">
+            <Button HorizontalAlignment="Left" Margin="431,273,0,0" VerticalAlignment="Top"  Width="120" Height="60" Background="#FF3349"  Click="Logout_Click">
                 <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Text=" Log&#xA; out"/>
 
             </Button>
+            
+            
+           
+
+
+
+
+
+
+
+
+
+
+
+
             <TextBlock HorizontalAlignment="Left" Margin="113,367,0,0" TextWrapping="Wrap" Text="Phone number:" VerticalAlignment="Top" FontSize="20"/>
             <TextBlock HorizontalAlignment="Left" Margin="113,427,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.386,0.565"/>
 

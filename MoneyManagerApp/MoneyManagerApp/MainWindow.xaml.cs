@@ -33,20 +33,24 @@ namespace MoneyManagerApp
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
+            
         }
 
         private void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {                               
             db.Database.EnsureCreated();
+            UsernameOrEmailTextBox.Text = "";
+            PasswordTextBox.Password = string.Empty;
+
         }
-        
+
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             /*string UsernameOrEmail = UsernameOrEmailTextBox.Text;
             string password = PasswordTextBox.Password;*/
             string UsernameOrEmail = "79ostap@ukr.net";
-            string password ="1212";
+            string password = "1212";
 
             User user = db.Users.FirstOrDefault(u => u.UsersEmail == UsernameOrEmail);
 

@@ -28,6 +28,12 @@ namespace MoneyManagerApp.Presentation
         {
 
         }
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            My_Profile my_Profile = new My_Profile();
+            my_Profile.Show();
+            this.Close();
+        }
 
         private void Button_Transfer_To_Account_Click(object sender, RoutedEventArgs e)
         {

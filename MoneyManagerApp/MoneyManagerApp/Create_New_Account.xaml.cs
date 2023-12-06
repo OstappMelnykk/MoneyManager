@@ -83,5 +83,16 @@ namespace MoneyManagerApp.Presentation
             this.Close();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Accounts accounts = new Accounts();
+            accounts.Show();
+            this.Close();
+        }
     }
 }

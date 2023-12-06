@@ -8,6 +8,7 @@ namespace MoneyManagerApp.DAL.Helpers
 {
     public static class CurrentUser
     {
+        
         public static int UserId { get; private set; }
         public static string Username { get; private set; }
 

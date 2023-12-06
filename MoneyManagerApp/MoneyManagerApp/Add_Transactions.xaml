@@ -31,7 +31,7 @@
                 <RowDefinition Height="103*"/>
             </Grid.RowDefinitions>
             <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Add transaction" VerticalAlignment="Top" FontSize="35" Height="50" Width="250"/>
-            <Button FontSize="21"  Content="Back" HorizontalAlignment="Left" Margin="31,45,0,0" VerticalAlignment="Top" Height="35" Width="90" Background="#AA00D7" Click="Button_Click"/>
+            <Button FontSize="21"  Content="Back" HorizontalAlignment="Left" Margin="31,45,0,0" VerticalAlignment="Top" Height="35" Width="90" Background="#AA00D7" Click="BackButton_Click"/>
             <Button  HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="60" Width="210" FontSize="19" Background="#f0f0f0" Click="Button_Transfer_To_Account_Click">
                 <TextBlock  Text="Transfer to account" TextAlignment="Center"/>
             </Button>

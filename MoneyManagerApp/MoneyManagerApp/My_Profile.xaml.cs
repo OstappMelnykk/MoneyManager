@@ -23,11 +23,44 @@ namespace MoneyManagerApp.Presentation
         {
             InitializeComponent();
         }
+
+
+        private void EditProfile_Click(object sender, RoutedEventArgs e)
+        {
+            Edit_Profile edit_Profile = new Edit_Profile();
+            edit_Profile.Show();
+            this.Close();
+        }
+
+        private void SecuritySettings_Click(object sender, RoutedEventArgs e)
+        {
+            Security_Setting security_Setting = new Security_Setting();
+            security_Setting.Show();
+            this.Close();
+        }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            
+
+            this.Close();
+        }
+
+
+
+
+
+
         private void HomeLabel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Home home = new Home();
             home.Show();
             this.Close();
+
+
+            
         }
 
         private void AccountsLabel_MouseDown(object sender, MouseButtonEventArgs e)

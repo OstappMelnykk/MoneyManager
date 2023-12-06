@@ -1,6 +1,9 @@
-﻿using System;
+﻿using MoneyManagerApp.DAL.Helpers;
+using MoneyManagerApp.Presentation.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -14,15 +17,81 @@ using System.Windows.Shapes;
 
 namespace MoneyManagerApp.Presentation
 {
-    /// <summary>
-    /// Interaction logic for Edit_Profile.xaml
-    /// </summary>
+
     public partial class Edit_Profile : Window
     {
         public Edit_Profile()
         {
             InitializeComponent();
         }
+
+
+        private string textFromFirstTextBox = "";
+        private string textFromSecondTextBox = "";
+        private string textFromThirdTextBox = "";
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            My_Profile my_Profile = new My_Profile();
+            my_Profile.Show();
+            this.Close();
+        }
+            
+            
+            
+            
+            
+            
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            textFromFirstTextBox = FirstTextBox.Text;
+            textFromSecondTextBox = SecondTextBox.Text;
+            textFromThirdTextBox = ThirdTextBox.Text;
+
+            bool isChanged = false;
+
+            using (var dbContext = new ApplicationContext())
+            {
+                var entityToUpdate = dbContext.Users.Where(x => x.UsersId == CurrentUser.UserId).FirstOrDefault();
+
+                if (entityToUpdate != null)
+                {
+
+                    if(!string.IsNullOrEmpty(textFromFirstTextBox) && textFromFirstTextBox != entityToUpdate.UsersName)
+                    {
+                        entityToUpdate.UsersName = textFromFirstTextBox;
+                        isChanged = true;
+                    }
+                    if (!string.IsNullOrEmpty(textFromSecondTextBox) && textFromSecondTextBox != entityToUpdate.UsersPhonenumber)
+                    {
+                        entityToUpdate.UsersPhonenumber = textFromSecondTextBox;
+                        isChanged = true;
+                    }
+                    if (!string.IsNullOrEmpty(textFromThirdTextBox) && textFromThirdTextBox != entityToUpdate.UsersEmail)
+                    {
+                        entityToUpdate.UsersEmail = textFromThirdTextBox;
+                        isChanged = true;
+                    }
+
+
+                    if (isChanged)
+                    {
+                        dbContext.SaveChanges();
+                        FirstTextBox.Text = "";
+                        SecondTextBox.Text = "";
+                        ThirdTextBox.Text = "";
+                        MessageBox.Show("Зміни успішно збережено.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Нічого не змінено.");
+                    }
+                }
+            }
+        }
+
+
+
         private void HomeLabel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Home home = new Home();
@@ -57,6 +126,11 @@ namespace MoneyManagerApp.Presentation
             My_Profile my_Profile1 = new My_Profile();
             my_Profile1.Show();
             this.Close();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

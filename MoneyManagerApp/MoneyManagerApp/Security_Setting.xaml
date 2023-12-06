@@ -27,7 +27,7 @@
 
         <Grid Grid.Column="1" Grid.RowSpan="5" Margin="0,5,0,-5">
             <TextBlock HorizontalAlignment="Center" Margin="0,25,0,0" TextWrapping="Wrap" Text="Security setting" VerticalAlignment="Top" FontSize="35" Height="50" Width="250"/>
-            <Button FontSize="25" Content="Back" HorizontalAlignment="Left" Margin="42,35,0,0" VerticalAlignment="Top" Height="40" Width="80" Background="#AA00D7"/>
+            <Button FontSize="25" Content="Back" HorizontalAlignment="Left" Margin="42,35,0,0" VerticalAlignment="Top" Height="40" Width="80" Background="#AA00D7"  Click="BackButton_Click"/>
             <TextBlock FontSize="19" HorizontalAlignment="Left" Margin="221,140,0,0" TextWrapping="Wrap" Text="Old password" VerticalAlignment="Top"/>
             <TextBlock FontSize="19" HorizontalAlignment="Left" Margin="221,215,0,0" TextWrapping="Wrap" Text="New password" VerticalAlignment="Top"/>
             <TextBlock FontSize="19" HorizontalAlignment="Left" Margin="221,290,0,0" TextWrapping="Wrap" Text="Repeat new password" VerticalAlignment="Top"/>
