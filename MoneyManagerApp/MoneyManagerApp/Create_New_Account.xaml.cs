@@ -33,9 +33,18 @@ namespace MoneyManagerApp.Presentation
                     _dbContext.Accounts.Add(newAccount);
                     _dbContext.SaveChanges();
 
-                    Accounts accounts = new Accounts();
-                    accounts.Show();
-                    this.Close();
+                    if (CountOfOpenningHomePage.Count != 1)
+                    {
+                        Accounts accounts = new Accounts();
+                        accounts.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        Home home = new Home();
+                        home.Show();
+                        this.Close();
+                    }
                 }
                 catch (Exception ex)
                 {

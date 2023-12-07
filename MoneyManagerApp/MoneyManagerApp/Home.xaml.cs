@@ -53,7 +53,10 @@ namespace MoneyManagerApp.Presentation
             using (var dbContext = new ApplicationContext()) // Замість YourDbContext вкажіть ваш контекст бази даних
             {
                 var currentUserAccount = dbContext.Accounts.FirstOrDefault(a => a.FkUsersId == currentUserId);
-                CurrentAccount.SetCurrentAccount(currentUserAccount.AccountsId, currentUserAccount.AccountsTitle);
+                if (currentUserAccount != null)
+                {
+                    CurrentAccount.SetCurrentAccount(currentUserAccount.AccountsId, currentUserAccount.AccountsTitle);
+                }
             }
         }
         private decimal GetBalanceDifference()

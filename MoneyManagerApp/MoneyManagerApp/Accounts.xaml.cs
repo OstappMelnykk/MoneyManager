@@ -1,7 +1,9 @@
-﻿using MoneyManagerApp.DAL.Helpers;
+﻿using Microsoft.EntityFrameworkCore;
+using MoneyManagerApp.DAL.Helpers;
 using MoneyManagerApp.Presentation.Models;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -19,6 +21,13 @@ namespace MoneyManagerApp.Presentation
 
         private void LoadUserAccounts()
         {
+            Style customButtonStyle = new Style(typeof(Button));
+
+            // Adding setters to the style
+            customButtonStyle.Setters.Add(new Setter(Border.CornerRadiusProperty, new CornerRadius(5)));
+
+            // Assigning the style to Application.Current.Resources
+            Application.Current.Resources["CustomButtonStyle"] = customButtonStyle;
             List<Account> userAccounts = GetUserAccounts();
 
             for (int i = 0; i < userAccounts.Count; i++)
@@ -56,8 +65,11 @@ namespace MoneyManagerApp.Presentation
                     Height = 30,
                     FontSize = 20,
                     Tag = userAccounts[i],
-                    Background = Brushes.Blue
+                    Background = Brushes.Blue,
+                    Foreground = Brushes.White,
+
                 };
+                
                 chooseButton.Click += ChooseButton_Click;
 
                 Button deleteButton = new Button
@@ -69,9 +81,16 @@ namespace MoneyManagerApp.Presentation
                     Width = 80,
                     Height = 30,
                     FontSize = 20,
-                    Background = new SolidColorBrush(Color.FromRgb(170, 0, 215))
+                    Background = new SolidColorBrush(Color.FromRgb(170, 0, 215)),
+                    Foreground = Brushes.White,
+                    Tag = userAccounts[i],
+                    Style = customButtonStyle,
+
                 };
-                deleteButton.Click += DeleteButton_Click;
+
+                
+
+                deleteButton.Click += Delete_Button_Click;
 
                 AccountsGrid.Children.Add(accountTextBlock);
                 AccountsGrid.Children.Add(balanceTextBlock);
@@ -80,20 +99,52 @@ namespace MoneyManagerApp.Presentation
             }
         }
 
+
         private decimal GetBalanceDifference(int accountId)
         {
             using (var dbContext = new ApplicationContext())
             {
+                // Отримайте суму транзакцій типу 1 для поточного облікового запису
                 decimal sumType1 = dbContext.Transactions
-                    .Where(t => t.FkAccountsIdTo == accountId && t.FkAccountsIdFrom == null && t.TransactionsType == 1)
+                    .Where(t => t.FkAccountsIdTo == accountId)
                     .Sum(t => t.TransactionsSum);
 
+                // Отримайте суму транзакцій типу 2 для поточного облікового запису
                 decimal sumType2 = dbContext.Transactions
-                    .Where(t => t.FkAccountsIdTo == null && t.FkAccountsIdFrom == accountId && t.TransactionsType == 2)
+                    .Where(t => t.FkAccountsIdFrom == accountId)
                     .Sum(t => t.TransactionsSum);
 
+                // Обчисліть різницю сум типу 1 та типу 2
                 return sumType1 - sumType2;
             }
+        }
+
+        public void Delete_Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button button && button.Tag is Account selectedAccount)
+            {
+
+
+                using (var dbContext = new ApplicationContext())
+                {
+                    var accountToDelete = dbContext.Accounts.FirstOrDefault(a => a.AccountsId == selectedAccount.AccountsId);
+
+                    if (accountToDelete != null)
+                    {
+                        // Видалення всіх транзакцій, пов'язаних з акаунтом
+                        var transactionsToDelete = dbContext.Transactions.Where(t => t.FkAccountsIdFrom == selectedAccount.AccountsId || t.FkAccountsIdTo == selectedAccount.AccountsId);
+                        dbContext.Transactions.RemoveRange(transactionsToDelete);
+
+                        // Видалення акаунту
+                        dbContext.Accounts.Remove(accountToDelete);
+
+                        dbContext.SaveChanges();
+                    }
+                }
+            }
+            Accounts accounts = new Accounts();
+            accounts.Show();
+            this.Close();
         }
 
         private void ChooseButton_Click(object sender, RoutedEventArgs e)

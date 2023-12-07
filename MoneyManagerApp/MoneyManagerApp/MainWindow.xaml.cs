@@ -47,10 +47,9 @@ namespace MoneyManagerApp
 
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            /*string UsernameOrEmail = UsernameOrEmailTextBox.Text;
-            string password = PasswordTextBox.Password;*/
-            string UsernameOrEmail = "79ostap@ukr.net";
-            string password = "1212";
+            string UsernameOrEmail = UsernameOrEmailTextBox.Text;
+            string password = PasswordTextBox.Password;
+          
 
             User user = db.Users.FirstOrDefault(u => u.UsersEmail == UsernameOrEmail);
 
@@ -64,10 +63,19 @@ namespace MoneyManagerApp
                 if (enteredPasswordHash == user.PasswordHash)
                 {
                     CurrentUser.SetCurrentUser(user.UsersId, user.UsersName);
-                    // Successful login
-                    Home home = new Home();
-                    home.Show();
-                    this.Close();
+                    if (CurrentUserHasAccount(CurrentUser.UserId))
+                    {
+                        // Successful login
+                        Home home = new Home();
+                        home.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        Create_New_Account create_New_Account = new Create_New_Account();
+                        create_New_Account.Show();
+                        this.Close();
+                    }
                     
                 }
                 else
@@ -96,7 +104,21 @@ namespace MoneyManagerApp
             }
         }
 
-
+        private bool CurrentUserHasAccount(int currentUserId)
+        {
+            using (var dbContext = new ApplicationContext()) // Замість YourDbContext вкажіть ваш контекст бази даних
+            {
+                var currentUserAccount = dbContext.Accounts.FirstOrDefault(a => a.FkUsersId == currentUserId);
+                if (currentUserAccount != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
         private void CreateAccountButton_Click(object sender, RoutedEventArgs e)
         {
            
