@@ -165,6 +165,11 @@ namespace MoneyManagerApp.Presentation
             home.Show();
             this.Close();
         }
+
+        private void ButtonApplyFilters_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }

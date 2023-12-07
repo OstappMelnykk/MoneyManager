@@ -40,9 +40,9 @@
                 <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="18" Text=" Log&#xA; out"/>
 
             </Button>
-            
-            
-           
+
+
+
 
 
 
@@ -58,10 +58,18 @@
             <TextBlock HorizontalAlignment="Left" Margin="113,367,0,0" TextWrapping="Wrap" Text="Phone number:" VerticalAlignment="Top" FontSize="20"/>
             <TextBlock HorizontalAlignment="Left" Margin="113,427,0,0" TextWrapping="Wrap" Text="E-mail:" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.386,0.565"/>
 
-            <TextBox Width="200" Height="27" BorderBrush="Gray" BorderThickness="1"  Margin="351,380,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18">
+
+            <TextBlock  HorizontalAlignment="Left" Margin="431,370,0,0" TextWrapping="Wrap" Text="sssssssssssssssssss" VerticalAlignment="Top" FontSize="18"/>
+            <TextBlock  HorizontalAlignment="Left" Margin="431,429,0,0" TextWrapping="Wrap" Text="sssssssssssssssssss" VerticalAlignment="Top" FontSize="18"/>
+
+
+
+
+
+            <TextBox Width="200" Height="27" BorderBrush="Gray" BorderThickness="1"  Margin="102,306,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18">
 
             </TextBox>
-            <TextBox Width="200" Height="27" BorderBrush="Gray" BorderThickness="1"  Margin="351,440,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18">
+            <TextBox Width="200" Height="27" BorderBrush="Gray" BorderThickness="1"  Margin="556,265,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18">
 
             </TextBox>
 
