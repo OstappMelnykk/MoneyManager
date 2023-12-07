@@ -239,3 +239,15 @@ C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManage
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\OxyPlot.dll
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\OxyPlot.Wpf.dll
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\OxyPlot.Wpf.Shared.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\EPPlus.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\EPPlus.Interfaces.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\EPPlus.System.Drawing.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\Microsoft.Extensions.Configuration.Json.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\System.Security.Cryptography.Pkcs.dll
+C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll

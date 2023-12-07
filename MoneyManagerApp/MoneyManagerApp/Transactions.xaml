@@ -28,7 +28,7 @@
         <Grid Grid.Column="1" Grid.RowSpan="5">
             <TextBlock HorizontalAlignment="Left" Margin="221,26,0,0" TextWrapping="Wrap" Text="Transactions" VerticalAlignment="Top" FontSize="35"/>
             <Button Content="Apply filters" HorizontalAlignment="Center" Margin="0,98,0,0" VerticalAlignment="Top" FontSize="20" Width="150" Background="#0092FF"/>
-            <ListBox HorizontalAlignment="Left" Height="287" Margin="93,155,0,0" VerticalAlignment="Top" Width="476" Background="LightBlue" BorderBrush="Black" BorderThickness="1"
+            <ListBox HorizontalAlignment="Left" Height="287" Margin="36,155,0,0" VerticalAlignment="Top" Width="605" Background="LightBlue" BorderBrush="Black" BorderThickness="1"
          ItemsSource="{Binding TransactionList}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -46,14 +46,9 @@
             </ListBox>
 
 
-            <Button Content="Add transaction" FontSize="20" HorizontalAlignment="Center" Margin="0,490,150,0" VerticalAlignment="Top" Width="300" Height="30" Background="#0092FF"/>
-            <Button Content="Save as exel" FontSize="20" HorizontalAlignment="Center" Margin="400,490,0,0" VerticalAlignment="Top" Width="150" Height="30" Background="#0092FF"/>
-            <Button FontSize="18" Content="Delete" HorizontalAlignment="Left" Margin="569,277,0,0" VerticalAlignment="Top" Height="26" Width="72" Background="#AA00D7" RenderTransformOrigin="0.553,0.628"/>
-            <Button FontSize="18" Content="Delete" HorizontalAlignment="Left" Margin="569,345,0,0" VerticalAlignment="Top" Height="26" Width="72" Background="#AA00D7"/>
-            <Button FontSize="18" Content="Delete" HorizontalAlignment="Left" Margin="569,215,0,0" VerticalAlignment="Top" Height="26" Width="72" Background="#AA00D7"/>
+            <Button Content="Add transaction" FontSize="20" HorizontalAlignment="Left" Margin="36,470,0,0" VerticalAlignment="Top" Width="374" Height="40" Background="#0092FF" Click="Button_Click"/>
+            <Button Content="Save as exel" FontSize="20" HorizontalAlignment="Left" Margin="491,470,0,0" VerticalAlignment="Top" Width="150" Height="40" Background="#0092FF" Click="ButtonSaveAsExel_Click"/>
             <Button FontSize="18" Content="Delete" HorizontalAlignment="Left" Margin="36,36,0,0" VerticalAlignment="Top" Height="26" Width="72" Background="#AA00D7"/>
-            <Button FontSize="18" Content="Delete" HorizontalAlignment="Left" Margin="569,416,0,0" VerticalAlignment="Top" Height="26" Width="72" Background="#AA00D7"/>
-            <Button FontSize="18" Content="Delete" HorizontalAlignment="Left" Margin="576,155,0,0" VerticalAlignment="Top" Height="26" Width="72" Background="#AA00D7"/>
 
         </Grid>
     </Grid>

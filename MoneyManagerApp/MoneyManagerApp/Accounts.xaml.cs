@@ -71,6 +71,7 @@ namespace MoneyManagerApp.Presentation
                     FontSize = 20,
                     Background = new SolidColorBrush(Color.FromRgb(170, 0, 215))
                 };
+                deleteButton.Click += DeleteButton_Click;
 
                 AccountsGrid.Children.Add(accountTextBlock);
                 AccountsGrid.Children.Add(balanceTextBlock);
@@ -104,6 +105,11 @@ namespace MoneyManagerApp.Presentation
             Home home = new Home();
             home.Show();
             this.Close();
+        }
+        
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+           
         }
 
         private List<Account> GetUserAccounts()

@@ -1,10 +1,17 @@
-﻿using MoneyManagerApp.DAL.Helpers;
+﻿
+
+using MoneyManagerApp.DAL.Helpers;
 using MoneyManagerApp.Presentation.Models;
+using OfficeOpenXml;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Input;
+
+
 
 namespace MoneyManagerApp.Presentation
 {
@@ -24,6 +31,61 @@ namespace MoneyManagerApp.Presentation
             TransactionList = new ObservableCollection<Transaction>(currentAccountTransactions);
             DataContext = this;
         }
+
+
+
+
+        private void ButtonSaveAsExel_Click(object sender, RoutedEventArgs e)
+        {
+            System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
+
+            using (var dbContext = new ApplicationContext())
+            {
+                var transactions = dbContext.Transactions.ToList();
+
+                OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+
+                using (var excelPackage = new OfficeOpenXml.ExcelPackage())
+                {
+                    var worksheet = excelPackage.Workbook.Worksheets.Add("Transactions");
+
+                    // Додайте заголовки для колонок
+                    worksheet.Cells[1, 1].Value = "Transaction ID";
+                    worksheet.Cells[1, 2].Value = "Transaction Type";
+                    worksheet.Cells[1, 3].Value = "Account ID From";
+                    worksheet.Cells[1, 4].Value = "Account ID To";
+                    worksheet.Cells[1, 5].Value = "Description";
+                    worksheet.Cells[1, 6].Value = "Transaction Sum";
+                    worksheet.Cells[1, 7].Value = "Transaction Date";
+
+                    int row = 2; // Початковий рядок для даних
+
+                    foreach (var transaction in transactions)
+                    {
+                        worksheet.Cells[row, 1].Value = transaction.TransactionsId;
+                        worksheet.Cells[row, 2].Value = transaction.TransactionsType ?? 0;
+                        worksheet.Cells[row, 3].Value = transaction.FkAccountsIdFrom.HasValue ? transaction.FkAccountsIdFrom.ToString() : "null";
+                        worksheet.Cells[row, 4].Value = transaction.FkAccountsIdTo.HasValue ? transaction.FkAccountsIdTo.ToString() : "null";
+
+                        worksheet.Cells[row, 5].Value = transaction.TransactionsDescription ?? "";
+                        worksheet.Cells[row, 6].Value = transaction.TransactionsSum;
+                        worksheet.Cells[row, 7].Value = transaction.TransactionsDate;
+
+                        row++;
+                    }
+
+                    // Зберігання файлу Excel
+                    
+                    var filePath = @"D:\Downloads\Transactions.xlsx"; // Вкажіть шлях та ім'я файлу
+                    FileInfo excelFile = new FileInfo(filePath);
+                    excelPackage.SaveAs(excelFile);
+                }
+            }
+        }
+
+
+
+
 
         private List<Transaction> GetCurrentUserTransactions()
         {
@@ -75,6 +137,13 @@ namespace MoneyManagerApp.Presentation
             my_Profile1.Show();
             this.Close();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        
     }
 
 }
