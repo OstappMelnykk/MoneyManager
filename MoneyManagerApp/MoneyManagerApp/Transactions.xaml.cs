@@ -3,6 +3,7 @@
 using MoneyManagerApp.DAL.Helpers;
 using MoneyManagerApp.Presentation.Models;
 using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -78,7 +79,15 @@ namespace MoneyManagerApp.Presentation
                     
                     var filePath = @"D:\Downloads\Transactions.xlsx"; // Вкажіть шлях та ім'я файлу
                     FileInfo excelFile = new FileInfo(filePath);
-                    excelPackage.SaveAs(excelFile);
+                    try
+                    {
+                        excelPackage.SaveAs(excelFile);
+                        MessageBox.Show("Файл успішно збережено.", "Успіх");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"Не вдалося зберегти файл: {ex.Message}", "Помилка");
+                    }
                 }
             }
         }
@@ -138,12 +147,24 @@ namespace MoneyManagerApp.Presentation
             this.Close();
         }
 
+        private void ButtonAddTransasction_Click(object sender, RoutedEventArgs e)
+        {
+            Add_Transactions add_Transactions = new Add_Transactions();
+            add_Transactions.Show();
+            this.Close();
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            Home home = new Home();
+            home.Show();
+            this.Close();
+        }
     }
 
 }

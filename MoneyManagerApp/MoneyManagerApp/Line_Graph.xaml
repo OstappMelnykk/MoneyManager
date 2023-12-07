@@ -38,8 +38,8 @@
 
 
             <Button FontSize="23" Content="Apply" HorizontalAlignment="Left" Margin="445,462,0,0" VerticalAlignment="Top" Height="35" Width="120" Background="#0092FF" Click="ApplyButton_Click"/>
-            <TextBox x:Name="startDateTextBox" HorizontalAlignment="Left" Margin="258,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Height="27"/>
-            <TextBox x:Name="endDateTextBox" HorizontalAlignment="Left" Margin="106,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Height="27"/>
+            <TextBox x:Name="endDateTextBox" HorizontalAlignment="Left" Margin="258,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Height="27"/>
+            <TextBox x:Name="startDateTextBox" HorizontalAlignment="Left" Margin="106,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Height="27"/>
             <TextBlock FontSize="18" HorizontalAlignment="Left" Margin="51,435,0,0" TextWrapping="Wrap" Text="Select a date range" VerticalAlignment="Top" Height="25" Width="155"/>
             <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="51,470,0,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top"/>
             <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="226,470,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" RenderTransformOrigin="0.425,-1.012"/>

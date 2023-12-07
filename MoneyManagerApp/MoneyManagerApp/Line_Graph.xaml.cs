@@ -38,9 +38,15 @@ namespace MoneyManagerApp.Presentation
 
         public Line_Graph()
         {
+           
             db.Database.EnsureCreated();
             InitializeComponent();
+            CreateGraph();
 
+        }
+
+        private void CreateGraph()
+        {
             int idOfCurrentUser = CurrentUser.UserId;
             int idOfAccountUser = CurrentAccount.AccountId;
 
@@ -55,15 +61,15 @@ namespace MoneyManagerApp.Presentation
             /*DateTime? startDate = null;
             DateTime? endDate = null;
 */
-           /* if (!string.IsNullOrWhiteSpace(startDateTextBox.Text) && DateTime.TryParse(startDateTextBox.Text, out DateTime parsedStartDate))
-            {
-                startDate = parsedStartDate;
-            }
+            /* if (!string.IsNullOrWhiteSpace(startDateTextBox.Text) && DateTime.TryParse(startDateTextBox.Text, out DateTime parsedStartDate))
+             {
+                 startDate = parsedStartDate;
+             }
 
-            if (!string.IsNullOrWhiteSpace(endDateTextBox.Text) && DateTime.TryParse(endDateTextBox.Text, out DateTime parsedEndDate))
-            {
-                endDate = parsedEndDate;
-            }*/
+             if (!string.IsNullOrWhiteSpace(endDateTextBox.Text) && DateTime.TryParse(endDateTextBox.Text, out DateTime parsedEndDate))
+             {
+                 endDate = parsedEndDate;
+             }*/
 
 
 
@@ -114,8 +120,8 @@ namespace MoneyManagerApp.Presentation
 
 
             var plotModel = new PlotModel { Title = "" };
-
-            // Створення ряду даних для графіка
+            plotModel.Series.Clear();
+        
             var series = new LineSeries
             {
                 Title = "Transactions",
@@ -146,45 +152,64 @@ namespace MoneyManagerApp.Presentation
             });
 
             plotView.Model = plotModel;
+
+            
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            CreateGraph();
+        }
+
+        private void Window_Activated(object sender, EventArgs e)
+        {
+            CreateGraph();
+        }
+
+
+
+
+
+
+
+
 
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
 
-            /*int idOfCurrentUser = CurrentUser.UserId;
+            int idOfCurrentUser = CurrentUser.UserId;
             int idOfAccountUser = CurrentAccount.AccountId;
 
-            DateTime startDate = new DateTime(2023, 12, 2, 0, 0, 0, DateTimeKind.Utc); 
-            DateTime endDate = new DateTime(2023, 12, 7, 23, 59, 59, DateTimeKind.Utc).AddTicks(-1); 
 
-            DateTime? parsedStartDate = null;
-            DateTime? parsedEndDate = null;
+            string startDateString = startDateTextBox.Text;
+            string endDateString = endDateTextBox.Text;
 
-
-
-
-            if (DateTime.TryParseExact(endDateTextBox.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
+            if (!DateTime.TryParse(startDateString, out DateTime startDate) || !DateTime.TryParse(endDateString, out DateTime endDate))
             {
-                parsedEndDate = DateTime.SpecifyKind(parsedDate, DateTimeKind.Utc);
+                MessageBox.Show("Please enter valid date formats (yyyy-MM-dd) in both fields.");
+                return;
             }
 
-            if (!string.IsNullOrWhiteSpace(startDateTextBox.Text) && DateTime.TryParseExact(startDateTextBox.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime tempParsedStartDate))
+         
+            if (startDate >= endDate)
             {
-                parsedStartDate = DateTime.SpecifyKind(tempParsedStartDate, DateTimeKind.Utc);
+                MessageBox.Show("End date should be greater than the start date.");
+                return;
             }
 
-            if (!string.IsNullOrWhiteSpace(endDateTextBox.Text) && DateTime.TryParseExact(endDateTextBox.Text, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime tempParsedEndDate))
+           
+            if (string.IsNullOrWhiteSpace(startDateString) || string.IsNullOrWhiteSpace(endDateString))
             {
-                parsedEndDate = DateTime.SpecifyKind(tempParsedEndDate.Date.AddDays(1).AddTicks(-1), DateTimeKind.Utc);
+                MessageBox.Show("Please enter both start and end dates.");
+                return;
             }
 
-            DateTime startDateFilter = parsedStartDate ?? startDate;
-            DateTime endDateFilter = parsedEndDate ?? endDate;
-
+            DateTime startDateT = DateTime.Parse(startDateString, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal).ToUniversalTime();
+            DateTime endDateT = DateTime.Parse(endDateString, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal).ToUniversalTime().AddDays(1).AddTicks(-1);
 
             List<Transaction> tr = db.Transactions
                 .Where(x => (x.FkAccountsIdTo == idOfAccountUser || x.FkAccountsIdFrom == idOfAccountUser)
-                    && x.TransactionsDate >= startDate && x.TransactionsDate <= endDate)
+                    && x.TransactionsDate.ToUniversalTime() >= startDateT && x.TransactionsDate.ToUniversalTime() <= endDateT)
                 .OrderBy(x => x.TransactionsDate)
                 .ToList();
 
@@ -225,8 +250,8 @@ namespace MoneyManagerApp.Presentation
 
 
             var plotModel = new PlotModel { Title = "" };
+            plotModel.Series.Clear();
 
-            
             var series = new LineSeries
             {
                 Title = "Transactions",
@@ -256,8 +281,7 @@ namespace MoneyManagerApp.Presentation
                 IntervalType = DateTimeIntervalType.Days
             });
 
-            plotView.Model = plotModel;*/
-
+            plotView.Model = plotModel;
         }
 
 

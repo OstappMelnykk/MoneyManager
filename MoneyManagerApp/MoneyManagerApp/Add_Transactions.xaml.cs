@@ -28,10 +28,10 @@ namespace MoneyManagerApp.Presentation
         {
 
         }
-        private void BackButton_Click(object sender, RoutedEventArgs e)
+         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            My_Profile my_Profile = new My_Profile();
-            my_Profile.Show();
+            Home home = new Home();
+            home.Show();
             this.Close();
         }
 
@@ -80,8 +80,8 @@ namespace MoneyManagerApp.Presentation
 
         private void StatisticLabel_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Bar_Graph bar_Graph = new Bar_Graph();
-            bar_Graph.Show();
+            Line_Graph line_Graph = new Line_Graph();
+            line_Graph.Show();
             this.Close();
         }
 
