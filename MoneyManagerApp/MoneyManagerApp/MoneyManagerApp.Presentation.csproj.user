@@ -10,6 +10,9 @@
     <Compile Update="Accounts.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Add_New_Goal.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Add_Transactions.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -58,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Accounts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Add_New_Goal.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Add_Transactions.xaml">

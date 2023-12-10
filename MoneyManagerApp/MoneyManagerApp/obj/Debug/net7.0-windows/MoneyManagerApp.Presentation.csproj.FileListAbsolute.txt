@@ -266,3 +266,5 @@ D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\OxyPlot.Wpf.Shared.dll
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\System.Security.Cryptography.Pkcs.dll
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-windows\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Add_New_Goal.g.cs
+D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Add_New_Goal.baml
