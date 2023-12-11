@@ -121,9 +121,13 @@ namespace MoneyManagerApp.Presentation
 
         private void SeemoreButton_Click(object sender, RoutedEventArgs e)
         {
-            Goal_Name goal_name = new Goal_Name();
-            goal_name.Show();
-            this.Close();
+            if (sender is Button button && button.Tag is Goal selectedGoal)
+            {
+                Goal_Name goal_Name = new Goal_Name(selectedGoal.GoalsId);
+                goal_Name.Show();
+                this.Close();
+            }
+            
         }
 
 

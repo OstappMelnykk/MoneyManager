@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MoneyManagerApp.DAL.Helpers;
+using MoneyManagerApp.Presentation.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +21,84 @@ namespace MoneyManagerApp.Presentation
     /// </summary>
     public partial class Goal_Name : Window
     {
-        public Goal_Name()
+        private int goalId;
+        private Goal currentGoal;
+        public Goal_Name(int goalId)
         {
+            this.goalId = goalId;
+            currentGoal = GetCurrentGoal(goalId);
             InitializeComponent();
+            LoadGoal();
+            
         }
+
+        private static Goal GetCurrentGoal(int goalId)
+        {
+            using (var dbContext = new ApplicationContext())
+            {
+                // Отримайте суму транзакцій типу 1 для поточного облікового запису
+                Goal goal = dbContext.Goals.Where(g => g.GoalsId == goalId).FirstOrDefault();
+
+                // Отримайте суму транзакцій типу 2 для поточного облікового запису
+
+                return goal;
+            }
+        }
+
+        private string GetAccountNameById(int accountId)
+        {
+            using (var dbContext = new ApplicationContext())
+            {
+                // Отримайте суму транзакцій типу 1 для поточного облікового запису
+                Account account = dbContext.Accounts.Where(a => a.AccountsId == accountId).FirstOrDefault();
+
+                // Отримайте суму транзакцій типу 2 для поточного облікового запису
+
+                return account.AccountsTitle;
+            }
+        }
+
+        private void LoadGoal()
+        {
+            NumberToCollectTextBlock.Text = currentGoal.GoalsAmounttocollect.ToString();
+            AmmountToCollectTextBlock.Text = currentGoal.GoalsAmounttocollect.ToString();
+            DescriptionTextBlock.Text = currentGoal.GoalsDescription;
+            GoalNameTextBlock.Text = currentGoal.GoalsTitle;
+            AccountTextBlock.Text = GetAccountNameById((int)currentGoal.FkAccountsId);
+            TitleTextBlock.Text = currentGoal.GoalsTitle;
+            GoalProgressBar.Value = (double)GetBalanceDifference((int)currentGoal.FkAccountsId);
+            GoalProgressBar.Maximum = (double)currentGoal.GoalsAmounttocollect;
+        }
+
+        private decimal GetBalanceDifference(int accountId)
+        {
+            using (var dbContext = new ApplicationContext())
+            {
+                // Отримайте суму транзакцій типу 1 для поточного облікового запису
+                decimal sumType1 = dbContext.Transactions
+                    .Where(t => t.FkAccountsIdTo == accountId)
+                    .Sum(t => t.TransactionsSum);
+
+                // Отримайте суму транзакцій типу 2 для поточного облікового запису
+                decimal sumType2 = dbContext.Transactions
+                    .Where(t => t.FkAccountsIdFrom == accountId)
+                    .Sum(t => t.TransactionsSum);
+
+                // Обчисліть різницю сум типу 1 та типу 2
+                return sumType1 - sumType2;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
         private void HomeLabel_MouseDown(object sender, MouseButtonEventArgs e)
         {
             Home home = new Home();

@@ -26,29 +26,28 @@
         <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23" MouseDown="MyProfileLabel_MouseDown"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
-            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Goal name" VerticalAlignment="Top" FontSize="35" Height="50" Width="200"/>
+            <TextBlock x:Name="TitleTextBlock" HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Goal name" VerticalAlignment="Top" FontSize="35" Height="50" Width="200"/>
             <Button FontSize="22" Content="Back" HorizontalAlignment="Left" Margin="70,47,0,0" VerticalAlignment="Top" Height="35" Width="80" Background="#AA00D7"/>
             <Button FontSize="21" Content="Save" HorizontalAlignment="Left" Margin="475,439,0,0" VerticalAlignment="Top" Height="40" Width="120" Background="#0092FF"/>
-            <ProgressBar HorizontalAlignment="Left" Height="30" Margin="65,119,0,0" VerticalAlignment="Top" Width="530"/>
+            <ProgressBar x:Name="GoalProgressBar" HorizontalAlignment="Left" Height="30" Margin="65,119,0,0" VerticalAlignment="Top" Width="530"/>
             <TextBlock HorizontalAlignment="Left" Margin="70,196,0,0" TextWrapping="Wrap" Text="Amount to collect:" VerticalAlignment="Top" FontSize="21"/>
             <TextBlock HorizontalAlignment="Left" Margin="67,0,0,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Center" FontSize="21"/>
             <TextBlock HorizontalAlignment="Left" Margin="70,314,0,0" TextWrapping="Wrap" Text="Goal name:" VerticalAlignment="Top" FontSize="21"/>
             <TextBlock HorizontalAlignment="Left" Margin="74,364,0,0" TextWrapping="Wrap" Text="Account:" VerticalAlignment="Top" FontSize="21"/>
-            <TextBox FontSize="15" Width="201" Height="20" BorderBrush="Gray" BorderThickness="1"  Margin="308,200,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <TextBlock x:Name="AmmountToCollectTextBlock" FontSize="15" Width="201" Height="20" TextWrapping="Wrap"  Margin="308,200,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
 
-            </TextBox>
-            <TextBox FontSize="15"  Width="200" Height="20" BorderBrush="Gray" BorderThickness="1"  Margin="309,261,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            </TextBlock>
+            <TextBlock x:Name="DescriptionTextBlock" FontSize="15"  Width="200" Height="20" TextWrapping="Wrap"  Margin="309,261,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
 
-            </TextBox>
+            </TextBlock>
 
-            <ComboBox FontSize="15" HorizontalAlignment="Left" Margin="309,317,0,0"  Text="Account name" VerticalAlignment="Top" Width="200">
-                <ComboBoxItem Content="Select goal" IsEnabled="False" IsSelected="True"/>
-            </ComboBox>
-            <ComboBox FontSize="15" HorizontalAlignment="Left" Margin="308,373,0,0"  Text="Account name" VerticalAlignment="Top" Width="200">
-                <ComboBoxItem Content="Select account" IsEnabled="False" IsSelected="True"/>
-            </ComboBox>
+            <TextBlock x:Name="GoalNameTextBlock" FontSize="15" HorizontalAlignment="Left" Margin="309,317,0,0" Height="20"   VerticalAlignment="Top" Width="200" TextWrapping="Wrap">
+
+            </TextBlock>
+            <TextBlock x:Name="AccountTextBlock" FontSize="15" HorizontalAlignment="Left" Margin="308,373,0,0"  Height="20"   VerticalAlignment="Top" Width="200" TextWrapping="Wrap">
+            </TextBlock>
             <TextBlock HorizontalAlignment="Left" Margin="65,154,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Height="20" Width="10" FontSize="16" RenderTransformOrigin="-1.1,0.469"/>
-            <TextBlock HorizontalAlignment="Left" Margin="567,154,0,0" TextWrapping="Wrap" Text="number" VerticalAlignment="Top" Height="20" Width="60" FontSize="16"/>
+            <TextBlock x:Name="NumberToCollectTextBlock" HorizontalAlignment="Left" Margin="567,154,0,0" TextWrapping="Wrap" Text="number" VerticalAlignment="Top" Height="20" Width="60" FontSize="16"/>
         </Grid>
     </Grid>
 </Window>
