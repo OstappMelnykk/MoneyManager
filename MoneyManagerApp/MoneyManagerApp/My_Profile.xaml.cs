@@ -107,6 +107,8 @@ namespace MoneyManagerApp.Presentation
 
         private void Logout_Click(object sender, RoutedEventArgs e)
         {
+            CurrentUser.ClearCurrentUser();
+            CountOfOpenningHomePage.Count = 1;
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             

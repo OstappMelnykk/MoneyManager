@@ -1,7 +1,9 @@
-﻿using MoneyManagerApp.DAL.Helpers;
+﻿using Microsoft.Win32;
+using MoneyManagerApp.DAL.Helpers;
 using MoneyManagerApp.Presentation.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -20,12 +22,14 @@ namespace MoneyManagerApp.Presentation
 
     public partial class Edit_Profile : Window
     {
+        private ApplicationContext dbContext;
         public Edit_Profile()
         {
             InitializeComponent();
+            dbContext = new ApplicationContext();
         }
 
-
+        private byte[] newPhoto = null;
         private string textFromFirstTextBox = "";
         private string textFromSecondTextBox = "";
         private string textFromThirdTextBox = "";
@@ -70,6 +74,11 @@ namespace MoneyManagerApp.Presentation
                     if (!string.IsNullOrEmpty(textFromThirdTextBox) && textFromThirdTextBox != entityToUpdate.UsersEmail)
                     {
                         entityToUpdate.UsersEmail = textFromThirdTextBox;
+                        isChanged = true;
+                    }
+                    if (newPhoto != null && newPhoto != entityToUpdate.UsersPhoto)
+                    {
+                        entityToUpdate.UsersPhoto = newPhoto;
                         isChanged = true;
                     }
 
@@ -131,6 +140,37 @@ namespace MoneyManagerApp.Presentation
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void Button_Change_Photo_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Файли зображень (*.jpg, *.jpeg, *.png)|*.jpg;*.jpeg;*.png";
+            if (openFileDialog.ShowDialog() == true)
+            {
+                string selectedFileName = openFileDialog.FileName;
+
+                byte[] imageBytes = System.IO.File.ReadAllBytes(selectedFileName);
+                newPhoto = imageBytes;
+
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.StreamSource = new MemoryStream(imageBytes);
+                bitmap.EndInit();
+
+                // Показати зображення на WPF
+                NewPhotoImage.Source = bitmap;
+                
+
+
+
+                // Вам потрібно мати об'єкт користувача або модель даних, в яку ви збираєтесь зберігати ці байти.
+                // Наприклад, якщо у вас є об'єкт user з полем UsersPhoto типу byte[], ви можете зберегти зображення таким чином:
+                // user.UsersPhoto = imageBytes;
+
+                // Тепер вам потрібно зберегти цього користувача у базу даних з використанням Entity Framework або ADO.NET.
+                // Вам також потрібно знати які поля в базі даних відповідають полям моделі вашого користувача, і як правильно зберегти байтовий масив.
+            }
         }
     }
 }

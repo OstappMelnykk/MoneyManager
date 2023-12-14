@@ -27,12 +27,12 @@
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
             <TextBlock HorizontalAlignment="Left" Margin="268,25,0,0" TextWrapping="Wrap" Text="My profile" VerticalAlignment="Top" FontSize="35" Height="50" Width="200"/>
-            <Image HorizontalAlignment="Left" Height="170" Margin="125,123,0,0" VerticalAlignment="Top" Width="200" Source="My_Photo.png"/>
+            <Image x:Name="NewPhotoImage" HorizontalAlignment="Left" Height="170" Margin="125,123,0,0" VerticalAlignment="Top" Width="200" Source="My_Photo.png"/>
             <Button FontSize="25" Content="Back" HorizontalAlignment="Left" Margin="125,35,0,0" VerticalAlignment="Top" Height="40" Width="80" Background="#AA00D7"  Click="BackButton_Click"/>
 
             <Button FontSize="25" Content="Save" HorizontalAlignment="Left" Margin="484,383,0,0" VerticalAlignment="Top" Height="40" Width="110" Background="#0092FF" Click="SaveButton_Click"/>
 
-            <Button Content="Change photo" HorizontalAlignment="Left" Margin="165,306,0,0" VerticalAlignment="Top" FontSize="16" Background="#0092FF" Width="122"/>
+            <Button Content="Change photo" HorizontalAlignment="Left" Margin="165,306,0,0" VerticalAlignment="Top" FontSize="16" Background="#0092FF" Width="122" Click="Button_Change_Photo_Click"/>
             <TextBlock HorizontalAlignment="Left" Margin="394,111,0,0" TextWrapping="Wrap" Text="Set name" VerticalAlignment="Top" FontSize="18"/>
             <TextBox x:Name="FirstTextBox" HorizontalAlignment="Left" Margin="394,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="23" TextChanged="TextBox_TextChanged"/>
             <TextBlock HorizontalAlignment="Left" Margin="394,194,0,0" TextWrapping="Wrap" Text="Set phone number" VerticalAlignment="Top" FontSize="18"/>

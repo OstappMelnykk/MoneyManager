@@ -31,10 +31,10 @@
             <TextBlock FontSize="19" HorizontalAlignment="Left" Margin="221,140,0,0" TextWrapping="Wrap" Text="Old password" VerticalAlignment="Top"/>
             <TextBlock FontSize="19" HorizontalAlignment="Left" Margin="221,215,0,0" TextWrapping="Wrap" Text="New password" VerticalAlignment="Top"/>
             <TextBlock FontSize="19" HorizontalAlignment="Left" Margin="221,290,0,0" TextWrapping="Wrap" Text="Repeat new password" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,165,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
-            <TextBox HorizontalAlignment="Center" Margin="0,315,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
-            <Button FontSize="25" Content="Save" HorizontalAlignment="Center" Margin="0,400,0,0" VerticalAlignment="Top" Height="35" Width= "160" Background="#0092FF"/>
+            <PasswordBox x:Name="OldPasswordTextBox" HorizontalAlignment="Center" Margin="0,165,0,0"  VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+            <PasswordBox x:Name="NewPasswordTextBox" HorizontalAlignment="Center" Margin="0,240,0,0"  VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+            <PasswordBox x:Name="RepeatPasswordTextBox" HorizontalAlignment="Center" Margin="0,315,0,0"  VerticalAlignment="Top" Width="230" Height="30" FontSize="20"/>
+            <Button FontSize="25" Content="Save" HorizontalAlignment="Center" Margin="0,400,0,0" VerticalAlignment="Top" Height="35" Width= "160" Background="#0092FF" Click="Button_Save_Click"/>
 
         </Grid>
 
