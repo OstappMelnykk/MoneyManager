@@ -19,7 +19,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button FontSize="14" Content="Log in" Click="LoginButton_Click" HorizontalAlignment="Left" Margin="435,300,0,0" VerticalAlignment="Top" Height="30" Width="80" Background="#0092FF" Foreground="White">
+        <Button FontSize="14" Content="Log in" Click="LoginButton_Click" HorizontalAlignment="Left" Margin="452,300,0,0" VerticalAlignment="Top" Height="30" Width="80" Background="#0092FF" Foreground="White">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="5"/>

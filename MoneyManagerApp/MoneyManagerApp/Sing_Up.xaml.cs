@@ -1,4 +1,6 @@
-﻿using MoneyManagerApp.Presentation.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using MoneyManagerApp.DAL.Helpers;
+using MoneyManagerApp.Presentation.Models;
 using Org.BouncyCastle.Crypto.Digests;
 using Org.BouncyCastle.Crypto.Generators;
 using Org.BouncyCastle.Crypto.Parameters;
@@ -22,14 +24,67 @@ namespace MoneyManagerApp.Presentation
 {
     public partial class Sing_Up : Window
     {
+        string username;
+        string emailOrPhoneNumber;
+        string password;
+
+
         ApplicationContext db = new ApplicationContext();
 
         public Sing_Up()
         {
             InitializeComponent();
+           
         }
 
-        private void SignUpButton_Click(object sender, RoutedEventArgs e)
+
+       /* public Sing_Up(ApplicationContext _db)
+        {
+            InitializeComponent();
+            db = _db;
+        }*/
+
+
+        public string GetUsernameTextBox()
+        {
+            return UsernameTextBox.Text;
+        }
+        
+        public string GetEmailOrPhoneTextBox()
+        {
+            return EmailOrPhoneTextBox.Text;
+        }
+
+        public string GetPasswordTextBox()
+        {
+            return PasswordTextBox.Password;
+        }
+
+
+
+        
+        public void SetUsernameTextBox(string text)
+        {
+            UsernameTextBox.Text = text;
+        }
+
+        public void SetEmailOrPhoneTextBox(string text)
+        {
+            EmailOrPhoneTextBox.Text = text;
+        }
+         
+        public void SetPasswordTextBox(string text)
+        {
+            PasswordTextBox.Password = text;
+        }
+
+
+        public Button GetSignUpButton()
+        {
+            return SignUpButton; // Повернення кнопки SignUpButton
+        }
+
+        public void SignUpButton_Click(object sender, RoutedEventArgs e)
         {
             string username = UsernameTextBox.Text;
             string emailOrPhoneNumber = EmailOrPhoneTextBox.Text;
@@ -87,14 +142,39 @@ namespace MoneyManagerApp.Presentation
             db.SaveChanges();
 
 
-            // Відкриття вікна входу після успішної реєстрації
-            MainWindow loginWindow = new MainWindow(); // Замініть 'MainWindow' на вашу назву вікна входу
+            CurrentUser.SetCurrentUser(newUser.UsersId, newUser.UsersName);
+
+
+            Account newAccount = new Account();
+            newAccount.AccountsTitle = "Account";
+            newAccount.FkUsersId = CurrentUser.UserId;
+
+ 
+            db.Accounts.Add(newAccount);
+            db.SaveChanges();
+
+
+            Home loginWindow = new Home(); // Замініть 'MainWindow' на вашу назву вікна входу
             loginWindow.Show();
             this.Close();
         }
 
 
-
+        public bool CurrentUserHasAccount(int currentUserId)
+        {
+            using (var dbContext = new ApplicationContext()) // Замість YourDbContext вкажіть ваш контекст бази даних
+            {
+                var currentUserAccount = dbContext.Accounts.FirstOrDefault(a => a.FkUsersId == currentUserId);
+                if (currentUserAccount != null)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
 
 
         private bool IsUserAlreadyRegistered(string username, string emailOrPhoneNumber)
@@ -148,4 +228,8 @@ namespace MoneyManagerApp.Presentation
             return (salt, hash);
         }
     }
+
+
+
+    
 }

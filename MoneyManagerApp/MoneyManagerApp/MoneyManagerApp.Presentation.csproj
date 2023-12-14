@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MoneyManagerApp.BLL\MoneyManagerApp.BLL.csproj" />
+    <ProjectReference Include="..\MoneyManagerApp.DAL\MoneyManagerApp.DAL.csproj" />
   </ItemGroup>
 
 </Project>

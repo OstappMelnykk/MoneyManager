@@ -27,16 +27,37 @@ namespace MoneyManagerApp
 
     public partial class MainWindow : Window
     {
+        string UsernameOrEmail;
+        string password;
 
-        ApplicationContext db = new ApplicationContext();
+
+
+        private readonly ApplicationContext db;
+
+        public MainWindow()
+        {
+            InitializeComponent();
+            Loaded += MainWindow_Loaded;
+            db = new ApplicationContext();
+        }
+
+        public MainWindow(ApplicationContext db) : this()
+        {
+            this.db = db;
+        }
+
+
+
+
+        /*public ApplicationContext db = new ApplicationContext();
         public MainWindow()
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
             
-        }
+        }*/
 
-        private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+        public void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {                               
             db.Database.EnsureCreated();
             UsernameOrEmailTextBox.Text = "";
@@ -45,13 +66,13 @@ namespace MoneyManagerApp
         }
 
 
-        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        public void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            string UsernameOrEmail = UsernameOrEmailTextBox.Text;
-            string password = PasswordTextBox.Password;
-          
+            UsernameOrEmail = UsernameOrEmailTextBox.Text;
+            password = PasswordTextBox.Password;
+            string UsersName = UsernameOrEmail;
 
-            User user = db.Users.FirstOrDefault(u => u.UsersEmail == UsernameOrEmail);
+            User user = db.Users.FirstOrDefault(u => u.UsersName == UsersName);
 
             if (user != null)
             {
@@ -69,6 +90,9 @@ namespace MoneyManagerApp
                         Home home = new Home();
                         home.Show();
                         this.Close();
+
+                        
+
                     }
                     else
                     {
@@ -104,7 +128,7 @@ namespace MoneyManagerApp
             }
         }
 
-        private bool CurrentUserHasAccount(int currentUserId)
+        public bool CurrentUserHasAccount(int currentUserId)
         {
             using (var dbContext = new ApplicationContext()) // Замість YourDbContext вкажіть ваш контекст бази даних
             {
@@ -119,7 +143,7 @@ namespace MoneyManagerApp
                 }
             }
         }
-        private void CreateAccountButton_Click(object sender, RoutedEventArgs e)
+        public void CreateAccountButton_Click(object sender, RoutedEventArgs e)
         {
            
             Sing_Up signUpWindow = new Sing_Up();
@@ -128,13 +152,35 @@ namespace MoneyManagerApp
 
         }
 
-        private void ClearFields()
+        public void ClearFields()
         {
             UsernameOrEmailTextBox.Text = "";
             PasswordTextBox.Clear();
 
            
 
+        }
+
+
+        public string GetUsernameOrEmailText()
+        {
+            return UsernameOrEmailTextBox.Text;
+        }
+
+        public string GetPasswordText()
+        {
+            return PasswordTextBox.Password;
+        }
+
+
+        public void SetUsernameOrEmailText(string text)
+        {
+            UsernameOrEmailTextBox.Text = text;
+        }
+
+        public void SetPasswordText(string text)
+        {
+            PasswordTextBox.Password = text;
         }
 
     }

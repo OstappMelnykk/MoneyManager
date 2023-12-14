@@ -11,6 +11,7 @@
           "EPPlus": "7.0.3",
           "MaterialDesignThemes": "4.9.0",
           "MoneyManagerApp.BLL": "1.0.0",
+          "MoneyManagerApp.DAL": "1.0.0",
           "OxyPlot.Wpf": "2.1.2",
           "Portable.BouncyCastle": "1.9.0"
         },
