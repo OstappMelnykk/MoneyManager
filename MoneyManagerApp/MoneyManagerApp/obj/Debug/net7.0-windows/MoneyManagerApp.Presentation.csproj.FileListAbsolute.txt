@@ -168,7 +168,6 @@ C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManage
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\MoneyManagerApp.Presentation.csproj.AssemblyReference.cache
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Accounts.g.cs
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Add_Transactions.g.cs
-C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Bar_Graph.g.cs
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Create_New_Account.g.cs
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Edit_Profile.g.cs
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Goals.g.cs
@@ -188,7 +187,6 @@ C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManage
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\MoneyManagerApp.Presentation_MarkupCompile.lref
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Accounts.baml
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Add_Transactions.baml
-C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Bar_Graph.baml
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Create_New_Account.baml
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Edit_Profile.baml
 C:\Users\Comp_Zona\Desktop\MoneyManager\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Goals.baml

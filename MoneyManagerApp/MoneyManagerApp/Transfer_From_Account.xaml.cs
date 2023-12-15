@@ -62,7 +62,9 @@ namespace MoneyManagerApp.Presentation
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Add_Transactions add_Transactions = new Add_Transactions();
+            add_Transactions.Show();
+            this.Close();
         }
 
         private void Button_Add_Click(object sender, RoutedEventArgs e)

@@ -43,11 +43,11 @@
         <Grid Grid.Column="1" Grid.RowSpan="5">
             <TextBlock x:Name="TitleTextBlock" HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Goal name" VerticalAlignment="Top" FontSize="35" Height="50" Width="200"/>
             <Button FontSize="22" Content="Back" HorizontalAlignment="Left" Margin="70,47,0,0" VerticalAlignment="Top" Height="35" Width="80" Background="#AA00D7"/>
-            <Button FontSize="21" Content="Save" HorizontalAlignment="Left" Margin="475,439,0,0" VerticalAlignment="Top" Height="40" Width="120" Background="#0092FF"/>
+            <Button FontSize="21" Content="Save" HorizontalAlignment="Left" Margin="475,442,0,0" VerticalAlignment="Top" Height="40" Width="120" Background="#0092FF"/>
             <ProgressBar x:Name="GoalProgressBar" HorizontalAlignment="Left" Height="30" Margin="65,119,0,0" VerticalAlignment="Top" Width="530"/>
             <TextBlock HorizontalAlignment="Left" Margin="70,196,0,0" TextWrapping="Wrap" Text="Amount to collect:" VerticalAlignment="Top" FontSize="21"/>
             <TextBlock HorizontalAlignment="Left" Margin="67,0,0,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Center" FontSize="21"/>
-            <TextBlock HorizontalAlignment="Left" Margin="70,314,0,0" TextWrapping="Wrap" Text="Goal name:" VerticalAlignment="Top" FontSize="21"/>
+            <TextBlock HorizontalAlignment="Left" Margin="70,311,0,0" TextWrapping="Wrap" Text="Goal name:" VerticalAlignment="Top" FontSize="21"/>
             <TextBlock HorizontalAlignment="Left" Margin="74,364,0,0" TextWrapping="Wrap" Text="Account:" VerticalAlignment="Top" FontSize="21"/>
             <TextBlock x:Name="AmmountToCollectTextBlock" FontSize="15" Width="201" Height="20" TextWrapping="Wrap"  Margin="308,200,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
 

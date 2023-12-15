@@ -43,21 +43,22 @@
         <Grid Grid.Column="1" Grid.RowSpan="5">
             <TextBlock HorizontalAlignment="Center" Margin="50,40,0,0" TextWrapping="Wrap" Text="Add new goal" VerticalAlignment="Top" FontSize="35" Height="50" Width="300"/>
             <Button FontSize="22" Content="Back" HorizontalAlignment="Left" Margin="70,47,0,0" VerticalAlignment="Top" Height="35" Width="80" Background="#AA00D7"/>
-            <Button FontSize="21" Content="Save" HorizontalAlignment="Left" Margin="475,439,0,0" VerticalAlignment="Top" Height="40" Width="120" Background="#0092FF" Click="Button_Save_Click"/>
+            <Button FontSize="21" Content="Save" HorizontalAlignment="Left" Margin="389,442,0,0" VerticalAlignment="Top" Height="40" Width="120" Background="#0092FF" Click="Button_Save_Click"/>
             <TextBlock HorizontalAlignment="Left" Margin="70,196,0,0" TextWrapping="Wrap" Text="Amount to collect:" VerticalAlignment="Top" FontSize="21"/>
             <TextBlock HorizontalAlignment="Left" Margin="67,0,0,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Center" FontSize="21"/>
             <TextBlock HorizontalAlignment="Left" Margin="70,314,0,0" TextWrapping="Wrap" Text="Goal name:" VerticalAlignment="Top" FontSize="21"/>
             <TextBlock HorizontalAlignment="Left" Margin="74,364,0,0" TextWrapping="Wrap" Text="Account:" VerticalAlignment="Top" FontSize="21"/>
-            <TextBox x:Name="AmmountToCollectTextBox" FontSize="15" Width="201" Height="20" BorderBrush="Gray" BorderThickness="1"  Margin="308,200,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewTextInput="AmmountToCollectTextBox_PreviewTextInput" >
+            <TextBox x:Name="AmmountToCollectTextBox" FontSize="15" Width="201" Height="20
+                     " BorderBrush="Gray" BorderThickness="1"  Margin="308,200,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" PreviewTextInput="AmmountToCollectTextBox_PreviewTextInput" >
 
             </TextBox>
             <TextBox x:Name="DescriptionTextBox" FontSize="15"  Width="200" Height="20" BorderBrush="Gray" BorderThickness="1" Margin="309,261,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" TextChanged="TextBox_TextChanged">
 
             </TextBox>
 
-            <TextBox x:Name="GoalNameTextBox" FontSize="15" HorizontalAlignment="Left" Margin="309,317,0,0" VerticalAlignment="Top" Width="200">
+            <TextBox x:Name="GoalNameTextBox" FontSize="15" HorizontalAlignment="Left" Margin="308,314,0,0" VerticalAlignment="Top" Width="202">
             </TextBox>
-            <ComboBox x:Name="AccountComboBox" FontSize="15" HorizontalAlignment="Left" Margin="308,373,0,0"  Text="Account name" VerticalAlignment="Top" Width="200">
+            <ComboBox x:Name="AccountComboBox" FontSize="15" HorizontalAlignment="Left" Margin="308,373,0,0"  Text="Account name" VerticalAlignment="Top" Width="202">
                 <ComboBoxItem Content="Select account" IsEnabled="False" IsSelected="True"/>
             </ComboBox>
         </Grid>

@@ -44,7 +44,7 @@
         <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23" MouseDown="MyProfileLabel_MouseDown"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
-            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Statistic" VerticalAlignment="Top" FontSize="35" Height="50" Width="150"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Statistic" VerticalAlignment="Top" FontSize="35" Height="50" Width="131"/>
             <TextBlock HorizontalAlignment="Center" Margin="0,95,0,0" TextWrapping="Wrap" Text="Income vs expences" VerticalAlignment="Top" FontSize="25" Height="35" Width="250"/>
 
             <oxy:PlotView x:Name="plotView" HorizontalAlignment="Left" VerticalAlignment="Top" Width="607" Height="300" Margin="30,135,0,0">
@@ -52,15 +52,14 @@
             </oxy:PlotView>
 
 
-            <Button FontSize="23" Content="Apply" HorizontalAlignment="Left" Margin="445,462,0,0" VerticalAlignment="Top" Height="35" Width="120" Background="#0092FF" Click="ApplyButton_Click"/>
+            <Button FontSize="23" Content="Apply" HorizontalAlignment="Left" Margin="507,462,0,0" VerticalAlignment="Top" Height="35" Width="120" Background="#0092FF" Click="ApplyButton_Click"/>
             <TextBox x:Name="endDateTextBox" HorizontalAlignment="Left" Margin="258,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Height="27"/>
             <TextBox x:Name="startDateTextBox" HorizontalAlignment="Left" Margin="106,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Height="27"/>
-            <TextBlock FontSize="18" HorizontalAlignment="Left" Margin="51,435,0,0" TextWrapping="Wrap" Text="Select a date range" VerticalAlignment="Top" Height="25" Width="155"/>
+            <TextBlock FontSize="18" HorizontalAlignment="Left" Margin="153,435,0,0" TextWrapping="Wrap" Text="Select a date range" VerticalAlignment="Top" Height="25" Width="155"/>
             <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="51,470,0,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top"/>
             <TextBlock FontSize="20" HorizontalAlignment="Left" Margin="226,470,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" RenderTransformOrigin="0.425,-1.012"/>
-            <ComboBox FontSize="18" HorizontalAlignment="Left" Margin="449,50,0,0" VerticalAlignment="Top" Width="116">
-                <ComboBoxItem Content="Line graph" IsEnabled="False" IsSelected="True"/>
-            </ComboBox>
+            
+            
             <Image Source="Line_Graph.png" Width="400" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,200,0,0">
 
             </Image>

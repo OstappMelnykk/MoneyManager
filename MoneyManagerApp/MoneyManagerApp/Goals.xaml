@@ -41,7 +41,7 @@
         <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23" MouseDown="MyProfileLabel_MouseDown"/>
 
         <Grid Name="GoalsGrid" Grid.Column="1" Grid.RowSpan="5">
-            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Goals" VerticalAlignment="Top" FontSize="35" Height="50" Width="150"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,40,0,0" TextWrapping="Wrap" Text="Goals" VerticalAlignment="Top" FontSize="35" Height="50" Width="92"/>
             <Button Content="Create new goal" HorizontalAlignment="Center" Margin="0,434,0,0" VerticalAlignment="Top" FontSize="24" Width="244" Height="35" Background="#0092FF" Foreground="White" Click="Button_Create_New_Goal_Click">
                 <Button.Resources>
                     <Style TargetType="Border">

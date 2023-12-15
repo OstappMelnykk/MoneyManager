@@ -45,13 +45,15 @@
             <Image x:Name="NewPhotoImage" HorizontalAlignment="Left" Height="170" Margin="125,123,0,0" VerticalAlignment="Top" Width="200" Source="My_Photo.png"/>
             <Button FontSize="25" Content="Back" HorizontalAlignment="Left" Margin="125,35,0,0" VerticalAlignment="Top" Height="40" Width="80" Background="#AA00D7"  Click="BackButton_Click"/>
 
-            <Button FontSize="25" Content="Save" HorizontalAlignment="Left" Margin="484,383,0,0" VerticalAlignment="Top" Height="40" Width="110" Background="#0092FF" Click="SaveButton_Click"/>
+            <Button FontSize="25" Content="Save" HorizontalAlignment="Left" Margin="484,443,0,0" VerticalAlignment="Top" Height="40" Width="110" Background="#0092FF" Click="SaveButton_Click"/>
 
             <Button Content="Change photo" HorizontalAlignment="Left" Margin="125,310,0,0" VerticalAlignment="Top" FontSize="25" Background="#0092FF" Width="164" Click="Button_Change_Photo_Click" Height="37"/>
-            <TextBlock HorizontalAlignment="Left" Margin="394,155,0,0" TextWrapping="Wrap" Text="Set Name" VerticalAlignment="Top" FontSize="18"/>
-            <TextBox x:Name="FirstTextBox" HorizontalAlignment="Left" Margin="394,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="23" TextChanged="TextBox_TextChanged"/>
-            <TextBlock HorizontalAlignment="Left" Margin="394,248,0,0" TextWrapping="Wrap" Text="Set E-mail/Phone" VerticalAlignment="Top" FontSize="18" RenderTransformOrigin="-0.351,0.419"/>
-            <TextBox  x:Name="ThirdTextBox" HorizontalAlignment="Left" Margin="394,277,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="23"/>
+            <TextBlock HorizontalAlignment="Left" Margin="394,148,0,0" TextWrapping="Wrap" Text="Set Name" VerticalAlignment="Top" FontSize="23
+                       "/>
+            <TextBox x:Name="FirstTextBox" HorizontalAlignment="Left" Margin="394,184,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="27" TextChanged="TextBox_TextChanged"/>
+            <TextBlock HorizontalAlignment="Left" Margin="394,241,0,0" TextWrapping="Wrap" Text="Set E-mail/Phone" VerticalAlignment="Top" FontSize="23
+                       " RenderTransformOrigin="-0.351,0.419"/>
+            <TextBox  x:Name="ThirdTextBox" HorizontalAlignment="Left" Margin="394,277,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" Height="27"/>
 
         </Grid>
     </Grid>

@@ -26,23 +26,23 @@
         <Label Content="My profile" HorizontalAlignment="Center" Grid.Row="4" VerticalAlignment="Center" FontSize="23" MouseDown="MyProfileLabel_MouseDown"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="5">
-            <TextBlock HorizontalAlignment="Left" Margin="68,31,0,0" TextWrapping="Wrap" Text="Transfer between accounts" VerticalAlignment="Top" FontSize="32" Height="50" Width="408"/>
-            <Button FontSize="25" Content="Back" HorizontalAlignment="Left" Margin="466,36,0,0" VerticalAlignment="Top" Height="40" Width="80" Background="#AA00D7" Foreground="White">
+            <TextBlock HorizontalAlignment="Center" Margin="0,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="32" Height="94" Width="251"><Run Text="Transfer between "/><LineBreak/><Run Text="       accounts"/></TextBlock>
+            <Button FontSize="25" Content="Back" HorizontalAlignment="Left" Margin="110,53,0,0" VerticalAlignment="Top" Height="40" Width="80" Background="#AA00D7" Foreground="White" Click="Button_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="5"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <TextBlock HorizontalAlignment="Left" Margin="120,144,0,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top" FontSize="25" Height="40" Width="60"/>
-            <TextBlock HorizontalAlignment="Left" Margin="120,211,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" FontSize="25" Height="40" Width="60"/>
+            <TextBlock HorizontalAlignment="Left" Margin="120,142,0,0" TextWrapping="Wrap" Text="From:" VerticalAlignment="Top" FontSize="25" Height="40" Width="60"/>
+            <TextBlock HorizontalAlignment="Left" Margin="120,209,0,0" TextWrapping="Wrap" Text="To:" VerticalAlignment="Top" FontSize="25" Height="40" Width="60"/>
             <TextBlock HorizontalAlignment="Left" Margin="120,278,0,0" TextWrapping="Wrap" Text="Description:" VerticalAlignment="Top" FontSize="25" Height="40" Width="140"/>
             <TextBlock HorizontalAlignment="Left" Margin="120,331,0,0" TextWrapping="Wrap" Text="Sum:" VerticalAlignment="Top" FontSize="25" Height="40" Width="60"/>
             <TextBlock x:Name="ErrorMessage"  FontSize="20" Foreground="Red" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,99,0,0"/>
             <ComboBox x:Name="FromAccountComboBox" FontSize="25" HorizontalAlignment="Left" Margin="336,144,0,0"  Text="Account name" VerticalAlignment="Top" Width="210" SelectionChanged="ComboBox_SelectionChanged"/>
             <ComboBox x:Name="ToAccountComboBox" FontSize="25" HorizontalAlignment="Left" Margin="336,211,0,0"  Text="Account name" VerticalAlignment="Top" Width="210" SelectionChanged="ComboBox_SelectionChanged"/>
-            <TextBox x:Name="DescriptionTextBox" FontSize="25" HorizontalAlignment="Left" Margin="336,280,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="210"/>
-            <TextBox x:Name="SumTextBox" FontSize="25" HorizontalAlignment="Left" Margin="336,340,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="210" PreviewTextInput="SumTextBox_PreviewTextInput"/>
+            <TextBox x:Name="DescriptionTextBox" FontSize="25" HorizontalAlignment="Left" Margin="336,280,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top" Width="210" TextChanged="DescriptionTextBox_TextChanged"/>
+            <TextBox x:Name="SumTextBox" FontSize="25" HorizontalAlignment="Left" Margin="336,340,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" Width="210" PreviewTextInput="SumTextBox_PreviewTextInput" TextChanged="SumTextBox_TextChanged"/>
             <Button  FontSize="25" Content="Add" HorizontalAlignment="Left" Margin="376,435,0,0" VerticalAlignment="Top" Height="40" Width="170" Background="#0092FF" Foreground="White" Click="Button_Add_Click">
                 <Button.Resources>
                     <Style TargetType="Border">

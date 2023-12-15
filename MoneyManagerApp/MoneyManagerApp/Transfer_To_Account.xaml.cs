@@ -13,6 +13,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace MoneyManagerApp.Presentation
@@ -62,7 +63,7 @@ namespace MoneyManagerApp.Presentation
             string selectedAccount = AccountComboBox.SelectedItem as string;
             if (!string.IsNullOrEmpty(selectedAccount))
             {
-                
+
                 using (var dbContext = new ApplicationContext())
                 {
                     Account account = GetUserAccounts().FirstOrDefault(a => a.AccountsTitle == selectedAccount);
@@ -71,7 +72,17 @@ namespace MoneyManagerApp.Presentation
                     Transaction transaction = new Transaction();
                     transaction.TransactionsType = 1;
                     transaction.TransactionsDescription = description;
-                    transaction.TransactionsSum = Convert.ToDecimal(sum);
+                    try
+                    {
+                        transaction.TransactionsSum = Convert.ToDecimal(sum);
+                    }
+                    catch (Exception)
+                    {
+
+
+                        return;
+                    }
+                
                     transaction.FkAccountsIdTo = account.AccountsId;
                     dbContext.Transactions.Add(transaction);
                     dbContext.SaveChanges();
@@ -117,6 +128,12 @@ namespace MoneyManagerApp.Presentation
             this.Close();
         }
 
-
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Add_Transactions add_Transactions = new Add_Transactions();
+            add_Transactions.Show();
+            this.Close();
+            
+        }
     }
 }

@@ -184,5 +184,21 @@ namespace MoneyManagerApp.Presentation
             this.Close();
         }
 
+        private void DescriptionTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void SumTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Add_Transactions add_Transactions = new Add_Transactions();
+            add_Transactions.Show();
+            this.Close();
+        }
     }
 }
