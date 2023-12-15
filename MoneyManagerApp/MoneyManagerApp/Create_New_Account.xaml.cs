@@ -8,12 +8,12 @@ namespace MoneyManagerApp.Presentation
 {
     public partial class Create_New_Account : Window
     {
-        private ApplicationContext _dbContext; // Заміни це на свій контекст бази даних
+        private ApplicationContext _dbContext; 
 
         public Create_New_Account()
         {
             InitializeComponent();
-            _dbContext = new ApplicationContext(); // Ініціалізуй контекст бази даних
+            _dbContext = new ApplicationContext(); 
         }
 
         private void Save_Button_Click(object sender, RoutedEventArgs e)
@@ -24,12 +24,11 @@ namespace MoneyManagerApp.Presentation
             {
                 try
                 {
-                    // Створення нового об'єкту Account для збереження в базу даних
+         
                     Account newAccount = new Account();
                     newAccount.AccountsTitle = accountName;
                     newAccount.FkUsersId = CurrentUser.UserId;
 
-                    // Додавання нового об'єкту до DbSet в контексті бази даних
                     _dbContext.Accounts.Add(newAccount);
                     _dbContext.SaveChanges();
 

@@ -17,30 +17,27 @@ using System.Windows.Shapes;
 
 namespace MoneyManagerApp.Presentation
 {
-    /// <summary>
-    /// Interaction logic for Home.xaml
-    /// </summary>
+
     public partial class Home : Window
     {
         public ObservableCollection<Transaction> Transactions { get; set; }
         public Home()
         {
             InitializeComponent();
-            int currentUserId = GetCurrentUserId(); // Отримання Id поточного користувача, наприклад, із збереженого значення
+            int currentUserId = GetCurrentUserId();
             if (CountOfOpenningHomePage.Count == 1)
             {
                 GetCurrentUserAccount(currentUserId);
                 CountOfOpenningHomePage.Count = 2;
             }
-            string currentUserAccountName = CurrentAccount.AccountTitle; // Отримання назви облікового запису поточного користувача
-            AccountNameLabel.Content = currentUserAccountName; // Встановлення назви акаунта у TextBox
+            string currentUserAccountName = CurrentAccount.AccountTitle; 
+            AccountNameLabel.Content = currentUserAccountName; 
             BalanceLabel.Content = GetBalanceDifference().ToString() + "₴";
             List<Transaction> currentAccountTransactions = GetCurrentAccountTransactions(CurrentAccount.AccountId);
             Transactions = new ObservableCollection<Transaction>(currentAccountTransactions);
             DataContext = this;
         }
 
-        // Додайте цей метод до коду вашого вікна Home
        
 
         private int GetCurrentUserId()
@@ -50,7 +47,7 @@ namespace MoneyManagerApp.Presentation
 
         private void GetCurrentUserAccount(int currentUserId)
         {
-            using (var dbContext = new ApplicationContext()) // Замість YourDbContext вкажіть ваш контекст бази даних
+            using (var dbContext = new ApplicationContext()) 
             {
                 var currentUserAccount = dbContext.Accounts.FirstOrDefault(a => a.FkUsersId == currentUserId);
                 if (currentUserAccount != null)
@@ -63,17 +60,17 @@ namespace MoneyManagerApp.Presentation
         {
             using (var dbContext = new ApplicationContext())
             {
-                // Отримайте суму транзакцій типу 1 для поточного облікового запису
+            
                 decimal sumType1 = dbContext.Transactions
                     .Where(t => t.FkAccountsIdTo == CurrentAccount.AccountId)
                     .Sum(t => t.TransactionsSum);
 
-                // Отримайте суму транзакцій типу 2 для поточного облікового запису
+            
                 decimal sumType2 = dbContext.Transactions
                     .Where(t => t.FkAccountsIdFrom == CurrentAccount.AccountId)
                     .Sum(t => t.TransactionsSum);
 
-                // Обчисліть різницю сум типу 1 та типу 2
+
                 return sumType1 - sumType2;
             }
         }

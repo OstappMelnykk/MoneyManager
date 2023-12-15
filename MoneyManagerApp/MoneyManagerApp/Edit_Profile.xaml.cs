@@ -56,7 +56,7 @@ namespace MoneyManagerApp.Presentation
                     bitmap.StreamSource = new MemoryStream(imageBytes);
                     bitmap.EndInit();
 
-                    // Показати зображення на WPF
+
                     NewPhotoImage.Source = bitmap;
                 }
                 else
@@ -182,18 +182,11 @@ namespace MoneyManagerApp.Presentation
                 bitmap.StreamSource = new MemoryStream(imageBytes);
                 bitmap.EndInit();
 
-                // Показати зображення на WPF
+               
                 NewPhotoImage.Source = bitmap;
                 
 
-
-
-                // Вам потрібно мати об'єкт користувача або модель даних, в яку ви збираєтесь зберігати ці байти.
-                // Наприклад, якщо у вас є об'єкт user з полем UsersPhoto типу byte[], ви можете зберегти зображення таким чином:
-                // user.UsersPhoto = imageBytes;
-
-                // Тепер вам потрібно зберегти цього користувача у базу даних з використанням Entity Framework або ADO.NET.
-                // Вам також потрібно знати які поля в базі даних відповідають полям моделі вашого користувача, і як правильно зберегти байтовий масив.
+            
             }
         }
     }

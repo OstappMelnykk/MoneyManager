@@ -61,7 +61,7 @@ namespace MoneyManagerApp.Presentation {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MoneyManagerApp.Presentation;component/accounts.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MoneyManagerApp.Presentation;V1.0.0.0;component/accounts.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Accounts.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

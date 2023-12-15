@@ -16,9 +16,7 @@ using System.Windows.Shapes;
 
 namespace MoneyManagerApp.Presentation
 {
-    /// <summary>
-    /// Interaction logic for Goal_Name.xaml
-    /// </summary>
+    
     public partial class Goal_Name : Window
     {
         private int goalId;
@@ -36,10 +34,9 @@ namespace MoneyManagerApp.Presentation
         {
             using (var dbContext = new ApplicationContext())
             {
-                // Отримайте суму транзакцій типу 1 для поточного облікового запису
+     
                 Goal goal = dbContext.Goals.Where(g => g.GoalsId == goalId).FirstOrDefault();
 
-                // Отримайте суму транзакцій типу 2 для поточного облікового запису
 
                 return goal;
             }
@@ -49,10 +46,9 @@ namespace MoneyManagerApp.Presentation
         {
             using (var dbContext = new ApplicationContext())
             {
-                // Отримайте суму транзакцій типу 1 для поточного облікового запису
+             
                 Account account = dbContext.Accounts.Where(a => a.AccountsId == accountId).FirstOrDefault();
 
-                // Отримайте суму транзакцій типу 2 для поточного облікового запису
 
                 return account.AccountsTitle;
             }
@@ -74,17 +70,16 @@ namespace MoneyManagerApp.Presentation
         {
             using (var dbContext = new ApplicationContext())
             {
-                // Отримайте суму транзакцій типу 1 для поточного облікового запису
+
                 decimal sumType1 = dbContext.Transactions
                     .Where(t => t.FkAccountsIdTo == accountId)
                     .Sum(t => t.TransactionsSum);
 
-                // Отримайте суму транзакцій типу 2 для поточного облікового запису
+
                 decimal sumType2 = dbContext.Transactions
                     .Where(t => t.FkAccountsIdFrom == accountId)
                     .Sum(t => t.TransactionsSum);
 
-                // Обчисліть різницю сум типу 1 та типу 2
                 return sumType1 - sumType2;
             }
         }

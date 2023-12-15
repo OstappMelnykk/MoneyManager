@@ -93,7 +93,7 @@ namespace MoneyManagerApp.Presentation {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MoneyManagerApp.Presentation;component/transfer_between_accounts.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MoneyManagerApp.Presentation;V1.0.0.0;component/transfer_between_accounts.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Transfer_Between_Accounts.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

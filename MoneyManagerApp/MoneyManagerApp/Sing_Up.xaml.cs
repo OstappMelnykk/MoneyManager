@@ -38,12 +38,6 @@ namespace MoneyManagerApp.Presentation
         }
 
 
-       /* public Sing_Up(ApplicationContext _db)
-        {
-            InitializeComponent();
-            db = _db;
-        }*/
-
 
         public string GetUsernameTextBox()
         {
@@ -81,7 +75,7 @@ namespace MoneyManagerApp.Presentation
 
         public Button GetSignUpButton()
         {
-            return SignUpButton; // Повернення кнопки SignUpButton
+            return SignUpButton; 
         }
 
         public void SignUpButton_Click(object sender, RoutedEventArgs e)
@@ -94,7 +88,7 @@ namespace MoneyManagerApp.Presentation
             bool containsOnlyDigits = emailOrPhoneNumber.All(char.IsDigit);
             bool containsAtSymbol = emailOrPhoneNumber.Contains('@');
 
-            // Перевірка наявності користувача перед реєстрацією нового користувача
+        
             if (IsUserAlreadyRegistered(username, emailOrPhoneNumber))
             {
                 ToolTip toolTip = new ToolTip();
@@ -123,7 +117,7 @@ namespace MoneyManagerApp.Presentation
 
             
 
-            // Реєстрація нового користувача
+   
             (byte[], byte[]) T = PasswordHelper.GetHashAndSalt(password);
 
             byte[] salt = T.Item1;
@@ -154,7 +148,7 @@ namespace MoneyManagerApp.Presentation
             db.SaveChanges();
 
 
-            Home loginWindow = new Home(); // Замініть 'MainWindow' на вашу назву вікна входу
+            Home loginWindow = new Home(); 
             loginWindow.Show();
             this.Close();
         }
@@ -162,7 +156,7 @@ namespace MoneyManagerApp.Presentation
 
         public bool CurrentUserHasAccount(int currentUserId)
         {
-            using (var dbContext = new ApplicationContext()) // Замість YourDbContext вкажіть ваш контекст бази даних
+            using (var dbContext = new ApplicationContext()) 
             {
                 var currentUserAccount = dbContext.Accounts.FirstOrDefault(a => a.FkUsersId == currentUserId);
                 if (currentUserAccount != null)
@@ -189,10 +183,7 @@ namespace MoneyManagerApp.Presentation
             EmailOrPhoneTextBox.Text = "";
             PasswordTextBox.Clear();
 
-           /* Home HomeWindow = new Home();
-            this.Close();
 
-            HomeWindow.Show();*/
            
         }
     }

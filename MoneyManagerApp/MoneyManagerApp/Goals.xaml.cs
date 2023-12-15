@@ -16,9 +16,7 @@ using System.Windows.Shapes;
 
 namespace MoneyManagerApp.Presentation
 {
-    /// <summary>
-    /// Interaction logic for Goals.xaml
-    /// </summary>
+
     public partial class Goals : Window
     {
         double accountBalance = GetAccountBalance(CurrentAccount.AccountId);

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bxaQGDHmAQxpgGycrUDAEEUymHInzl6N4wT3rAUSlW+jI0+FALAsEvxkjp1g3GeoU2Vig7UqubvqFYOQfLTX/A==",
+  "dgSpecHash": "JXTli2Ef/j1KMiKDBDMnf0YTVPOJC405BL45YE20FcYzv/oOl8yr7FcicKa16XcuszPDjpcmg7KKspa9RC6sSg==",
   "success": true,
   "projectFilePath": "D:\\c#\\Development\\MoneyManager\\MoneyManagerApp\\MoneyManagerApp\\MoneyManagerApp.Presentation.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.io.recyclablememorystream\\2.3.2\\microsoft.io.recyclablememorystream.2.3.2.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\nlog\\5.2.7\\nlog.5.2.7.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\npgsql\\7.0.6\\npgsql.7.0.6.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.11\\npgsql.entityframeworkcore.postgresql.7.0.11.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\oxyplot.core\\2.1.2\\oxyplot.core.2.1.2.nupkg.sha512",

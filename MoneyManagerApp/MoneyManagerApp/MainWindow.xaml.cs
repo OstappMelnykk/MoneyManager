@@ -124,7 +124,7 @@ namespace MoneyManagerApp
 
         public bool CurrentUserHasAccount(int currentUserId)
         {
-            using (var dbContext = new ApplicationContext()) // Замість YourDbContext вкажіть ваш контекст бази даних
+            using (var dbContext = new ApplicationContext()) 
             {
                 var currentUserAccount = dbContext.Accounts.FirstOrDefault(a => a.FkUsersId == currentUserId);
                 if (currentUserAccount != null)

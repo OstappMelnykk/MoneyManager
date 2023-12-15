@@ -17,9 +17,7 @@ using System.Windows.Shapes;
 
 namespace MoneyManagerApp.Presentation
 {
-    /// <summary>
-    /// Interaction logic for Transfer_From_Account.xaml
-    /// </summary>
+    
     public partial class Transfer_From_Account : Window
     {
         public Transfer_From_Account()
@@ -49,13 +47,13 @@ namespace MoneyManagerApp.Presentation
 
         private void SumTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
-            // Отримання тексту, який користувач намагається ввести
+            
             string newText = SumTextBox.Text + e.Text;
 
-            // Перевірка, чи текст може бути конвертований до decimal
+          
             if (!decimal.TryParse(newText, out _))
             {
-                // Якщо текст не може бути конвертований до decimal, відміна введення
+                
                 e.Handled = true;
             }
         }
@@ -72,7 +70,7 @@ namespace MoneyManagerApp.Presentation
             string selectedAccount = FromAccountComboBox.SelectedItem as string;
             if (!string.IsNullOrEmpty(selectedAccount))
             {
-                // Проводьте ваші дії з вибраним значенням
+               
                 using (var dbContext = new ApplicationContext())
                 {
                     Account fromAccount = GetUserAccounts().FirstOrDefault(a => a.AccountsTitle == selectedAccount);

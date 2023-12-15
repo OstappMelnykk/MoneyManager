@@ -14,9 +14,7 @@ using System.Windows.Shapes;
 
 namespace MoneyManagerApp.Presentation
 {
-    /// <summary>
-    /// Interaction logic for Add_Transactions.xaml
-    /// </summary>
+
     public partial class Add_Transactions : Window
     {
         public Add_Transactions()

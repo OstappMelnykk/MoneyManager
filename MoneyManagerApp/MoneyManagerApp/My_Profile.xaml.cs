@@ -18,9 +18,7 @@ using System.Windows.Shapes;
 
 namespace MoneyManagerApp.Presentation
 {
-    /// <summary>
-    /// Interaction logic for My_Profile.xaml
-    /// </summary>
+
     public partial class My_Profile : Window
     {
         public My_Profile()
@@ -69,18 +67,18 @@ namespace MoneyManagerApp.Presentation
 
         static string ConvertByteaToString(byte[] byteaValue)
         {
-            // Перетворення byte[] в рядок за допомогою BitConverter
+         
             string stringValue = BitConverter.ToString(byteaValue).Replace("-", "");
             return stringValue;
         }
 
         static byte[] ConvertByteaToBytes(string byteaData)
         {
-            // Видаляємо подвійні бекслеші та розділяємо рядок на пари символів
+      
             byteaData = byteaData.Replace("\\x", "");
             string[] bytePairs = SplitString(byteaData, 2);
 
-            // Конвертуємо кожну пару в байт та складаємо в масив байтів
+         
             byte[] byteArray = new byte[bytePairs.Length];
             for (int i = 0; i < bytePairs.Length; i++)
             {

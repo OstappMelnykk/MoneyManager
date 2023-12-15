@@ -17,9 +17,7 @@ using System.Windows.Shapes;
 
 namespace MoneyManagerApp.Presentation
 {
-    /// <summary>
-    /// Interaction logic for Security_Setting.xaml
-    /// </summary>
+
     public partial class Security_Setting : Window
     {
         public Security_Setting()

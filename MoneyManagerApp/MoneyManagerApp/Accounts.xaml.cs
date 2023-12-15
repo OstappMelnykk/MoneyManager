@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using MoneyManagerApp.DAL.Helpers;
 using MoneyManagerApp.Presentation.Models;
+using NLog;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -13,6 +15,7 @@ namespace MoneyManagerApp.Presentation
 {
     public partial class Accounts : Window
     {
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         public Accounts()
         {
             InitializeComponent();
@@ -21,130 +24,151 @@ namespace MoneyManagerApp.Presentation
 
         private void LoadUserAccounts()
         {
-            Style customButtonStyle = new Style(typeof(Button));
-
-            // Adding setters to the style
-            customButtonStyle.Setters.Add(new Setter(Border.CornerRadiusProperty, new CornerRadius(5)));
-
-            // Assigning the style to Application.Current.Resources
-            Application.Current.Resources["CustomButtonStyle"] = customButtonStyle;
-            List<Account> userAccounts = GetUserAccounts();
-
-            for (int i = 0; i < userAccounts.Count; i++)
+            try
             {
-                TextBlock accountTextBlock = new TextBlock
+                Style customButtonStyle = new Style(typeof(Button));
+
+                customButtonStyle.Setters.Add(new Setter(Border.CornerRadiusProperty, new CornerRadius(5)));
+
+
+                Application.Current.Resources["CustomButtonStyle"] = customButtonStyle;
+                List<Account> userAccounts = GetUserAccounts();
+
+                for (int i = 0; i < userAccounts.Count; i++)
                 {
-                    Text = userAccounts[i].AccountsTitle,
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    Margin = new Thickness(0, 160 + (80 * i), 410, 0),
-                    TextWrapping = TextWrapping.Wrap,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    FontSize = 23,
-                    Height = 30,
-                    Width = 100
-                };
+                    TextBlock accountTextBlock = new TextBlock
+                    {
+                        Text = userAccounts[i].AccountsTitle,
+                        HorizontalAlignment = HorizontalAlignment.Center,
+                        Margin = new Thickness(0, 160 + (80 * i), 410, 0),
+                        TextWrapping = TextWrapping.Wrap,
+                        VerticalAlignment = VerticalAlignment.Top,
+                        FontSize = 23,
+                        Height = 30,
+                        Width = 100
+                    };
 
-                TextBlock balanceTextBlock = new TextBlock
-                {
-                    Text = GetBalanceDifference(userAccounts[i].AccountsId).ToString(),
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    Margin = new Thickness(0, 160 + (80 * i), 60, 0),
-                    TextWrapping = TextWrapping.Wrap,
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Width = 100,
-                    FontSize = 23
-                };
+                    TextBlock balanceTextBlock = new TextBlock
+                    {
+                        Text = GetBalanceDifference(userAccounts[i].AccountsId).ToString(),
+                        HorizontalAlignment = HorizontalAlignment.Center,
+                        Margin = new Thickness(0, 160 + (80 * i), 60, 0),
+                        TextWrapping = TextWrapping.Wrap,
+                        VerticalAlignment = VerticalAlignment.Top,
+                        Width = 100,
+                        FontSize = 23
+                    };
 
-                Button chooseButton = new Button
-                {
-                    Content = "Choose",
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    Margin = new Thickness(200, 160 + (80 * i), 0, 0),
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Width = 80,
-                    Height = 30,
-                    FontSize = 20,
-                    Tag = userAccounts[i],
-                    Background = Brushes.Blue,
-                    Foreground = Brushes.White,
+                    Button chooseButton = new Button
+                    {
+                        Content = "Choose",
+                        HorizontalAlignment = HorizontalAlignment.Center,
+                        Margin = new Thickness(200, 160 + (80 * i), 0, 0),
+                        VerticalAlignment = VerticalAlignment.Top,
+                        Width = 80,
+                        Height = 30,
+                        FontSize = 20,
+                        Tag = userAccounts[i],
+                        Background = Brushes.Blue,
+                        Foreground = Brushes.White,
 
-                };
-                
-                chooseButton.Click += ChooseButton_Click;
+                    };
 
-                Button deleteButton = new Button
-                {
-                    Content = "Delete",
-                    HorizontalAlignment = HorizontalAlignment.Center,
-                    Margin = new Thickness(450, 160 + (80 * i), 0, 0),
-                    VerticalAlignment = VerticalAlignment.Top,
-                    Width = 80,
-                    Height = 30,
-                    FontSize = 20,
-                    Background = new SolidColorBrush(Color.FromRgb(170, 0, 215)),
-                    Foreground = Brushes.White,
-                    Tag = userAccounts[i],
+                    chooseButton.Click += ChooseButton_Click;
+
+                    Button deleteButton = new Button
+                    {
+                        Content = "Delete",
+                        HorizontalAlignment = HorizontalAlignment.Center,
+                        Margin = new Thickness(450, 160 + (80 * i), 0, 0),
+                        VerticalAlignment = VerticalAlignment.Top,
+                        Width = 80,
+                        Height = 30,
+                        FontSize = 20,
+                        Background = new SolidColorBrush(Color.FromRgb(170, 0, 215)),
+                        Foreground = Brushes.White,
+                        Tag = userAccounts[i],
 
 
-                };
+                    };
 
-                
 
-                deleteButton.Click += Delete_Button_Click;
 
-                AccountsGrid.Children.Add(accountTextBlock);
-                AccountsGrid.Children.Add(balanceTextBlock);
-                AccountsGrid.Children.Add(chooseButton);
-                AccountsGrid.Children.Add(deleteButton);
+                    deleteButton.Click += Delete_Button_Click;
+
+                    AccountsGrid.Children.Add(accountTextBlock);
+                    AccountsGrid.Children.Add(balanceTextBlock);
+                    AccountsGrid.Children.Add(chooseButton);
+                    AccountsGrid.Children.Add(deleteButton);
+                }
+                logger.Info("Рахунки користувача завантажені успішно.");
+            }
+            catch(Exception ex)
+            {
+                logger.Error(ex, "Помилка при завантаженні рахунків користувача");
             }
         }
 
 
         private decimal GetBalanceDifference(int accountId)
         {
-            using (var dbContext = new ApplicationContext())
+            try
             {
-                // Отримайте суму транзакцій типу 1 для поточного облікового запису
-                decimal sumType1 = dbContext.Transactions
-                    .Where(t => t.FkAccountsIdTo == accountId)
-                    .Sum(t => t.TransactionsSum);
+                using (var dbContext = new ApplicationContext())
+                {
 
-                // Отримайте суму транзакцій типу 2 для поточного облікового запису
-                decimal sumType2 = dbContext.Transactions
-                    .Where(t => t.FkAccountsIdFrom == accountId)
-                    .Sum(t => t.TransactionsSum);
+                    decimal sumType1 = dbContext.Transactions
+                        .Where(t => t.FkAccountsIdTo == accountId)
+                        .Sum(t => t.TransactionsSum);
 
-                // Обчисліть різницю сум типу 1 та типу 2
-                return sumType1 - sumType2;
+
+                    decimal sumType2 = dbContext.Transactions
+                        .Where(t => t.FkAccountsIdFrom == accountId)
+                        .Sum(t => t.TransactionsSum);
+
+
+                    return sumType1 - sumType2;
+                }
+            } catch (Exception ex)
+            {
+                logger.Error(ex, "Помилка при обчисленні різниці балансу");
+                return -1;
             }
         }
 
         public void Delete_Button_Click(object sender, RoutedEventArgs e)
         {
-            if (sender is Button button && button.Tag is Account selectedAccount)
+            try
             {
-
-
-                using (var dbContext = new ApplicationContext())
+                if (sender is Button button && button.Tag is Account selectedAccount)
                 {
-                    var accountToDelete = dbContext.Accounts.FirstOrDefault(a => a.AccountsId == selectedAccount.AccountsId);
 
-                    if (accountToDelete != null)
+
+                    using (var dbContext = new ApplicationContext())
                     {
-                        // Видалення всіх транзакцій, пов'язаних з акаунтом
-                        var transactionsToDelete = dbContext.Transactions.Where(t => t.FkAccountsIdFrom == selectedAccount.AccountsId || t.FkAccountsIdTo == selectedAccount.AccountsId);
-                        dbContext.Transactions.RemoveRange(transactionsToDelete);
+                        var accountToDelete = dbContext.Accounts.FirstOrDefault(a => a.AccountsId == selectedAccount.AccountsId);
 
-                        // Видалення акаунту
-                        dbContext.Accounts.Remove(accountToDelete);
+                        if (accountToDelete != null)
+                        {
 
-                        dbContext.SaveChanges();
+                            var transactionsToDelete = dbContext.Transactions.Where(t => t.FkAccountsIdFrom == selectedAccount.AccountsId || t.FkAccountsIdTo == selectedAccount.AccountsId);
+                            dbContext.Transactions.RemoveRange(transactionsToDelete);
+
+
+                            dbContext.Accounts.Remove(accountToDelete);
+
+                            dbContext.SaveChanges();
+                        }
                     }
                 }
+                Accounts accounts = new Accounts();
+                accounts.Show();
+                this.Close();
             }
-            Accounts accounts = new Accounts();
-            accounts.Show();
-            this.Close();
+            catch (Exception ex)
+            {
+                logger.Error(ex, "Помилка при видаленні облікового запису");
+            }
         }
 
         private void ChooseButton_Click(object sender, RoutedEventArgs e)

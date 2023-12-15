@@ -1,5 +1,6 @@
 ﻿using MoneyManagerApp.DAL.Helpers;
 using MoneyManagerApp.Presentation.Models;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +18,9 @@ using System.Windows.Shapes;
 
 namespace MoneyManagerApp.Presentation
 {
-    /// <summary>
-    /// Interaction logic for Add_New_Goal.xaml
-    /// </summary>
     public partial class Add_New_Goal : Window
     {
+        private static readonly Logger logger = LogManager.GetCurrentClassLogger();
         public Add_New_Goal()
         {
             InitializeComponent();
