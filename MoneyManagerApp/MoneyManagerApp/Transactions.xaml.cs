@@ -76,8 +76,9 @@ namespace MoneyManagerApp.Presentation
                     }
 
                     // Зберігання файлу Excel
+                    string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+                    string filePath = System.IO.Path.Combine(projectDirectory, "ExelFile", "Transactions.xlsx");
                     
-                    var filePath = @"D:\Downloads\Transactions.xlsx"; // Вкажіть шлях та ім'я файлу
                     FileInfo excelFile = new FileInfo(filePath);
                     try
                     {

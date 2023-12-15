@@ -53,11 +53,11 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button  HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="60" Width="210" FontSize="19" Background="#f0f0f0" Click="Button_Transfer_To_Account_Click">
+            <Button  HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="60" Width="210" FontSize="19" Background="#767676" Click="Button_Transfer_To_Account_Click">
                 <TextBlock  Text="Transfer to account" TextAlignment="Center"/>
             </Button>
-            <Button Content="Tranfer from account" HorizontalAlignment="Center" Margin="0,240,0,0"  Height="60" Width="210" FontSize="19" VerticalAlignment="Top" Background="#f0f0f0" Click="Button_Transfer_From_Account_Click"/>
-            <Button Content="Transfer between accounts" HorizontalAlignment="Center" Margin="0,12,0,0"  Height="60" Width="210" FontSize="19" VerticalAlignment="Top" Grid.Row="1" Background="#f0f0f0" Click="Button_Transfer_Between_Accounts_Click"/>
+            <Button Content="Tranfer from account" HorizontalAlignment="Center" Margin="0,240,0,0"  Height="60" Width="210" FontSize="19" VerticalAlignment="Top" Background="#767676" Click="Button_Transfer_From_Account_Click"/>
+            <Button Content="Transfer between accounts" HorizontalAlignment="Center" Margin="0,12,0,0"  Height="60" Width="210" FontSize="19" VerticalAlignment="Top" Grid.Row="1" Background="#767676" Click="Button_Transfer_Between_Accounts_Click"/>
 
         </Grid>
 

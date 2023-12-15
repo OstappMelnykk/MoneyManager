@@ -19,4 +19,8 @@
     <ProjectReference Include="..\MoneyManagerApp.DAL\MoneyManagerApp.DAL.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ExelFile\" />
+  </ItemGroup>
+
 </Project>
