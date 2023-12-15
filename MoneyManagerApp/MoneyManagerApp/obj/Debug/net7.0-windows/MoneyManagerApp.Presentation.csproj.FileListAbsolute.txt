@@ -38,7 +38,6 @@ D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\bin\Debug\net7.0-
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\MoneyManagerApp.Presentation.csproj.AssemblyReference.cache
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Accounts.g.cs
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Add_Transactions.g.cs
-D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Bar_Graph.g.cs
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Create_New_Account.g.cs
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Edit_Profile.g.cs
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Goals.g.cs
@@ -58,7 +57,6 @@ D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\MoneyManagerApp.Presentation_MarkupCompile.lref
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Accounts.baml
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Add_Transactions.baml
-D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Bar_Graph.baml
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Create_New_Account.baml
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Edit_Profile.baml
 D:\c#\Development\MoneyManager\MoneyManagerApp\MoneyManagerApp\obj\Debug\net7.0-windows\Goals.baml
