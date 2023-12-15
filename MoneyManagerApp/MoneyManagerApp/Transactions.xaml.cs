@@ -23,13 +23,13 @@ namespace MoneyManagerApp.Presentation
         public Transactions()
         {
             InitializeComponent();
+            TransactionList = new ObservableCollection<Transaction>(GetCurrentUserTransactions());
             LoadUserTransactions();
         }
 
         private void LoadUserTransactions()
         {
-            List<Transaction> currentAccountTransactions = GetCurrentUserTransactions();
-            TransactionList = new ObservableCollection<Transaction>(currentAccountTransactions);
+            
             DataContext = this;
         }
 
@@ -107,6 +107,11 @@ namespace MoneyManagerApp.Presentation
                 userTransactions = dbContext.Transactions
                     .Where(t => currentUserAccounts.Contains((int)t.FkAccountsIdFrom) || currentUserAccounts.Contains((int)t.FkAccountsIdTo))
                     .ToList();
+                foreach(var transaction in userTransactions)
+                {
+                    transaction.FkAccountsIdToNavigation = dbContext.Accounts.FirstOrDefault(a => a.AccountsId == transaction.FkAccountsIdTo);
+                    transaction.FkAccountsIdFromNavigation = dbContext.Accounts.FirstOrDefault(a => a.AccountsId == transaction.FkAccountsIdFrom);
+                }
             }
 
             return userTransactions;

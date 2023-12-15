@@ -1,4 +1,5 @@
-﻿using MoneyManagerApp.DAL.Helpers;
+﻿using Microsoft.EntityFrameworkCore.Query.Internal;
+using MoneyManagerApp.DAL.Helpers;
 using MoneyManagerApp.Presentation.Models;
 using System;
 using System.Collections.Generic;
@@ -40,13 +41,27 @@ namespace MoneyManagerApp.Presentation
                     UsernameTextBlock.Text = user.UsersName;
                     EmailTextBlock.Text = user.UsersEmail;
                     byte[] imageBytes = user.UsersPhoto;
-                    BitmapImage bitmap = new BitmapImage();
-                    bitmap.BeginInit();
-                    bitmap.StreamSource = new MemoryStream(imageBytes);
-                    bitmap.EndInit();
+                    if (imageBytes != null)
+                    {
+                        BitmapImage bitmap = new BitmapImage();
+                        bitmap.BeginInit();
+                        bitmap.StreamSource = new MemoryStream(imageBytes);
+                        bitmap.EndInit();
 
-                    // Показати зображення на WPF
-                    MyImage.Source = bitmap;
+                        // Показати зображення на WPF
+                        MyImage.Source = bitmap;
+                    }
+                    else
+                    {
+                        string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+                        string imagePath = System.IO.Path.Combine(projectDirectory, "images", "My_Photo.png");
+                        byte[] imageBytesDefault = File.ReadAllBytes(imagePath);
+                        BitmapImage bitmap = new BitmapImage();
+                        bitmap.BeginInit();
+                        bitmap.StreamSource = new MemoryStream(imageBytesDefault);
+                        bitmap.EndInit();
+                        MyImage.Source = bitmap;
+                    }
 
                 }
             }

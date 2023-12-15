@@ -1,4 +1,5 @@
-﻿using Microsoft.Win32;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Win32;
 using MoneyManagerApp.DAL.Helpers;
 using MoneyManagerApp.Presentation.Models;
 using System;
@@ -27,6 +28,7 @@ namespace MoneyManagerApp.Presentation
         {
             InitializeComponent();
             dbContext = new ApplicationContext();
+            LoadUserPhoto();
         }
 
         private byte[] newPhoto = null;
@@ -41,7 +43,35 @@ namespace MoneyManagerApp.Presentation
             this.Close();
         }
             
-            
+        private void LoadUserPhoto()
+        {
+            User user = dbContext.Users.Where(u => u.UsersId == CurrentUser.UserId).FirstOrDefault();
+            if (user != null)
+            {
+                byte[] imageBytes = user.UsersPhoto;
+                if (imageBytes != null)
+                {
+                    BitmapImage bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.StreamSource = new MemoryStream(imageBytes);
+                    bitmap.EndInit();
+
+                    // Показати зображення на WPF
+                    NewPhotoImage.Source = bitmap;
+                }
+                else
+                {
+                    string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
+                    string imagePath = System.IO.Path.Combine(projectDirectory, "images", "My_Photo.png");
+                    byte[] imageBytesDefault = File.ReadAllBytes(imagePath);
+                    BitmapImage bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.StreamSource = new MemoryStream(imageBytesDefault);
+                    bitmap.EndInit();
+                    NewPhotoImage.Source = bitmap;
+                }
+            }
+        }    
             
             
             
@@ -49,7 +79,6 @@ namespace MoneyManagerApp.Presentation
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             textFromFirstTextBox = FirstTextBox.Text;
-            textFromSecondTextBox = SecondTextBox.Text;
             textFromThirdTextBox = ThirdTextBox.Text;
 
             bool isChanged = false;
@@ -66,11 +95,7 @@ namespace MoneyManagerApp.Presentation
                         entityToUpdate.UsersName = textFromFirstTextBox;
                         isChanged = true;
                     }
-                    if (!string.IsNullOrEmpty(textFromSecondTextBox) && textFromSecondTextBox != entityToUpdate.UsersPhonenumber)
-                    {
-                        entityToUpdate.UsersPhonenumber = textFromSecondTextBox;
-                        isChanged = true;
-                    }
+                    
                     if (!string.IsNullOrEmpty(textFromThirdTextBox) && textFromThirdTextBox != entityToUpdate.UsersEmail)
                     {
                         entityToUpdate.UsersEmail = textFromThirdTextBox;
@@ -87,7 +112,6 @@ namespace MoneyManagerApp.Presentation
                     {
                         dbContext.SaveChanges();
                         FirstTextBox.Text = "";
-                        SecondTextBox.Text = "";
                         ThirdTextBox.Text = "";
                         MessageBox.Show("Зміни успішно збережено.");
                     }

@@ -84,7 +84,7 @@ namespace MoneyManagerApp.Presentation
                     Background = new SolidColorBrush(Color.FromRgb(170, 0, 215)),
                     Foreground = Brushes.White,
                     Tag = userAccounts[i],
-                    Style = customButtonStyle,
+
 
                 };
 

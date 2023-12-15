@@ -27,18 +27,13 @@ namespace MoneyManagerApp
 
     public partial class MainWindow : Window
     {
-        string UsernameOrEmail;
-        string password;
-
-
-
-        private readonly ApplicationContext db;
+        private  ApplicationContext db;
 
         public MainWindow()
         {
             InitializeComponent();
             Loaded += MainWindow_Loaded;
-            db = new ApplicationContext();
+            this.db = new ApplicationContext();
         }
 
         public MainWindow(ApplicationContext db) : this()
@@ -68,11 +63,10 @@ namespace MoneyManagerApp
 
         public void LoginButton_Click(object sender, RoutedEventArgs e)
         {
-            UsernameOrEmail = UsernameOrEmailTextBox.Text;
-            password = PasswordTextBox.Password;
-            string UsersName = UsernameOrEmail;
+            string UsernameOrEmail = UsernameOrEmailTextBox.Text;
+            string password = PasswordTextBox.Password;
 
-            User user = db.Users.FirstOrDefault(u => u.UsersName == UsersName);
+            User user = db.Users.FirstOrDefault(u => u.UsersEmail == UsernameOrEmail);
 
             if (user != null)
             {

@@ -86,6 +86,12 @@ namespace MoneyManagerApp.Presentation
                     .Where(t => t.FkAccountsIdTo == currentAccountId || t.FkAccountsIdFrom == currentAccountId)
                     .ToList();
 
+                foreach (var transaction in transactions)
+                {
+                    if(transaction.FkAccountsIdFrom == currentAccountId)
+                    transaction.TransactionsSum = -transaction.TransactionsSum;
+                }
+
                 return transactions;
             }
         }

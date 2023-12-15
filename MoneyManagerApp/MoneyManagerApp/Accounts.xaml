@@ -8,11 +8,18 @@
         mc:Ignorable="d"
         Title="Accounts" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
     <Window.Resources>
-        <Style x:Key="CustomButtonStyle" TargetType="Button">
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Background" Value="#0092FF"/>
-            <!-- Інші властивості кнопки -->
-            <Setter Property="Border.CornerRadius" Value="5"/>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                            <!-- Your button content here -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Window.Resources>
 

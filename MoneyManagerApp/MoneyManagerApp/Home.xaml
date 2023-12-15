@@ -4,8 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MoneyManagerApp.Presentation"
+        xmlns:converters="clr-namespace:MoneyManagerApp.Presentation"
         mc:Ignorable="d"
         Title="Home" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
+   
+
     <Grid>
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="129" ></ColumnDefinition>
@@ -55,10 +58,10 @@
                     <DataTemplate>
                         <StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-                                <TextBlock Text="{Binding TransactionsDescription}" FontSize="18" Width="250"/>
+                                <TextBlock Text="{Binding TransactionsDescription}" FontSize="18" Width="160"/>
                                 <TextBlock Text="₴" FontSize="18"/>
                                 <TextBlock Text="{Binding TransactionsSum}" FontSize="18" Width="100"/>
-                                <TextBlock Text="{Binding TransactionsDate}" FontSize="18"/>
+                                <TextBlock Text="{Binding TransactionsDate, StringFormat={}{0:dd/MM/yyyy HH:mm:ss}}" FontSize="18"/>
                             </StackPanel>
                             <!-- Додайте інші поля транзакції, якщо потрібно -->
                         </StackPanel>

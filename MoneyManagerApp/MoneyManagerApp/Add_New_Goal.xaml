@@ -6,6 +6,21 @@
         xmlns:local="clr-namespace:MoneyManagerApp.Presentation"
         mc:Ignorable="d"
         Title="Add new goal" Height="550" Width="800" ResizeMode="NoResize" SizeToContent="Manual">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="5" Background="{TemplateBinding Background}">
+                            <!-- Your button content here -->
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions >
             <ColumnDefinition Width="129" ></ColumnDefinition>

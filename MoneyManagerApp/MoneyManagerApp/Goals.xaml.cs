@@ -66,7 +66,7 @@ namespace MoneyManagerApp.Presentation
                     HorizontalAlignment = HorizontalAlignment.Center,
                     Margin = new Thickness(200, 160 + (80 * i), 0, 0),
                     VerticalAlignment = VerticalAlignment.Top,
-                    Width = 80,
+                    Width = 83,
                     Height = 30,
                     FontSize = 20,
                     Tag = accountGoals[i],
